@@ -12,6 +12,8 @@ print(f"π的值: {math.pi}")
 print(f"2的平方根: {math.sqrt(2)}")
 print(f"向上取整 4.3: {math.ceil(4.3)}")
 
+print("\n=== 3. random模块示例 ===")
+print(f"out = {random.main()}")
 # 使用random模块
 print(f"0到1之间的随机数: {random.random()}")
 print(f"1到10之间的随机整数: {random.randint(1, 10)}")

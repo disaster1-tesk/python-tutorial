@@ -10,3 +10,7 @@ def enclose_function() -> Callable[[], None]:
 
 f = enclose_function()
 
+print(f.__closure__)
+print(hex(id(f)))
+print(f)
+

@@ -62,14 +62,33 @@
   - 装饰器：函数和类的增强技术
   - 迭代器和可迭代对象：自定义迭代逻辑
   - 上下文管理器：资源管理的高级用法
+- [类型注解与代码质量](type_hints/description.md) - [示例代码](type_hints/example.py) 🆕
+  - typing模块：List、Dict、Optional、Union、Callable、TypeVar、Generic
+  - dataclasses装饰器：字段、默认值、__post_init__、frozen
+  - Python 3.10+新语法：match/case、X|Y联合类型
+  - 静态检查：mypy、black、pylint代码规范工具
+  - 实战：带类型注解的完整项目模块示例
 
-### 6. 标准库和第三方库
-- [标准库使用](standard_library/description.md) - [示例代码](standard_library/example.py)
+### 6. 并发编程
+- [并发编程](concurrency/description.md) - [示例代码](concurrency/example.py) 🆕
+  - 多线程（threading）：Thread类、Lock/RLock/Semaphore、线程池
+  - 多进程（multiprocessing）：Process、Queue、Pipe、进程池
+  - 异步IO（asyncio）：事件循环、Task、gather/wait、async with/for
+  - GIL全局解释器锁：原理、限制、CPU密集vs IO密集场景选择
+  - 实战：并发下载器、异步爬虫、生产者消费者模型
+
+### 7. 标准库和第三方库
+- [标准库使用](standard_library/description.md) - [示例代码](standard_library/example.py) ✨强化
   - 系统操作：os、sys模块的使用
   - 日期时间：datetime模块处理时间数据
   - 数学计算：math、random模块的数学功能
   - 数据处理：json、re模块的数据操作
   - 容器类型：collections模块的高级数据结构
+  - 函数工具：functools（lru_cache、partial、wraps、singledispatch）✨
+  - 迭代器工具：itertools（chain、product、combinations、groupby）✨
+  - 子进程管理：subprocess（run、Popen、管道、超时控制）✨
+  - 现代路径操作：pathlib进阶（glob、rglob、文件树遍历）✨
+  - 上下文管理器：contextlib（@contextmanager、suppress、ExitStack）✨
 - [第三方库使用](third_party_libraries/description.md) - [示例代码](third_party_libraries/example.py)
   - 包管理：pip和虚拟环境的使用
   - 网络请求：requests库进行HTTP操作
@@ -77,7 +96,85 @@
   - 可视化：matplotlib数据可视化
   - Web框架：flask轻量级Web开发
 
-### 7. 开发实践
+### 8. 数据库操作
+- [数据库操作](database/description.md) - [示例代码](database/example.py) 🆕
+  - sqlite3：连接、游标、CRUD、参数化查询（防SQL注入）、事务
+  - SQLAlchemy Core vs ORM：模型定义、Session、关系映射、查询API
+  - 连接池与上下文管理器
+  - 实战：学生管理系统、ORM CRUD操作完整示例
+
+### 9. 设计模式
+- [设计模式](design_patterns/description.md) - [示例代码](design_patterns/example.py) 🆕
+  - 创建型：单例（多种实现）、工厂方法、抽象工厂、建造者
+  - 结构型：装饰器模式（vs Python装饰器语法）、代理、适配器、组合
+  - 行为型：观察者、策略、命令、迭代器、模板方法
+  - Python惯用法 vs 传统GoF模式对比分析
+  - 实战：插件系统（策略+工厂）、事件系统（观察者）
+
+### 10. 网络编程
+- [网络编程](networking/description.md) - [示例代码](networking/example.py) 🆕
+  - socket基础：TCP三次握手、TCP/UDP收发、非阻塞socket
+  - 高级socket：select/poll多路复用、简单聊天室
+  - requests进阶：Session复用、认证、重试机制、超时
+  - REST API构建：Flask路由进阶、Blueprint、错误处理
+  - FastAPI：路由、Pydantic模型、自动文档（OpenAPI）
+  - 实战：简单TCP回声服务器、REST API完整示例
+
+### 11. 数据处理进阶
+- [数据处理进阶](data_processing/description.md) - [示例代码](data_processing/example.py) 🆕
+  - pandas深入：数据清洗（缺失值/重复值/类型转换）、分组聚合、时间序列
+  - merge/join：多表合并、内连接/左连接/右连接
+  - matplotlib进阶：多子图、样式、中文显示、保存高清图
+  - seaborn统计图表：箱线图、热力图、分组柱状图、直方图+KDE
+  - Excel/CSV实战处理：openpyxl读写Excel
+  - 实战：完整数据分析流程（加载→清洗→分析→可视化→导出）
+
+### 12. Web 开发 🌐
+- [Web 开发](web_development/description.md) - [示例代码](web_development/example.py) 🆕
+  - Flask：路由、蓝图、中间件、模板渲染、RESTful API 完整 CRUD
+  - FastAPI：Pydantic 模型、依赖注入、自动文档（OpenAPI）、异步支持
+  - Django：ORM 查询（链式查询、聚合、优化）、类视图（CBV）、模型定义
+  - Web 全栈：WSGI/ASGI 原理、RESTful 设计规范、JWT 认证、WebSocket
+  - 部署：Docker + Nginx + Gunicorn/Uvicorn、环境配置、日志监控
+  - 前端交互：Jinja2 模板继承、前后端分离架构
+
+### 13. AI/ML 基础 🤖
+- [AI/ML 基础](ai_ml_basics/description.md) - [示例代码](ai_ml_basics/example.py) 🆕
+  - NumPy：数组创建、形状操作、广播、向量化运算、布尔索引、统计聚合
+  - Pandas：DataFrame 创建、数据清洗、分组聚合、排序过滤、合并拼接
+  - Scikit-learn：分类（LogisticRegression、RandomForest、SVM）、回归、Pipeline
+  - 特征工程：标准化/归一化、独热编码、PCA 降维、特征选择
+  - 模型评估：交叉验证、网格搜索、学习曲线分析
+  - 无监督学习：K-Means 聚类、肘部法则、轮廓系数
+
+### 14. 深度学习 🧠
+- [深度学习](deep_learning/description.md) - [示例代码](deep_learning/example.py) 🆕
+  - PyTorch 基础：Tensor 操作、自动微分（Autograd）、GPU 加速
+  - 神经网络：全连接层（MLP）、激活函数（ReLU/Sigmoid）、损失函数、优化器
+  - CNN：卷积、池化、BatchNorm、Dropout、ResNet 迁移学习
+  - RNN/LSTM/GRU：序列建模、双向 RNN、词嵌入（Embedding）
+  - Transformer：自注意力机制、多头注意力、位置编码、编码器/解码器
+  - 训练技巧：混合精度训练、梯度裁剪、学习率调度、模型保存与加载
+
+### 15. NLP 与大语言模型 💬
+- [NLP 与大语言模型](nlp_and_llm/description.md) - [示例代码](nlp_and_llm/example.py) 🆕
+  - 文本预处理：中文分词（jieba）、文本清洗、停用词过滤、正则表达式
+  - 词嵌入：Word2Vec、GloVe、TF-IDF 文本向量化
+  - HuggingFace：Pipeline 快速使用、AutoModel 微调、Trainer API
+  - LLM 应用：Prompt Engineering、RAG 检索增强生成、API 调用
+  - LangChain：Chain、Agent、Memory、Tool 集成
+  - 向量数据库：ChromaDB、FAISS、Milvus 概念
+
+### 16. 计算机视觉 👁
+- [计算机视觉](cv_computer_vision/description.md) - [示例代码](cv_computer_vision/example.py) 🆕
+  - OpenCV 基础：图像读取/保存、缩放/裁剪/旋转、颜色空间（BGR/RGB/HSV）
+  - 图像滤波：高斯模糊、中值滤波、边缘检测（Canny/Sobel/Laplacian）
+  - 形态学操作：腐蚀、膨胀、开运算、闭运算
+  - 图像分割：阈值分割（Otsu）、轮廓检测、颜色分割
+  - PIL/Pillow：基本图像操作、滤镜、增强、批量处理
+  - 深度学习视觉：图像分类（ResNet）、目标检测（YOLO）、语义分割（U-Net）
+
+### 17. 开发实践
 - [单元测试](unit_testing/description.md) - [示例代码](unit_testing/example.py)
   - unittest框架：Python内置测试框架
   - pytest框架：现代测试工具的使用
@@ -91,9 +188,35 @@
   - 性能分析：cProfile分析程序性能
   - 内存调试：memory_profiler监控内存使用
 
+## 学习路线建议
+
+```
+入门阶段 ───────────────────────────────────────────────────
+  1. 基础语法 → 2. 数据类型 → 3. 控制流语句
+  4. 函数 → 5. 类与对象 → 6. 异常处理和文件操作
+
+进阶阶段 ───────────────────────────────────────────────────
+  7. 模块和包 → 8. 高级特性 → 9. 类型注解与代码质量
+  10. 并发编程 → 11. 标准库和第三方库
+
+实战阶段 ───────────────────────────────────────────────────
+  12. 数据库操作 → 13. 设计模式 → 14. 网络编程
+  15. 数据处理进阶 → 16. 单元测试 → 17. 调试技巧
+
+Web 开发方向 ───────────────────────────────────────────────
+  18. Web 开发（Flask/FastAPI/Django 全栈）
+  19. 数据库 + 部署（Docker/Nginx）
+
+AI/ML 方向 ────────────────────────────────────────────────
+  20. AI/ML 基础（NumPy/Pandas/Scikit-learn）
+  21. 深度学习（PyTorch/CNN/RNN/Transformer）
+  22. NLP 与大语言模型（HuggingFace/RAG/Prompt）
+  23. 计算机视觉（OpenCV/目标检测/图像分割）
+```
+
 ## 学习建议
 
-1. **循序渐进**：按照目录顺序学习，从基础知识开始，逐步深入到高级特性。建议每个知识点都要实际动手练习示例代码，并尝试修改和扩展。
+1. **循序渐进**：按照学习路线的顺序学习，从基础知识开始，逐步深入到高级特性。建议每个知识点都要实际动手练习示例代码，并尝试修改和扩展。
 
 2. **动手实践**：每个知识点都配有示例代码，建议亲自运行并修改代码来加深理解。可以尝试添加自己的测试用例，或者将不同知识点组合使用。
 
@@ -107,7 +230,7 @@
 
 7. **掌握调试**：熟练掌握各种调试技巧，能够快速定位和解决问题。调试是开发者必备的重要技能。
 
-8. **关注最佳实践**：学习和遵循 Python 编程的最佳实践，如 PEP 8 代码风格指南，这有助于编写高质量的代码。
+8. **关注最佳实践**：学习和遵循 Python 编程的最佳实践，如 PEP 8 代码风格指南、类型注解（PEP 484），这有助于编写高质量的代码。
 
 ## 贡献
 

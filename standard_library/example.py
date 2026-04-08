@@ -143,6 +143,8 @@ Point = namedtuple("Point", ["x", "y"])
 p = Point(1, 2)
 print(f"命名元组: x={p.x}, y={p.y}")
 
+import contextlib
+
 print("\n=== 9. pathlib模块示例 ===")
 from pathlib import Path
 
@@ -201,3 +203,271 @@ def multiply(x, y):
 # 创建一个固定第一个参数的函数
 double = partial(multiply, 2)
 print(f"使用partial创建的double函数: {double(5)}")
+
+# ============================================================
+# 11. functools 进阶示例
+# ============================================================
+print("\n=== 11. functools 进阶 ===")
+
+import functools
+import time as time_mod
+
+# --- lru_cache 缓存 ---
+@functools.lru_cache(maxsize=128)
+def fibonacci(n):
+    """递归计算斐波那契数（带缓存，避免重复计算）"""
+    if n < 2:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+print(f"fibonacci(35) = {fibonacci(35)}")
+print(f"缓存信息: {fibonacci.cache_info()}")
+
+# --- partial 偏函数 ---
+def log(level, message):
+    ts = time_mod.strftime("%H:%M:%S")
+    print(f"  [{ts}] [{level}] {message}")
+
+info_log = functools.partial(log, "INFO")
+error_log = functools.partial(log, "ERROR")
+info_log("系统启动")
+error_log("连接超时")
+
+# --- wraps 保留元信息 ---
+def timer_decorator(func):
+    """计时装饰器（使用 wraps 保留原函数信息）"""
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        start = time_mod.perf_counter()
+        result = func(*args, **kwargs)
+        elapsed = time_mod.perf_counter() - start
+        print(f"  {func.__name__} 执行耗时: {elapsed:.4f}s")
+        return result
+    return wrapper
+
+@timer_decorator
+def slow_function():
+    """这是一个慢函数的文档字符串"""
+    time_mod.sleep(0.05)
+    return "done"
+
+result = slow_function()
+print(f"  函数名保留: {slow_function.__name__}")
+print(f"  文档保留: {slow_function.__doc__}")
+print(f"  返回值: {result}")
+
+# --- singledispatch 泛型函数 ---
+@functools.singledispatch
+def process_data(data):
+    print(f"  默认处理: {data}")
+
+@process_data.register(int)
+def _(data):
+    print(f"  处理整数: {data} x 2 = {data * 2}")
+
+@process_data.register(list)
+def _(data):
+    print(f"  处理列表: 长度={len(data)}, 内容={data}")
+
+@process_data.register(str)
+def _(data):
+    print(f"  处理字符串: '{data}' (长度={len(data)})")
+
+print("singledispatch 示例:")
+process_data(42)
+process_data([1, 2, 3])
+process_data("hello")
+process_data(3.14)
+
+
+# ============================================================
+# 12. itertools 进阶示例
+# ============================================================
+print("\n=== 12. itertools 进阶 ===")
+
+# --- chain：合并多个可迭代对象 ---
+headers = ["姓名", "年龄", "城市"]
+row1 = ["张三", 28, "北京"]
+row2 = ["李四", 32, "上海"]
+all_data = list(itertools.chain(headers, row1, row2))
+print(f"chain 合并: {all_data}")
+
+# --- product：笛卡尔积 ---
+sizes = ["S", "M", "L"]
+colors = ["红", "蓝"]
+variants = list(itertools.product(colors, sizes))
+print(f"product 笛卡尔积: {variants} (共{len(variants)}种)")
+
+# --- permutations vs combinations ---
+team = ["A", "B", "C"]
+print(f"permutations(2): {list(itertools.permutations(team, 2))}")
+print(f"combinations(2): {list(itertools.combinations(team, 2))}")
+print(f"combinations_with_replacement(2): {list(itertools.combinations_with_replacement(team, 2))}")
+
+# --- groupby：分组（必须先排序！）---
+data = [("水果", "苹果"), ("蔬菜", "白菜"), ("水果", "香蕉"),
+        ("肉类", "牛肉"), ("蔬菜", "萝卜"), ("水果", "橙子")]
+data.sort(key=lambda x: x[0])
+print("groupby 分组:")
+for category, items in itertools.groupby(data, key=lambda x: x[0]):
+    print(f"  {category}: {[item[1] for item in items]}")
+
+# --- accumulate：累积计算 ---
+sales = [100, 200, 150, 300, 250]
+cumsum = list(itertools.accumulate(sales))
+print(f"accumulate 累加: {cumsum}")
+
+# --- islice：惰性切片 ---
+def fake_lines():
+    for i in range(1, 1000000):
+        yield f"第{i}行数据"
+
+first_3 = list(itertools.islice(fake_lines(), 3))
+print(f"islice 前3行: {first_3}")
+
+# --- starmap ---
+points = [(1, 2), (3, 4), (5, 6)]
+distances = list(itertools.starmap(lambda x, y: (x**2 + y**2)**0.5, points))
+print(f"starmap 计算距离: {distances}")
+
+
+# ============================================================
+# 13. subprocess 进阶示例
+# ============================================================
+print("\n=== 13. subprocess 进阶 ===")
+
+# --- run：基本用法 ---
+result = subprocess.run(
+    [sys.executable, "--version"],
+    capture_output=True,
+    text=True,
+)
+print(f"Python 版本: {result.stdout.strip()}")
+
+# --- check=True：命令失败时抛出异常 ---
+try:
+    result = subprocess.run(
+        [sys.executable, "-c", "print('Hello from subprocess!')"],
+        capture_output=True, text=True, check=True,
+    )
+    print(f"子进程输出: {result.stdout.strip()}")
+except subprocess.CalledProcessError as e:
+    print(f"命令失败: {e}")
+
+# --- timeout：超时控制 ---
+try:
+    subprocess.run(
+        [sys.executable, "-c", "import time; time.sleep(10)"],
+        timeout=2,
+        capture_output=True, text=True,
+    )
+except subprocess.TimeoutExpired:
+    print("命令执行超时（已设2秒限制）!")
+
+# --- Popen：实时交互 ---
+process = subprocess.Popen(
+    [sys.executable, "-c", "import sys; print(sys.stdin.read().upper())"],
+    stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+)
+stdout, stderr = process.communicate(input="hello world\n")
+print(f"Popen 管道输出: {stdout.strip()}")
+
+
+# ============================================================
+# 14. pathlib 进阶示例
+# ============================================================
+print("\n=== 14. pathlib 进阶 ===")
+
+# --- glob / rglob ---
+current = Path(".")
+py_files = list(current.rglob("*.py"))
+print(f"当前目录 Python 文件数: {len(py_files)}")
+
+md_files = list(current.glob("**/*.md"))
+print(f"当前目录 Markdown 文件数: {len(md_files)}")
+
+# --- 文件信息 ---
+if py_files:
+    sample = py_files[0]
+    stat = sample.stat()
+    print(f"示例文件: {sample.name}")
+    print(f"  大小: {stat.st_size} 字节")
+    print(f"  扩展名: {sample.suffix}")
+    print(f"  父目录: {sample.parent.name}")
+
+# --- 按扩展名统计 ---
+from collections import Counter as Counter2
+extensions = Counter2(
+    f.suffix for f in current.rglob("*")
+    if f.is_file() and f.suffix
+)
+print(f"文件类型分布 (Top 5): {dict(extensions.most_common(5))}")
+
+# --- pathlib vs os.path 对比 ---
+print("\npathlib vs os.path:")
+print(f"  拼接路径: Path('a') / 'b' / 'c' = {Path('a') / 'b' / 'c'}")
+print(f"  获取扩展名: Path('test.py').suffix = '{Path('test.py').suffix}'")
+print(f"  获取文件名: Path('/a/b/test.py').name = '{Path('/a/b/test.py').name}'")
+print(f"  获取父目录: Path('/a/b/test.py').parent = '{Path('/a/b/test.py').parent}'")
+
+
+# ============================================================
+# 15. contextlib 进阶示例
+# ============================================================
+print("\n=== 15. contextlib 进阶 ===")
+
+# --- @contextmanager：计时器 ---
+@contextlib.contextmanager
+def timer(name):
+    """计时上下文管理器"""
+    start = time_mod.perf_counter()
+    print(f"  [{name}] 开始...")
+    try:
+        yield
+    finally:
+        elapsed = time_mod.perf_counter() - start
+        print(f"  [{name}] 完成，耗时: {elapsed:.4f}s")
+
+with timer("数据处理"):
+    time_mod.sleep(0.1)
+    total = sum(range(1000000))
+
+# --- suppress：抑制异常 ---
+print("\nsuppress 示例:")
+with contextlib.suppress(FileNotFoundError):
+    open("nonexistent_file.txt", "r")
+print("  FileNotFoundError 被抑制，程序继续执行")
+
+# --- ExitStack：动态管理多个上下文 ---
+print("\nExitStack 示例:")
+with contextlib.ExitStack() as stack:
+    files = []
+    for i in range(3):
+        f = stack.enter_context(open(f"temp_{i}.txt", "w", encoding="utf-8"))
+        f.write(f"文件{i}的内容\n")
+        files.append(f)
+        print(f"  创建 temp_{i}.txt")
+    print("  所有文件已打开，with块结束后自动关闭")
+
+# 清理临时文件
+import os
+for i in range(3):
+    try:
+        os.remove(f"temp_{i}.txt")
+        print(f"  已删除 temp_{i}.txt")
+    except FileNotFoundError:
+        pass
+
+# --- redirect_stdout：捕获输出 ---
+print("\nredirect_stdout 示例:")
+import io
+
+f = io.StringIO()
+with contextlib.redirect_stdout(f):
+    print("这行输出被重定向了")
+    print("这行也是")
+captured = f.getvalue()
+print(f"  捕获到 {len(captured.splitlines())} 行输出")
+print(f"  内容: {captured.strip()}")
+
+print("\n✅ 所有标准库示例运行完毕！")

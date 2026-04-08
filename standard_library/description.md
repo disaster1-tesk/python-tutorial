@@ -2253,3 +2253,400 @@ fs_analyzer.cleanup_sample_structure()
 
 这些实战案例展示了Python标准库中常用模块的实际应用场景，包括系统操作、时间处理、数学计算、数据序列化、文本处理和高级数据结构等。通过这些例子，可以更好地理解如何在实际项目中使用这些模块来解决具体问题。
 
+---
+
+## 6. functools 模块 - 函数工具箱
+
+### 知识点解析
+
+**概念定义**：functools 模块提供了一系列"高阶函数工具"，用于操作或增强其他函数。它就像给函数加装备的"工匠"——能缓存结果、固定参数、保留元信息等。
+
+**核心规则**：
+1. `@lru_cache` — 缓存函数返回值，避免重复计算（Least Recently Used 策略）
+2. `@cached_property` — 将结果缓存为实例属性（Python 3.8+）
+3. `functools.partial` — 固定函数的部分参数，生成新函数
+4. `functools.reduce` — 将函数累积应用到序列上
+5. `@functools.wraps` — 保留被装饰函数的元信息（`__name__`、`__doc__`）
+6. `functools.singledispatch` — 单分派泛型函数（根据第一个参数类型选择实现）
+
+**常见易错点**：
+1. `lru_cache` 要求函数参数必须是可哈希的（list/dict 不能直接缓存）
+2. 忘记加 `@wraps` 导致被装饰函数的 `__name__` 变成 wrapper
+3. `partial` 固定的是位置参数，要注意参数顺序
+4. `cached_property` 只在第一次访问时计算，之后从实例 `__dict__` 取值
+5. `reduce` 在 Python 3 中已移到 functools，不再内置
+
+### 实战案例
+
+#### 案例：缓存、偏函数与装饰器工具
+```python
+import functools
+import time
+
+# === lru_cache 缓存 ===
+@functools.lru_cache(maxsize=128)
+def fibonacci(n):
+    """递归计算斐波那契数（带缓存，避免重复计算）"""
+    if n < 2:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+# 不带缓存的递归：fib(35) 需要约 5 秒
+# 带缓存的递归：fib(35) 瞬间完成
+print(f"fibonacci(35) = {fibonacci(35)}")
+print(f"缓存信息: {fibonacci.cache_info()}")
+
+# === partial 偏函数 ===
+def log(level, message, timestamp=None):
+    ts = timestamp or time.strftime("%H:%M:%S")
+    print(f"[{ts}] [{level}] {message}")
+
+# 固定 level 参数，生成专用函数
+info_log = functools.partial(log, "INFO")
+error_log = functools.partial(log, "ERROR")
+debug_log = functools.partial(log, "DEBUG")
+
+info_log("系统启动")      # 输出: [14:30:00] [INFO] 系统启动
+error_log("连接超时")     # 输出: [14:30:00] [ERROR] 连接超时
+
+# === wraps 保留元信息 ===
+def timer(func):
+    """计时装饰器（使用 wraps 保留原函数信息）"""
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        start = time.perf_counter()
+        result = func(*args, **kwargs)
+        elapsed = time.perf_counter() - start
+        print(f"{func.__name__} 执行耗时: {elapsed:.4f}s")
+        return result
+    return wrapper
+
+@timer
+def slow_function():
+    """这是一个慢函数的文档字符串"""
+    time.sleep(0.1)
+    return "done"
+
+print(f"函数名: {slow_function.__name__}")    # 输出: slow_function（不是 wrapper）
+print(f"文档: {slow_function.__doc__}")        # 输出: 这是一个慢函数的文档字符串
+
+# === singledispatch 泛型函数 ===
+@functools.singledispatch
+def process_data(data):
+    print(f"默认处理: {data}")
+
+@process_data.register(int)
+def _(data):
+    print(f"处理整数: {data} × 2 = {data * 2}")
+
+@process_data.register(list)
+def _(data):
+    print(f"处理列表: 长度={len(data)}, 内容={data}")
+
+@process_data.register(str)
+def _(data):
+    print(f"处理字符串: '{data}' (长度={len(data)})")
+
+process_data(42)             # 处理整数
+process_data([1, 2, 3])     # 处理列表
+process_data("hello")        # 处理字符串
+process_data(3.14)           # 默认处理
+```
+
+---
+
+## 7. itertools 模块 - 迭代器工具箱
+
+### 知识点解析
+
+**概念定义**：itertools 模块提供了一套"迭代器工具"，用于高效创建和操作迭代器。它就像一个"流水线工厂"——能组合、过滤、排列、累积各种数据流，而且全部是惰性求值，内存占用极低。
+
+**核心规则**：
+1. 无限迭代器：`count(start, step)`、`cycle(iterable)`、`repeat(elem, n)`
+2. 排列组合：`product(A, B)` 笛卡尔积、`permutations(A, r)` 排列、`combinations(A, r)` 组合
+3. 分组与切片：`groupby(iterable, key)`（需先排序）、`islice(iterable, start, stop)`
+4. 筛选与累积：`filterfalse(pred, seq)`、`accumulate(seq, func)`、`chain(*iterables)`
+5. `itertools.starmap(func, iterable)` — 类似 map 但解包元组参数
+
+**常见易错点**：
+1. `groupby` 只会合并**相邻**的相同元素，使用前必须先排序
+2. 无限迭代器（count/cycle）不能直接 `list()` 转换，会内存溢出
+3. `product` 的结果是笛卡尔积，数据量大时注意组合爆炸
+4. `combinations` 无重复组合，`combinations_with_replacement` 允许重复
+5. `islice` 不支持负索引
+
+### 实战案例
+
+#### 案例：数据分析中的迭代器技巧
+```python
+import itertools
+
+# === chain：合并多个可迭代对象 ===
+headers = ["姓名", "年龄", "城市"]
+row1 = ["张三", 28, "北京"]
+row2 = ["李四", 32, "上海"]
+all_data = list(itertools.chain(headers, row1, row2))
+print(f"合并数据: {all_data}")
+
+# === product：笛卡尔积（所有组合）===
+sizes = ["S", "M", "L"]
+colors = ["红", "蓝"]
+variants = list(itertools.product(colors, sizes))
+print(f"SKU组合: {variants}")
+print(f"共 {len(variants)} 种")
+
+# === permutations vs combinations ===
+team = ["A", "B", "C"]
+print(f"全排列(permutations): {list(itertools.permutations(team, 2))}")
+print(f"组合(combinations):   {list(itertools.combinations(team, 2))}")
+
+# === groupby：分组（必须先排序！）===
+data = [("水果", "苹果"), ("蔬菜", "白菜"), ("水果", "香蕉"),
+        ("肉类", "牛肉"), ("蔬菜", "萝卜"), ("水果", "橙子")]
+data.sort(key=lambda x: x[0])  # 必须先排序！
+for category, items in itertools.groupby(data, key=lambda x: x[0]):
+    print(f"{category}: {[item[1] for item in items]}")
+
+# === accumulate：累积计算 ===
+sales = [100, 200, 150, 300, 250]
+cumsum = list(itertools.accumulate(sales))
+print(f"销售额: {sales}")
+print(f"累计额: {cumsum}")
+# 自定义累积（累乘）
+cumprod = list(itertools.accumulate(sales[1:], lambda x, y: x * y))
+print(f"累乘: {cumprod}")
+
+# === islice：惰性切片 ===
+# 模拟大文件逐行读取，只取前3行
+def fake_lines():
+    for i in range(1, 1000000):
+        yield f"第{i}行数据"
+
+first_3 = list(itertools.islice(fake_lines(), 3))
+print(f"前3行: {first_3}")
+```
+
+---
+
+## 8. subprocess 模块 - 子进程管理
+
+### 知识点解析
+
+**概念定义**：subprocess 模块让你能在 Python 中启动新的进程、执行系统命令，就像在终端里敲命令一样。它是 `os.system()` 的现代替代品，功能更强大、更安全。
+
+**核心规则**：
+1. `subprocess.run()` — Python 3.5+ 推荐用法，运行命令并等待完成
+2. `subprocess.Popen()` — 高级用法，可以与子进程实时交互
+3. `capture_output=True` — 捕获 stdout 和 stderr（Python 3.7+）
+4. `text=True` — 将输出作为字符串返回（而非 bytes）
+5. `timeout` 参数 — 防止子进程卡死
+
+**常见易错点**：
+1. `shell=True` 存在命令注入风险，尽量避免使用
+2. Windows 下命令是 `dir`，Linux 下是 `ls`，注意跨平台差异
+3. `run()` 默认不会抛出异常（即使命令返回非零退出码），需要 `check=True`
+4. `Popen` 创建后需要手动 `communicate()` 或 `wait()`，否则可能产生僵尸进程
+5. 管道输出过大时可能导致死锁（`communicate()` 会自动处理）
+
+### 实战案例
+
+#### 案例：安全的命令执行工具
+```python
+import subprocess
+import sys
+
+# === run：基本用法 ===
+# 获取 Python 版本
+result = subprocess.run(
+    [sys.executable, "--version"],
+    capture_output=True,
+    text=True,
+)
+print(f"Python版本: {result.stdout.strip()}")
+
+# check=True：命令失败时抛出 CalledProcessError
+try:
+    subprocess.run(
+        [sys.executable, "-c", "print('Hello from subprocess!')"],
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+except subprocess.CalledProcessError as e:
+    print(f"命令失败: {e}")
+
+# === timeout：超时控制 ===
+try:
+    subprocess.run(
+        [sys.executable, "-c", "import time; time.sleep(10)"],
+        timeout=2,  # 最多等2秒
+        capture_output=True,
+        text=True,
+    )
+except subprocess.TimeoutExpired:
+    print("命令执行超时！")
+
+# === Popen：实时交互 ===
+# 用管道将数据传给子进程
+process = subprocess.Popen(
+    [sys.executable, "-c", "import sys; print(sys.stdin.read().upper())"],
+    stdin=subprocess.PIPE,
+    stdout=subprocess.PIPE,
+    stderr=subprocess.PIPE,
+    text=True,
+)
+stdout, stderr = process.communicate(input="hello world\n")
+print(f"子进程输出: {stdout.strip()}")
+```
+
+---
+
+## 9. pathlib 进阶 - 现代 path 操作
+
+### 知识点解析
+
+**概念定义**：pathlib 是 Python 3.4 引入的面向对象路径库，用 `Path` 对象替代 `os.path` 的字符串拼接。Path 对象可以像操作字符串一样操作路径，同时提供文件读写、目录遍历等方法。
+
+**核心规则**：
+1. `Path.glob("*.py")` — 非递归匹配、`Path.rglob("*.py")` — 递归匹配
+2. `Path.mkdir(parents=True, exist_ok=True)` — 安全创建目录
+3. `Path.read_text()` / `Path.write_text()` — 一行读写文件
+4. `Path.stat()` — 获取文件信息（大小、修改时间等）
+5. `Path.resolve()` — 获取绝对路径并解析符号链接
+
+**pathlib vs os.path 对比分析**：
+
+| 操作 | os.path（旧式） | pathlib（新式） |
+|------|----------------|----------------|
+| 拼接路径 | `os.path.join(a, b, c)` | `Path(a) / b / c` |
+| 获取扩展名 | `os.path.splitext(f)[1]` | `Path(f).suffix` |
+| 获取文件名 | `os.path.basename(f)` | `Path(f).name` |
+| 获取父目录 | `os.path.dirname(f)` | `Path(f).parent` |
+| 判断是否存在 | `os.path.exists(f)` | `Path(f).exists()` |
+| 列出目录 | `os.listdir(d)` | `Path(d).iterdir()` |
+| 遍历匹配 | `glob.glob("*.py")` | `Path(".").glob("*.py")` |
+
+**常见易错点**：
+1. `/` 运算符要求左边是 Path 对象，不能是字符串：`"a" / "b"` 会报错
+2. `glob` 和 `rglob` 返回生成器，不是列表，需要 `list()` 才能反复遍历
+3. Windows 下路径用 `\`，但 Path 对象的 `/` 运算符自动处理分隔符
+
+### 实战案例
+
+#### 案例：项目文件扫描器
+```python
+from pathlib import Path
+
+# 扫描当前项目结构
+project = Path(".")
+print("=== 项目 Python 文件 ===")
+py_files = sorted(project.rglob("*.py"))
+for f in py_files[:10]:  # 只显示前10个
+    size = f.stat().st_size
+    print(f"  {f.relative_to(project)} ({size} 字节)")
+print(f"  ... 共 {len(py_files)} 个 Python 文件")
+
+# 查找所有 Markdown 文件
+md_files = list(project.glob("**/*.md"))
+print(f"\nMarkdown 文件: {len(md_files)} 个")
+
+# 按扩展名统计
+from collections import Counter
+extensions = Counter(f.suffix for f in project.rglob("*") if f.is_file())
+print(f"\n文件类型分布: {dict(extensions.most_common(5))}")
+```
+
+---
+
+## 10. contextlib 模块 - 上下文管理器工具
+
+### 知识点解析
+
+**概念定义**：contextlib 模块提供了一组"上下文管理器工具"，让你更方便地创建和使用 `with` 语句。上下文管理器确保资源（文件、锁、连接等）在使用后自动释放，即使发生异常也不会泄漏。
+
+**核心规则**：
+1. `@contextmanager` — 用生成器函数快速创建上下文管理器
+2. `contextlib.suppress(Exception)` — 静默抑制指定异常
+3. `contextlib.ExitStack` — 动态管理多个上下文（数量不确定时特别有用）
+4. `contextlib.redirect_stdout` / `redirect_stderr` — 临时重定向输出流
+
+**常见易错点**：
+1. `@contextmanager` 装饰的函数必须 yield 恰好一次
+2. yield 之后的代码（清理逻辑）即使在 with 块中发生异常也会执行
+3. `suppress` 会静默吞掉异常，只适合"不存在也不影响"的场景
+4. `ExitStack` 在 `__exit__` 时按 LIFO 顺序（后进先出）清理资源
+
+### 实战案例
+
+#### 案例：自定义上下文管理器
+```python
+import contextlib
+import time
+
+# === @contextmanager：计时器 ===
+@contextlib.contextmanager
+def timer(name):
+    """计时上下文管理器"""
+    start = time.perf_counter()
+    print(f"[{name}] 开始...")
+    try:
+        yield
+    finally:
+        elapsed = time.perf_counter() - start
+        print(f"[{name}] 完成，耗时: {elapsed:.4f}s")
+
+with timer("数据处理"):
+    time.sleep(0.2)
+    # 模拟数据处理...
+    total = sum(range(1000000))
+
+# === suppress：抑制异常 ===
+with contextlib.suppress(FileNotFoundError):
+    # 文件不存在也不报错
+    open("nonexistent_file.txt", "r")
+
+# === ExitStack：动态管理多个资源 ===
+@contextlib.contextmanager
+def acquire_resource(name):
+    print(f"  获取资源: {name}")
+    yield name
+    print(f"  释放资源: {name}")
+
+with contextlib.ExitStack() as stack:
+    # 动态获取不确定数量的资源
+    resources = ["数据库连接", "文件锁", "网络socket"]
+    for r in resources:
+        stack.enter_context(acquire_resource(r))
+    print("所有资源已获取，执行业务逻辑...")
+    # with 块结束时自动按 LIFO 顺序释放所有资源
+
+# === redirect_stdout：捕获 print 输出 ===
+import io
+
+f = io.StringIO()
+with contextlib.redirect_stdout(f):
+    print("这行输出被重定向了")
+    print("这行也是")
+
+captured = f.getvalue()
+print(f"捕获到的输出: {captured.strip()}")
+```
+
+---
+
+## 标准库补充模块小结
+
+| 模块 | 核心功能 | 最常用工具 |
+|------|---------|-----------|
+| functools | 函数工具 | `lru_cache`, `partial`, `wraps`, `singledispatch` |
+| itertools | 迭代器工具 | `chain`, `product`, `combinations`, `groupby`, `islice` |
+| subprocess | 子进程管理 | `run(capture_output=True, text=True, check=True)` |
+| pathlib | 路径操作 | `Path.glob()`, `read_text()`, `write_text()`, `stat()` |
+| contextlib | 上下文管理 | `@contextmanager`, `suppress`, `ExitStack` |
+
+**学习建议**：
+1. 优先掌握 `functools.lru_cache` 和 `itertools`——日常编程中最高频
+2. `subprocess.run()` 是执行外部命令的标准方式，记住 `capture_output=True, text=True` 组合
+3. 新项目优先使用 `pathlib` 替代 `os.path`，代码更简洁
+4. `contextlib.suppress` 适合"尝试操作，失败也无所谓"的场景
+
