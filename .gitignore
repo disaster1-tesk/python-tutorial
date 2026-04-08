@@ -1,0 +1,21 @@
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# WorkBuddy / Copilot
+.workbuddy/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
