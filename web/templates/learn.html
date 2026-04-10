@@ -1,0 +1,235 @@
+{% extends "base.html" %}
+
+{% block title %}{{ module_info.name }} - {{ APP_NAME }}{% endblock %}
+
+{% block extra_css %}
+<style>
+    .markdown-content h1 { font-size: 1.8rem; font-weight: bold; margin: 1.5rem 0 1rem; }
+    .markdown-content h2 { font-size: 1.5rem; font-weight: bold; margin: 1.5rem 0 1rem; }
+    .markdown-content h3 { font-size: 1.25rem; font-weight: bold; margin: 1rem 0 0.5rem; }
+    .markdown-content p { margin-bottom: 1rem; }
+    .markdown-content ul, .markdown-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+    .markdown-content li { margin-bottom: 0.5rem; }
+    .markdown-content pre { background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; overflow-x: auto; }
+    .markdown-content code { background: #f3f4f6; padding: 0.125rem 0.375rem; border-radius: 4px; font-size: 0.875rem; }
+    .markdown-content pre code { background: none; padding: 0; }
+    .tab-btn.active { background: #4f46e5; color: white; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="mb-6">
+    <a href="{{ url_for('index') }}" class="text-indigo-600 hover:underline text-sm">← 返回首页</a>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-6">
+    <!-- 主内容区 -->
+    <div class="lg:col-span-2">
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100">
+            <!-- 模块头部 -->
+            <div class="p-6 border-b border-gray-100">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h1 class="text-2xl font-bold">{{ module_info.icon }} {{ module_info.name }}</h1>
+                        <p class="text-gray-500 mt-1">分类：{{ module_info.category }}</p>
+                    </div>
+                    <button onclick="toggleFavorite('modules', '{{ module_info.id }}')" 
+                            class="text-2xl hover:scale-110 transition">
+                        {{ '⭐' if is_favorited else '☆' }}
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Tab 导航 -->
+            <div class="flex border-b border-gray-100">
+                <button onclick="showTab('description')" class="tab-btn px-6 py-3 font-medium border-b-2 border-transparent hover:bg-gray-50">
+                    📖 知识点
+                </button>
+                <button onclick="showTab('example')" class="tab-btn px-6 py-3 font-medium border-b-2 border-transparent hover:bg-gray-50">
+                    💻 代码示例
+                </button>
+                <button onclick="showTab('practice')" class="tab-btn px-6 py-3 font-medium border-b-2 border-transparent hover:bg-gray-50">
+                    ⌨️ 在线练习
+                </button>
+            </div>
+            
+            <!-- 知识点内容 -->
+            <div id="tab-description" class="tab-content p-6">
+                <div id="markdown-container" class="markdown-content">
+                    {% if description %}
+                    <!-- Markdown will be rendered by JavaScript -->
+                    {% else %}
+                    <p class="text-gray-500">该模块暂无知识点讲解</p>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <!-- 代码示例 -->
+            <div id="tab-example" class="tab-content p-6 hidden">
+                <pre><code class="language-python">{{ example }}</code></pre>
+            </div>
+            
+            <!-- 在线练习 -->
+            <div id="tab-practice" class="tab-content p-6 hidden">
+                <div class="bg-gray-900 rounded-lg p-4 mb-4">
+                    <textarea id="code-editor" class="w-full h-64 bg-gray-900 text-gray-100 font-mono p-4 rounded resize-y focus:outline-none" 
+                              placeholder="在这里编写 Python 代码..."></textarea>
+                </div>
+                <div class="flex gap-3">
+                    <button onclick="runCode()" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 flex items-center gap-2">
+                        ▶️ 运行
+                    </button>
+                    <button onclick="clearCode()" class="bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-600">
+                        清空
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <h4 class="font-bold mb-2">输出：</h4>
+                    <pre id="output" class="bg-gray-100 p-4 rounded-lg min-h-24 text-sm font-mono">点击"运行"按钮执行代码</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 侧边栏 -->
+    <div class="space-y-6">
+        <!-- 学习状态 -->
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+            <h3 class="font-bold mb-4">📊 学习状态</h3>
+            <button onclick="markComplete('{{ module_info.id }}')" 
+                    class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 mb-3">
+                标记为已完成
+            </button>
+            <div class="flex items-center justify-between text-sm">
+                <span class="text-gray-500">当前状态</span>
+                <span class="px-2 py-1 rounded text-xs
+                    {% if module_status == 'completed' %}bg-green-100 text-green-700
+                    {% elif module_status == 'in_progress' %}bg-amber-100 text-amber-700
+                    {% else %}bg-gray-100 text-gray-700{% endif %}">
+                    {% if module_status == 'completed' %}已完成{% elif module_status == 'in_progress' %}进行中{% else %}未开始{% endif %}
+                </span>
+            </div>
+        </div>
+        
+        <!-- 依赖 -->
+        {% if dependencies %}
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+            <h3 class="font-bold mb-3">📌 前置知识</h3>
+            <div class="space-y-2">
+                {% for dep in dependencies %}
+                <a href="{{ url_for('learn', module_id=dep.id) }}" class="flex items-center gap-2 text-sm text-gray-600 hover:text-indigo-600">
+                    {{ dep.icon }} {{ dep.name }}
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        
+        <!-- 快速链接 -->
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+            <h3 class="font-bold mb-3">🔗 快速跳转</h3>
+            <div class="space-y-2">
+                <a href="{{ url_for('exercises', module_id=module_info.id) }}" class="flex items-center gap-2 text-gray-600 hover:text-indigo-600">
+                    📝 练习题
+                </a>
+                <a href="{{ url_for('quiz', module_id=module_info.id) }}" class="flex items-center gap-2 text-gray-600 hover:text-indigo-600">
+                    📋 章节测验
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function showTab(tabName) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active', 'border-indigo-600', 'text-indigo-600'));
+    
+    document.getElementById('tab-' + tabName).classList.remove('hidden');
+    event.target.classList.add('active', 'border-indigo-600', 'text-indigo-600');
+}
+
+function markComplete(moduleId) {
+    fetch('/api/progress/module/' + moduleId, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({status: 'completed'})
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            alert('🎉 恭喜完成本模块学习！');
+            location.reload();
+        }
+    });
+}
+
+function toggleFavorite(type, id) {
+    fetch('/api/favorites', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({type: type, id: id})
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) location.reload();
+    });
+}
+
+// Pyodide 代码运行
+let pyodide = null;
+
+async function initPyodide() {
+    if (!pyodide) {
+        document.getElementById('output').textContent = '加载 Python 环境中...';
+        pyodide = await loadPyodide();
+        document.getElementById('output').textContent = 'Python 环境就绪！';
+    }
+}
+
+async function runCode() {
+    await initPyodide();
+    const code = document.getElementById('code-editor').value;
+    const output = document.getElementById('output');
+    
+    output.textContent = '运行中...';
+    
+    try {
+        pyodide.runPython(`
+import sys
+from io import StringIO
+sys.stdout = StringIO()
+        `);
+        
+        pyodide.runPython(code);
+        
+        const result = pyodide.runPython('sys.stdout.getvalue()');
+        output.textContent = result || '(无输出)';
+    } catch (error) {
+        output.textContent = '错误: ' + error.message;
+    }
+}
+
+function clearCode() {
+    document.getElementById('code-editor').value = '';
+    document.getElementById('output').textContent = '点击"运行"按钮执行代码';
+}
+
+// Markdown 渲染
+document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('markdown-container');
+    const rawContent = {{ description | tojson }};
+    
+    if (rawContent) {
+        // 使用 marked 渲染 Markdown
+        const html = marked.parse(rawContent);
+        container.innerHTML = html;
+        
+        // 高亮代码块
+        container.querySelectorAll('pre code').forEach(function(block) {
+            hljs.highlightElement(block);
+        });
+    }
+});
+</script>
+{% endblock %}

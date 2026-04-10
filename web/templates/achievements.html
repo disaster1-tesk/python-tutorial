@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}成就 - {{ APP_NAME }}{% endblock %}
+
+{% block content %}
+<div class="mb-6">
+    <h1 class="text-2xl font-bold">🏆 成就徽章</h1>
+    <p class="text-gray-500">完成学习目标解锁成就</p>
+</div>
+
+<!-- 成就统计 -->
+<div class="grid grid-cols-3 gap-4 mb-8">
+    <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 text-center">
+        <div class="text-3xl font-bold text-indigo-600">{{ achievements|selectattr('unlocked')|list|length }}</div>
+        <div class="text-sm text-gray-500 mt-1">已解锁</div>
+    </div>
+    <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 text-center">
+        <div class="text-3xl font-bold text-gray-400">{{ achievements|length - (achievements|selectattr('unlocked')|list|length) }}</div>
+        <div class="text-sm text-gray-500 mt-1">未解锁</div>
+    </div>
+    <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 text-center">
+        <div class="text-3xl font-bold text-amber-500">{{ progress.modules.values()|selectattr('status', 'equalto', 'completed')|list|length }}</div>
+        <div class="text-sm text-gray-500 mt-1">完成模块</div>
+    </div>
+</div>
+
+<!-- 成就列表 -->
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+    {% for ach in achievements %}
+    <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 {% if not ach.unlocked %}opacity-50{% endif %}">
+        <div class="text-4xl mb-3">{{ ach.icon }}</div>
+        <h3 class="font-bold text-lg">{{ ach.name }}</h3>
+        <p class="text-sm text-gray-500 mt-1">{{ ach.description }}</p>
+        {% if ach.unlocked %}
+        <div class="mt-3 text-xs text-green-600">✅ 已解锁</div>
+        {% else %}
+        <div class="mt-3 text-xs text-gray-400">🔒 未解锁</div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

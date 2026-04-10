@@ -1,0 +1,2579 @@
+[
+  {
+    "id": "ex_basics_001",
+    "module": "base_syntax",
+    "title": "Hello World",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "编写一个程序，输出 'Hello, World! '",
+    "starter_code": "# 输出 Hello, World!\nprint()",
+    "solution": "print('Hello, World!')",
+    "tags": [
+      "输出",
+      "字符串"
+    ]
+  },
+  {
+    "id": "ex_basics_002",
+    "module": "base_syntax",
+    "title": "变量赋值",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "创建变量 name = 'Alice'，然后输出 'Hello, Alice!'",
+    "starter_code": "# 创建变量并输出",
+    "solution": "name = 'Alice'\nprint(f'Hello, {name}!')",
+    "tags": [
+      "变量",
+      "字符串格式化"
+    ]
+  },
+  {
+    "id": "ex_basics_003",
+    "module": "base_syntax",
+    "title": "数据类型转换",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "将字符串 '123' 转换为整数并加 5，输出结果",
+    "starter_code": "# 类型转换\ns = '123'\n# 转换并计算",
+    "solution": "s = '123'\nresult = int(s) + 5\nprint(result)",
+    "tags": [
+      "类型转换",
+      "整数"
+    ]
+  },
+  {
+    "id": "ex_basics_004",
+    "module": "base_syntax",
+    "title": "注释使用",
+    "difficulty": "easy",
+    "points": 5,
+    "description": "使用单行注释和多行注释",
+    "starter_code": "# 编写注释示例",
+    "solution": "# 这是单行注释\n\"\"\"\n这是多行注释\n\"\"\"\nprint('注释示例')",
+    "tags": [
+      "注释"
+    ]
+  },
+  {
+    "id": "ex_basics_005",
+    "module": "base_syntax",
+    "title": "用户输入",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 input() 获取用户姓名并输出问候",
+    "starter_code": "# 获取用户输入并问候",
+    "solution": "name = input('请输入姓名: ')\nprint(f'你好, {name}!')",
+    "tags": [
+      "输入",
+      "字符串"
+    ]
+  },
+  {
+    "id": "ex_types_001",
+    "module": "data_types",
+    "title": "整数操作",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "计算 10 + 5, 10 - 5, 10 * 5, 10 / 5",
+    "starter_code": "a = 10\nb = 5\n# 计算并输出",
+    "solution": "a = 10\nb = 5\nprint(a + b, a - b, a * b, a / b)",
+    "tags": [
+      "整数",
+      "运算符"
+    ]
+  },
+  {
+    "id": "ex_types_002",
+    "module": "data_types",
+    "title": "浮点数精度",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "计算 0.1 + 0.2，验证浮点数精度问题",
+    "starter_code": "# 浮点数计算\nresult = 0.1 + 0.2\nprint(result)",
+    "solution": "result = 0.1 + 0.2\nprint(f'{result:.2f}')",
+    "tags": [
+      "浮点数",
+      "精度"
+    ]
+  },
+  {
+    "id": "ex_types_003",
+    "module": "data_types",
+    "title": "字符串切片",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "获取字符串 'Python' 的前3个字符",
+    "starter_code": "s = 'Python'\n# 获取前3个字符",
+    "solution": "s = 'Python'\nprint(s[:3])",
+    "tags": [
+      "字符串",
+      "切片"
+    ]
+  },
+  {
+    "id": "ex_types_004",
+    "module": "data_types",
+    "title": "列表操作",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "创建列表 [1,2,3]，添加元素 4，输出列表",
+    "starter_code": "lst = [1, 2, 3]\n# 添加元素4",
+    "solution": "lst = [1, 2, 3]\nlst.append(4)\nprint(lst)",
+    "tags": [
+      "列表",
+      "操作"
+    ]
+  },
+  {
+    "id": "ex_types_005",
+    "module": "data_types",
+    "title": "字典操作",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "创建字典 {'name': 'Alice', 'age': 25}，访问 name",
+    "starter_code": "d = {'name': 'Alice', 'age': 25}\n# 访问 name",
+    "solution": "d = {'name': 'Alice', 'age': 25}\nprint(d['name'])",
+    "tags": [
+      "字典",
+      "访问"
+    ]
+  },
+  {
+    "id": "ex_flow_001",
+    "module": "control_flow",
+    "title": "if 语句",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "判断数字是正数、负数还是零",
+    "starter_code": "num = 5\n# 判断",
+    "solution": "num = 5\nif num > 0:\n    print('正数')\nelif num < 0:\n    print('负数')\nelse:\n    print('零')",
+    "tags": [
+      "条件",
+      "if"
+    ]
+  },
+  {
+    "id": "ex_flow_002",
+    "module": "control_flow",
+    "title": "for 循环",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 for 循环输出 1 到 5",
+    "starter_code": "# 输出 1 到 5",
+    "solution": "for i in range(1, 6):\n    print(i)",
+    "tags": [
+      "循环",
+      "for"
+    ]
+  },
+  {
+    "id": "ex_flow_003",
+    "module": "control_flow",
+    "title": "while 循环",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 while 循环输出 1 到 5",
+    "starter_code": "i = 1\n# while 循环输出 1 到 5",
+    "solution": "i = 1\nwhile i <= 5:\n    print(i)\n    i += 1",
+    "tags": [
+      "循环",
+      "while"
+    ]
+  },
+  {
+    "id": "ex_flow_004",
+    "module": "control_flow",
+    "title": "列表推导式",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用列表推导式生成 [0, 2, 4, 6, 8]",
+    "starter_code": "# 生成 [0, 2, 4, 6, 8]",
+    "solution": "result = [i*2 for i in range(5)]\nprint(result)",
+    "tags": [
+      "推导式",
+      "列表"
+    ]
+  },
+  {
+    "id": "ex_flow_005",
+    "module": "control_flow",
+    "title": "break 和 continue",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 break 在数字为 3 时停止循环",
+    "starter_code": "# 在 3 时停止",
+    "solution": "for i in range(1, 6):\n    if i == 3:\n        break\n    print(i)",
+    "tags": [
+      "循环",
+      "控制"
+    ]
+  },
+  {
+    "id": "ex_func_001",
+    "module": "functions",
+    "title": "定义函数",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "定义函数 greet(name) 返回问候语",
+    "starter_code": "# 定义 greet 函数",
+    "solution": "def greet(name):\n    return f'Hello, {name}!'\nprint(greet('Alice'))",
+    "tags": [
+      "函数",
+      "定义"
+    ]
+  },
+  {
+    "id": "ex_func_002",
+    "module": "functions",
+    "title": "默认参数",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "定义函数 say(message, times=2) 重复输出消息",
+    "starter_code": "# 定义带默认参数的函数",
+    "solution": "def say(message, times=2):\n    print(message * times)\nsay('Hi')",
+    "tags": [
+      "函数",
+      "默认参数"
+    ]
+  },
+  {
+    "id": "ex_func_003",
+    "module": "functions",
+    "title": "*args 用法",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "定义函数 sum_all(*nums) 计算总和",
+    "starter_code": "# 定义 *args 函数",
+    "solution": "def sum_all(*nums):\n    return sum(nums)\nprint(sum_all(1, 2, 3, 4))",
+    "tags": [
+      "函数",
+      "参数"
+    ]
+  },
+  {
+    "id": "ex_func_004",
+    "module": "functions",
+    "title": "lambda 表达式",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 lambda 实现 x * 2",
+    "starter_code": "# 使用 lambda",
+    "solution": "double = lambda x: x * 2\nprint(double(5))",
+    "tags": [
+      "lambda",
+      "匿名函数"
+    ]
+  },
+  {
+    "id": "ex_func_005",
+    "module": "functions",
+    "title": "递归函数",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用递归计算阶乘 5!",
+    "starter_code": "# 递归计算阶乘",
+    "solution": "def factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n-1)\nprint(factorial(5))",
+    "tags": [
+      "递归",
+      "函数"
+    ]
+  },
+  {
+    "id": "ex_class_001",
+    "module": "classes_objects",
+    "title": "定义类",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "定义类 Person，有属性 name",
+    "starter_code": "# 定义 Person 类",
+    "solution": "class Person:\n    def __init__(self, name):\n        self.name = name\np = Person('Alice')\nprint(p.name)",
+    "tags": [
+      "类",
+      "定义"
+    ]
+  },
+  {
+    "id": "ex_class_002",
+    "module": "classes_objects",
+    "title": "方法定义",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "定义类 Person，有方法 say_hello()",
+    "starter_code": "# 定义带方法的类",
+    "solution": "class Person:\n    def __init__(self, name):\n        self.name = name\n    def say_hello(self):\n        return f'Hello, {self.name}!'\np = Person('Alice')\nprint(p.say_hello())",
+    "tags": [
+      "类",
+      "方法"
+    ]
+  },
+  {
+    "id": "ex_class_003",
+    "module": "classes_objects",
+    "title": "继承",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "定义子类 Student 继承 Person",
+    "starter_code": "# 继承示例",
+    "solution": "class Person:\n    def __init__(self, name):\n        self.name = name\n\nclass Student(Person):\n    def __init__(self, name, grade):\n        super().__init__(name)\n        self.grade = grade\n\ns = Student('Bob', 'A')\nprint(s.name, s.grade)",
+    "tags": [
+      "继承",
+      "类"
+    ]
+  },
+  {
+    "id": "ex_class_004",
+    "module": "classes_objects",
+    "title": "属性封装",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 @property 封装属性",
+    "starter_code": "# 属性封装",
+    "solution": "class Circle:\n    def __init__(self, radius):\n        self._radius = radius\n    \n    @property\n    def radius(self):\n        return self._radius\n    \n    @property\n    def area(self):\n        return 3.14 * self._radius ** 2\n\nc = Circle(5)\nprint(c.area)",
+    "tags": [
+      "封装",
+      "property"
+    ]
+  },
+  {
+    "id": "ex_class_005",
+    "module": "classes_objects",
+    "title": "类方法与静态方法",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 @classmethod 和 @staticmethod",
+    "starter_code": "# 类方法和静态方法",
+    "solution": "class Math:\n    @staticmethod\n    def add(a, b):\n        return a + b\n    \n    @classmethod\n    def create(cls, value):\n        return cls(value)\n\nprint(Math.add(1, 2))",
+    "tags": [
+      "类方法",
+      "静态方法"
+    ]
+  },
+  {
+    "id": "ex_except_001",
+    "module": "exception_handling",
+    "title": "try-except",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "捕获除零异常",
+    "starter_code": "try:\n    result = 10 / 0\nexcept:\n    print('错误')",
+    "solution": "try:\n    result = 10 / 0\nexcept ZeroDivisionError:\n    print('不能除以零')",
+    "tags": [
+      "异常",
+      "处理"
+    ]
+  },
+  {
+    "id": "ex_except_002",
+    "module": "exception_handling",
+    "title": "多个 except",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "捕获 IndexError 和 KeyError",
+    "starter_code": "# 多个异常",
+    "solution": "try:\n    d = {'a': 1}\n    print(d['b'])\nexcept KeyError:\n    print('键不存在')\nexcept IndexError:\n    print('索引错误')",
+    "tags": [
+      "异常",
+      "多except"
+    ]
+  },
+  {
+    "id": "ex_except_003",
+    "module": "exception_handling",
+    "title": "finally",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 finally 确保清理",
+    "starter_code": "try:\n    print('Hello')\nfinally:\n    print('清理')",
+    "solution": "try:\n    print('Hello')\nfinally:\n    print('清理执行')",
+    "tags": [
+      "异常",
+      "finally"
+    ]
+  },
+  {
+    "id": "ex_except_004",
+    "module": "exception_handling",
+    "title": "raise",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 raise 抛出异常",
+    "starter_code": "# 抛出异常",
+    "solution": "def validate(age):\n    if age < 0:\n        raise ValueError('年龄不能为负')\n    return age\n\nvalidate(-1)",
+    "tags": [
+      "异常",
+      "raise"
+    ]
+  },
+  {
+    "id": "ex_except_005",
+    "module": "exception_handling",
+    "title": "自定义异常",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "定义自定义异常类",
+    "starter_code": "# 自定义异常",
+    "solution": "class MyError(Exception):\n    pass\n\nraise MyError('自定义错误')",
+    "tags": [
+      "异常",
+      "自定义"
+    ]
+  },
+  {
+    "id": "ex_file_001",
+    "module": "file_operations",
+    "title": "读文件",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "读取文件内容",
+    "starter_code": "# 读取文件\nwith open('test.txt', 'r') as f:\n    print(f.read())",
+    "solution": "# 先创建文件再读取\nwith open('test.txt', 'w') as f:\n    f.write('Hello')\n    \nwith open('test.txt', 'r') as f:\n    print(f.read())",
+    "tags": [
+      "文件",
+      "读取"
+    ]
+  },
+  {
+    "id": "ex_file_002",
+    "module": "file_operations",
+    "title": "写文件",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "写入内容到文件",
+    "starter_code": "# 写入文件\nwith open('output.txt', 'w') as f:\n    f.write('Hello, World!')",
+    "solution": "with open('output.txt', 'w') as f:\n    f.write('Hello, World!')\n    \nprint('写入完成')",
+    "tags": [
+      "文件",
+      "写入"
+    ]
+  },
+  {
+    "id": "ex_file_003",
+    "module": "file_operations",
+    "title": "JSON 操作",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 json 模块读写数据",
+    "starter_code": "import json\n\ndata = {'name': 'Alice', 'age': 25}\n# 写入 JSON",
+    "solution": "import json\n\ndata = {'name': 'Alice', 'age': 25}\n\nwith open('data.json', 'w') as f:\n    json.dump(data, f)\n\nwith open('data.json', 'r') as f:\n    print(json.load(f))",
+    "tags": [
+      "JSON",
+      "文件"
+    ]
+  },
+  {
+    "id": "ex_file_004",
+    "module": "file_operations",
+    "title": "路径操作",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 pathlib 操作路径",
+    "starter_code": "from pathlib import Path\n\n# 获取当前目录",
+    "solution": "from pathlib import Path\n\np = Path('.')\nprint(p.resolve())\nprint(list(p.glob('*.py')))",
+    "tags": [
+      "pathlib",
+      "路径"
+    ]
+  },
+  {
+    "id": "ex_file_005",
+    "module": "file_operations",
+    "title": "目录操作",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "创建和遍历目录",
+    "starter_code": "import os\n\n# 创建目录",
+    "solution": "import os\n\nos.makedirs('test_dir', exist_ok=True)\nprint('目录已创建')",
+    "tags": [
+      "目录",
+      "os"
+    ]
+  },
+  {
+    "id": "ex_module_001",
+    "module": "modules_packages",
+    "title": "导入模块",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "导入 math 模块并使用 sqrt",
+    "starter_code": "import math\n# 使用 sqrt",
+    "solution": "import math\nprint(math.sqrt(16))",
+    "tags": [
+      "导入",
+      "模块"
+    ]
+  },
+  {
+    "id": "ex_module_002",
+    "module": "modules_packages",
+    "title": "from 导入",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "从 math 导入 pi 和 sqrt",
+    "starter_code": "from math import pi, sqrt\n# 使用",
+    "solution": "from math import pi, sqrt\nprint(sqrt(16))\nprint(pi)",
+    "tags": [
+      "导入",
+      "from"
+    ]
+  },
+  {
+    "id": "ex_module_003",
+    "module": "modules_packages",
+    "title": "包创建",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "创建简单包结构",
+    "starter_code": "# 创建 mypackage 包",
+    "solution": "# 目录结构: mypackage/__init__.py\n# mypackage/utils.py\n\nimport mypackage\nprint('包导入成功')",
+    "tags": [
+      "包",
+      "创建"
+    ]
+  },
+  {
+    "id": "ex_module_004",
+    "module": "modules_packages",
+    "title": "__name__",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 __name__ == '__main__'",
+    "starter_code": "def main():\n    print('运行')\n\nif __name__ == '__main__':\n    main()",
+    "solution": "def main():\n    print('程序运行')\n\nif __name__ == '__main__':\n    main()",
+    "tags": [
+      "name",
+      "入口"
+    ]
+  },
+  {
+    "id": "ex_module_005",
+    "module": "modules_packages",
+    "title": "第三方库",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 pip 安装并导入第三方库",
+    "starter_code": "import requests\n# 发送请求",
+    "solution": "import requests\nresponse = requests.get('https://httpbin.org/get')\nprint(response.status_code)",
+    "tags": [
+      "第三方",
+      "requests"
+    ]
+  },
+  {
+    "id": "ex_adv_001",
+    "module": "advanced_features",
+    "title": "生成器",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 yield 创建生成器",
+    "starter_code": "def gen():\n    # 创建生成器",
+    "solution": "def gen():\n    for i in range(3):\n        yield i\n\nfor x in gen():\n    print(x)",
+    "tags": [
+      "生成器",
+      "yield"
+    ]
+  },
+  {
+    "id": "ex_adv_002",
+    "module": "advanced_features",
+    "title": "装饰器",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "创建简单装饰器",
+    "starter_code": "def my_decorator(func):\n    # 定义装饰器",
+    "solution": "def my_decorator(func):\n    def wrapper():\n        print('调用前')\n        func()\n        print('调用后')\n    return wrapper\n\n@my_decorator\ndef say():\n    print('Hello')\n\nsay()",
+    "tags": [
+      "装饰器",
+      "decorator"
+    ]
+  },
+  {
+    "id": "ex_adv_003",
+    "module": "advanced_features",
+    "title": "上下文管理器",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 with 语句",
+    "starter_code": "# with 语句使用",
+    "solution": "class MyContext:\n    def __enter__(self):\n        print('进入')\n        return self\n    def __exit__(self, *args):\n        print('退出')\n\nwith MyContext() as ctx:\n    print('使用中')",
+    "tags": [
+      "上下文",
+      "with"
+    ]
+  },
+  {
+    "id": "ex_adv_004",
+    "module": "advanced_features",
+    "title": "迭代器",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "创建自定义迭代器",
+    "starter_code": "class Counter:\n    # 创建迭代器",
+    "solution": "class Counter:\n    def __init__(self, limit):\n        self.limit = limit\n        self.current = 0\n    \n    def __iter__(self):\n        return self\n    \n    def __next__(self):\n        if self.current < self.limit:\n            self.current += 1\n            return self.current\n        raise StopIteration\n\nfor i in Counter(3):\n    print(i)",
+    "tags": [
+      "迭代器",
+      "iter"
+    ]
+  },
+  {
+    "id": "ex_adv_005",
+    "module": "advanced_features",
+    "title": "浅拷贝与深拷贝",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "理解深浅拷贝区别",
+    "starter_code": "import copy\n\noriginal = [[1, 2], [3, 4]]\n# 浅拷贝",
+    "solution": "import copy\n\noriginal = [[1, 2], [3, 4]]\nshallow = copy.copy(original)\ndeep = copy.deepcopy(original)\n\noriginal[0][0] = 99\nprint(shallow[0][0])  # 99 - 浅拷贝受影响\nprint(deep[0][0])     # 1 - 深拷贝不受影响",
+    "tags": [
+      "拷贝",
+      "copy"
+    ]
+  },
+  {
+    "id": "ex_type_001",
+    "module": "type_hints",
+    "title": "基础类型提示",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "为函数添加类型提示",
+    "starter_code": "def greet(name):\n    return f'Hello, {name}!'",
+    "solution": "def greet(name: str) -> str:\n    return f'Hello, {name}!'\n\nprint(greet('Alice'))",
+    "tags": [
+      "类型提示",
+      "函数"
+    ]
+  },
+  {
+    "id": "ex_type_002",
+    "module": "type_hints",
+    "title": "类型别名",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用类型别名",
+    "starter_code": "# 类型别名",
+    "solution": "from typing import List, Dict\n\nVector = List[float]\nMatrix = List[List[float]]\n\ndef process(vec: Vector) -> float:\n    return sum(vec)\n\nprint(process([1.0, 2.0, 3.0]))",
+    "tags": [
+      "类型",
+      "别名"
+    ]
+  },
+  {
+    "id": "ex_type_003",
+    "module": "type_hints",
+    "title": "Union 类型",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 Union 类型",
+    "starter_code": "from typing import Union\n\ndef parse(num: str) -> int:\n    return int(num)",
+    "solution": "from typing import Union\n\ndef parse(value: Union[str, int]) -> int:\n    if isinstance(value, str):\n        return int(value)\n    return value\n\nprint(parse('42'))\nprint(parse(42))",
+    "tags": [
+      "Union",
+      "类型"
+    ]
+  },
+  {
+    "id": "ex_type_004",
+    "module": "type_hints",
+    "title": "Optional",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 Optional",
+    "starter_code": "from typing import Optional\n\ndef find(name: str) -> str:\n    return name",
+    "solution": "from typing import Optional\n\ndef find(name: str) -> Optional[str]:\n    if name:\n        return name\n    return None\n\nprint(find('Alice'))\nprint(find(''))",
+    "tags": [
+      "Optional",
+      "类型"
+    ]
+  },
+  {
+    "id": "ex_type_005",
+    "module": "type_hints",
+    "title": "泛型",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用泛型",
+    "starter_code": "from typing import TypeVar, Generic\n\nT = TypeVar('T')\n\nclass Box(Generic[T]):\n    def __init__(self, content: T):\n        self.content = content",
+    "solution": "from typing import TypeVar, Generic\n\nT = TypeVar('T')\n\nclass Box(Generic[T]):\n    def __init__(self, content: T):\n        self.content = content\n    \n    def get(self) -> T:\n        return self.content\n\nbox = Box(123)\nprint(box.get())",
+    "tags": [
+      "泛型",
+      "Generic"
+    ]
+  },
+  {
+    "id": "ex_conc_001",
+    "module": "concurrency",
+    "title": "threading",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 threading 模块",
+    "starter_code": "import threading\n\ndef worker():\n    print('工作')\n\n# 创建线程",
+    "solution": "import threading\nimport time\n\ndef worker(num):\n    time.sleep(1)\n    print(f'任务 {num} 完成')\n\nthreads = []\nfor i in range(3):\n    t = threading.Thread(target=worker, args=(i,))\n    threads.append(t)\n    t.start()\n\nfor t in threads:\n    t.join()\n\nprint('全部完成')",
+    "tags": [
+      "线程",
+      "threading"
+    ]
+  },
+  {
+    "id": "ex_conc_002",
+    "module": "concurrency",
+    "title": "asyncio 基础",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 async/await",
+    "starter_code": "import asyncio\n\nasync def main():\n    print('Hello')\n\n# 运行",
+    "solution": "import asyncio\n\nasync def main():\n    print('Hello')\n    await asyncio.sleep(1)\n    print('World')\n\nasyncio.run(main())",
+    "tags": [
+      "异步",
+      "async"
+    ]
+  },
+  {
+    "id": "ex_conc_003",
+    "module": "concurrency",
+    "title": "asyncio 任务",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "创建多个异步任务",
+    "starter_code": "import asyncio\n\nasync def task(n):\n    await asyncio.sleep(1)\n    return n * 2\n\n# 创建任务",
+    "solution": "import asyncio\n\nasync def task(n):\n    await asyncio.sleep(1)\n    return n * 2\n\nasync def main():\n    results = await asyncio.gather(task(1), task(2), task(3))\n    print(results)\n\nasyncio.run(main())",
+    "tags": [
+      "异步",
+      "gather"
+    ]
+  },
+  {
+    "id": "ex_conc_004",
+    "module": "concurrency",
+    "title": "multiprocessing",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 multiprocessing",
+    "starter_code": "from multiprocessing import Process\n\ndef worker():\n    print('Process')\n\n# 创建进程",
+    "solution": "from multiprocessing import Process\nimport time\n\ndef worker(n):\n    time.sleep(1)\n    print(f'Process {n}')\n\nprocesses = []\nfor i in range(3):\n    p = Process(target=worker, args=(i,))\n    processes.append(p)\n    p.start()\n\nfor p in processes:\n    p.join()\n\nprint('完成')",
+    "tags": [
+      "进程",
+      "multiprocessing"
+    ]
+  },
+  {
+    "id": "ex_conc_005",
+    "module": "concurrency",
+    "title": "concurrent.futures",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 ThreadPoolExecutor",
+    "starter_code": "from concurrent.futures import ThreadPoolExecutor\n\ndef worker(n):\n    return n * 2\n\n# 使用线程池",
+    "solution": "from concurrent.futures import ThreadPoolExecutor\n\ndef worker(n):\n    return n * 2\n\nwith ThreadPoolExecutor(max_workers=3) as executor:\n    results = list(executor.map(worker, [1, 2, 3]))\n    print(results)",
+    "tags": [
+      "线程池",
+      "executor"
+    ]
+  },
+  {
+    "id": "ex_stdlib_001",
+    "module": "standard_library",
+    "title": "datetime",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 datetime 模块",
+    "starter_code": "import datetime\n\n# 获取当前时间",
+    "solution": "import datetime\n\nnow = datetime.datetime.now()\nprint(f'当前时间: {now}')\nprint(f'年份: {now.year}')",
+    "tags": [
+      "datetime",
+      "时间"
+    ]
+  },
+  {
+    "id": "ex_stdlib_002",
+    "module": "standard_library",
+    "title": "collections",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 Counter",
+    "starter_code": "from collections import Counter\n\n# 统计元素",
+    "solution": "from collections import Counter\n\ntext = 'hello world'\ncounter = Counter(text)\nprint(counter)\nprint(counter.most_common(3))",
+    "tags": [
+      "collections",
+      "Counter"
+    ]
+  },
+  {
+    "id": "ex_stdlib_003",
+    "module": "standard_library",
+    "title": "itertools",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 itertools",
+    "starter_code": "import itertools\n\n# 生成排列",
+    "solution": "import itertools\n\n# permutations 排列\nfor p in itertools.permutations('AB', 2):\n    print(''.join(p))\n\n# combinations 组合\nfor c in itertools.combinations('ABC', 2):\n    print(''.join(c))",
+    "tags": [
+      "itertools",
+      "排列组合"
+    ]
+  },
+  {
+    "id": "ex_stdlib_004",
+    "module": "standard_library",
+    "title": "functools",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 functools.lru_cache",
+    "starter_code": "from functools import lru_cache\n\n@lru_cache()\ndef fib(n):\n    if n < 2:\n        return n\n    return fib(n-1) + fib(n-2)\n\n# 计算斐波那契",
+    "solution": "from functools import lru_cache\n\n@lru_cache(maxsize=None)\ndef fib(n):\n    if n < 2:\n        return n\n    return fib(n-1) + fib(n-2)\n\nprint(fib(10))",
+    "tags": [
+      "functools",
+      "缓存"
+    ]
+  },
+  {
+    "id": "ex_stdlib_005",
+    "module": "standard_library",
+    "title": "random",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 random 模块",
+    "starter_code": "import random\n\n# 随机数",
+    "solution": "import random\n\n# 随机整数\nprint(random.randint(1, 10))\n\n# 随机选择\nprint(random.choice(['a', 'b', 'c']))\n\n# 随机打乱\nlst = [1, 2, 3, 4, 5]\nrandom.shuffle(lst)\nprint(lst)",
+    "tags": [
+      "random",
+      "随机"
+    ]
+  },
+  {
+    "id": "ex_third_001",
+    "module": "third_party_libraries",
+    "title": "requests",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 requests 发送请求",
+    "starter_code": "import requests\n\n# GET 请求",
+    "solution": "import requests\n\nresponse = requests.get('https://httpbin.org/get')\nprint(f'状态码: {response.status_code}')\nprint(response.json())",
+    "tags": [
+      "requests",
+      "HTTP"
+    ]
+  },
+  {
+    "id": "ex_third_002",
+    "module": "third_party_libraries",
+    "title": "numpy 基础",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 numpy 数组",
+    "starter_code": "import numpy as np\n\n# 创建数组",
+    "solution": "import numpy as np\n\narr = np.array([1, 2, 3, 4, 5])\nprint(arr * 2)\nprint(arr.mean())\nprint(arr.sum())",
+    "tags": [
+      "numpy",
+      "数组"
+    ]
+  },
+  {
+    "id": "ex_third_003",
+    "module": "third_party_libraries",
+    "title": "pandas 基础",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 pandas DataFrame",
+    "starter_code": "import pandas as pd\n\n# 创建 DataFrame",
+    "solution": "import pandas as pd\n\ndf = pd.DataFrame({\n    'name': ['Alice', 'Bob'],\n    'age': [25, 30]\n})\nprint(df)\nprint(df.describe())",
+    "tags": [
+      "pandas",
+      "DataFrame"
+    ]
+  },
+  {
+    "id": "ex_third_004",
+    "module": "third_party_libraries",
+    "title": "virtualenv",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "创建虚拟环境",
+    "starter_code": "# 创建虚拟环境命令",
+    "solution": "# 创建虚拟环境\npython -m venv myenv\n\n# 激活\n# Windows: myenv\\Scripts\\activate\n# Linux/Mac: source myenv/bin/activate\n\n# 安装包\npip install requests",
+    "tags": [
+      "virtualenv",
+      "环境"
+    ]
+  },
+  {
+    "id": "ex_third_005",
+    "module": "third_party_libraries",
+    "title": "pip 常用命令",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "pip 常用操作",
+    "starter_code": "# pip 命令",
+    "solution": "# 安装包\npip install requests\n\n# 列出已安装的包\npip list\n\n# 查看包信息\npip show requests\n\n# 导出依赖\npip freeze > requirements.txt\n\n# 从文件安装\npip install -r requirements.txt",
+    "tags": [
+      "pip",
+      "包管理"
+    ]
+  },
+  {
+    "id": "ex_ai_agent_001",
+    "module": "ai_agent",
+    "title": "AI Agent 基础",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "创建一个简单的 AI Agent 类，包含感知、决策、执行方法",
+    "starter_code": "class AIAgent:\n    def __init__(self, name):\n        self.name = name\n        # 初始化\n\n    def perceive(self, environment):\n        # 感知环境\n        pass\n\n    def decide(self):\n        # 决策\n        pass\n\n    def act(self):\n        # 执行\n        pass",
+    "solution": "class AIAgent:\n    def __init__(self, name):\n        self.name = name\n        self.state = {}\n        print(f'Agent {self.name} 已创建')\n    \n    def perceive(self, environment):\n        self.state['observation'] = environment\n        print(f'感知: {environment}')\n    \n    def decide(self):\n        obs = self.state.get('observation', '')\n        if 'help' in obs.lower():\n            action = '提供帮助'\n        else:\n            action = '继续观察'\n        self.state['action'] = action\n        return action\n    \n    def act(self):\n        action = self.state.get('action')\n        print(f'执行: {action}')\n        return action\n\n# 测试\tagent = AIAgent('助手')\nagent.perceive('用户需要帮助')\nagent.decide()\nagent.act()",
+    "tags": [
+      "AI Agent",
+      "基础"
+    ]
+  },
+  {
+    "id": "ex_ai_agent_002",
+    "module": "ai_agent",
+    "title": "实现 ReAct 提示",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "模拟 ReAct (Reasoning + Acting) 提示过程",
+    "starter_code": "# 模拟 ReAct 循环\ndef react_loop(question, max_steps=3):\n    # 实现推理+行动循环\n    pass",
+    "solution": "def react_loop(question, max_steps=3):\n    thoughts = []\n    actions = []\n    observations = []\n    \n    for step in range(max_steps):\n        # 推理\n        if step == 0:\n            thought = f'问题: {question}，我需要先理解问题'\n        else:\n            thought = f'基于上一步结果继续推理'\n        thoughts.append(thought)\n        \n        # 行动（模拟）\n        action = f'搜索相关资料 (步骤{step+1})'\n        actions.append(action)\n        \n        # 观察结果\n        observation = f'找到相关答案片段{step+1}'\n        observations.append(observation)\n        \n        print(f'步骤 {step+1}:')\n        print(f'  推理: {thought}')\n        print(f'  行动: {action}')\n        print(f'  观察: {observation}')\n        print()\n    \n    return '最终答案'\n\n# 测试\nresult = react_loop('Python中如何处理异常？')\nprint(f'最终结果: {result}')",
+    "tags": [
+      "ReAct",
+      "推理"
+    ]
+  },
+  {
+    "id": "ex_ai_agent_003",
+    "module": "ai_agent",
+    "title": "Agent 记忆系统",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现 Agent 的短期记忆和长期记忆",
+    "starter_code": "class AgentMemory:\n    def __init__(self):\n        self.short_term = []  # 短期记忆\n        self.long_term = {}   # 长期记忆\n    \n    def add_short(self, item):\n        # 添加短期记忆\n        pass\n\n    def add_long(self, key, value):\n        # 添加长期记忆\n        pass\n\n    def recall(self, key):\n        # 回忆\n        pass",
+    "solution": "class AgentMemory:\n    def __init__(self, short_capacity=5):\n        self.short_capacity = short_capacity\n        self.short_term = []\n        self.long_term = {}\n    \n    def add_short(self, item):\n        self.short_term.append(item)\n        if len(self.short_term) > self.short_capacity:\n            self.short_term.pop(0)\n        print(f'短期记忆: {self.short_term}')\n    \n    def add_long(self, key, value):\n        self.long_term[key] = value\n        print(f'长期记忆已保存: {key}')\n    \n    def recall(self, key):\n        result = self.long_term.get(key, '未找到')\n        print(f'回忆 {key}: {result}')\n        return result\n\n# 测试\nmemory = AgentMemory()\nmemory.add_short('用户说hello')\nmemory.add_short('用户问Python问题')\nmemory.add_long('Python', '一种编程语言')\nmemory.recall('Python')",
+    "tags": [
+      "记忆",
+      "Agent"
+    ]
+  },
+  {
+    "id": "ex_ai_agent_004",
+    "module": "ai_agent",
+    "title": "CoT 提示实现",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现 Chain of Thought 提示，展示推理过程",
+    "starter_code": "def chain_of_thought(question):\n    # 实现 CoT\n    pass",
+    "solution": "def chain_of_thought(question):\n    steps = []\n    \n    # 步骤1: 理解问题\n    steps.append(f'理解问题: {question}')\n    \n    # 步骤2: 分析问题\n    if '计算' in question or '+' in question or '-' in question:\n        steps.append('识别: 这是一个数学计算问题')\n    elif '什么' in question or '如何' in question:\n        steps.append('识别: 这是一个知识问答问题')\n    \n    # 步骤3: 推理过程\n    steps.append('开始逐步推理...')\n    \n    # 步骤4: 得出结论\n    steps.append('基于以上推理，得出结论')\n    \n    return steps\n\n# 测试\nquestion = '5 + 3 等于几？'\nfor step in chain_of_thought(question):\n    print(step)",
+    "tags": [
+      "CoT",
+      "提示"
+    ]
+  },
+  {
+    "id": "ex_ai_agent_005",
+    "module": "ai_agent",
+    "title": "简单 Agent 工具调用",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现 Agent 自主调用工具的能力",
+    "starter_code": "class SimpleAgent:\n    def __init__(self):\n        self.tools = {}\n    \n    def register_tool(self, name, func):\n        # 注册工具\n        pass\n    \n    def use_tool(self, tool_name, args):\n        # 使用工具\n        pass",
+    "solution": "class SimpleAgent:\n    def __init__(self):\n        self.tools = {}\n    \n    def register_tool(self, name, func, description=''):\n        self.tools[name] = {\n            'func': func,\n            'description': description\n        }\n        print(f'注册工具: {name}')\n    \n    def use_tool(self, tool_name, args):\n        if tool_name not in self.tools:\n            return f'工具不存在: {tool_name}'\n        \n        tool = self.tools[tool_name]\n        result = tool['func'](**args)\n        return result\n    \n    def plan_and_execute(self, goal):\n        # 简单规划\n        print(f'目标: {goal}')\n        \n        if '计算' in goal:\n            return self.use_tool('calculator', {'a': 10, 'b': 5})\n        elif '天气' in goal:\n            return self.use_tool('weather', {'city': '北京'})\n        else:\n            return '无法理解目标'\n\n# 测试\nagent = SimpleAgent()\nagent.register_tool('calculator', lambda a, b: a + b, '计算两个数的和')\nagent.register_tool('weather', lambda city: f'{city} 天气: 晴', '查询天气')\nprint(agent.plan_and_execute('计算10+5'))\nprint(agent.plan_and_execute('查询北京天气'))",
+    "tags": [
+      "工具调用",
+      "Agent"
+    ]
+  },
+  {
+    "id": "ex_mcp_protocol_001",
+    "module": "mcp_protocol",
+    "title": "MCP 工具定义",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "定义一个 MCP 工具的 JSON 结构",
+    "starter_code": "# 定义 MCP 工具\ntool = {\n    'name': 'calculate',\n    # 添加描述和参数\n}",
+    "solution": "# 定义 MCP 工具\ntool = {\n    'name': 'calculate',\n    'description': '执行简单的数学计算',\n    'inputSchema': {\n        'type': 'object',\n        'properties': {\n            'expression': {\n                'type': 'string',\n                'description': '要计算的数学表达式，如 2+3*4'\n            }\n        },\n        'required': ['expression']\n    }\n}\n\nimport json\nprint(json.dumps(tool, indent=2, ensure_ascii=False))",
+    "tags": [
+      "MCP",
+      "工具"
+    ]
+  },
+  {
+    "id": "ex_mcp_protocol_002",
+    "module": "mcp_protocol",
+    "title": "JSON-RPC 消息构建",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "构建 MCP 协议的 JSON-RPC 消息",
+    "starter_code": "def create_jsonrpc_request(method, params=None, req_id=1):\n    # 构建 JSON-RPC 请求\n    pass",
+    "solution": "import json\n\ndef create_jsonrpc_request(method, params=None, req_id=1):\n    request = {\n        'jsonrpc': '2.0',\n        'id': req_id,\n        'method': method\n    }\n    if params:\n        request['params'] = params\n    return request\n\n# 测试工具列表请求\nrequest = create_jsonrpc_request('tools/list')\nprint(json.dumps(request, indent=2))\n\n# 测试工具调用请求\nrequest = create_jsonrpc_request(\n    'tools/call',\n    params={'name': 'calculate', 'arguments': {'expression': '2+3'}},\n    req_id=2\n)\nprint(json.dumps(request, indent=2))",
+    "tags": [
+      "JSON-RPC",
+      "MCP"
+    ]
+  },
+  {
+    "id": "ex_mcp_protocol_003",
+    "module": "mcp_protocol",
+    "title": "MCP 资源定义",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "定义 MCP 资源并实现读取",
+    "starter_code": "# MCP 资源定义\nresource = {\n    'uri': 'file:///config/app.json',\n    'name': 'app_config',\n    # 添加描述和类型\n}\n\ndef read_resource(uri):\n    # 实现读取\n    pass",
+    "solution": "import json\n\n# MCP 资源定义\nresources = [\n    {\n        'uri': 'file:///config/app.json',\n        'name': 'app_config',\n        'description': '应用程序配置文件',\n        'mimeType': 'application/json'\n    },\n    {\n        'uri': 'file:///docs/README.md',\n        'name': 'readme',\n        'description': '项目说明文档',\n        'mimeType': 'text/markdown'\n    }\n]\n\ndef read_resource(uri):\n    if uri == 'file:///config/app.json':\n        return json.dumps({'app': 'Python Tutorial', 'version': '1.0'})\n    return '资源不存在'\n\n# 测试\nfor res in resources:\n    print(f\"资源: {res['name']}\")\n    if res['name'] == 'app_config':\n        print(f\"内容: {read_resource(res['uri'])}\")\n    print()",
+    "tags": [
+      "MCP",
+      "资源"
+    ]
+  },
+  {
+    "id": "ex_mcp_protocol_004",
+    "module": "mcp_protocol",
+    "title": "MCP 提示模板",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "定义和使用 MCP 提示模板",
+    "starter_code": "# 定义提示模板\ndef render_prompt(template, **kwargs):\n    # 渲染提示模板\n    pass\n\n# 代码审查模板\ntemplate = \"\"\"\n请审查以下 {{language}} 代码：\n\n```{{language}}\n{{code}}\n```\n\n请指出问题并提供改进建议。\n\"\"\"",
+    "solution": "# 定义提示模板\ndef render_prompt(template, **kwargs):\n    try:\n        return template.format(**kwargs)\n    except KeyError as e:\n        return f'缺少参数: {e}'\n\n\n# 代码审查模板\ncode_review_template = \"\"\"\n请审查以下 {{language}} 代码：\n\n```{{language}}\ndef {{function_name}}():\n    {{code}}\n```\n\n请指出：\n1. 代码风格问题\n2. 潜在的性能问题\n3. 安全风险（如有）\n4. 改进建议\n\"\"\"\n\n# 测试渲染\nprompt = render_prompt(\n    code_review_template,\n    language='Python',\n    function_name='calculate',\n    code='result=eval(input())'\n)\n\nprint(prompt)",
+    "tags": [
+      "MCP",
+      "提示模板"
+    ]
+  },
+  {
+    "id": "ex_mcp_protocol_005",
+    "module": "mcp_protocol",
+    "title": "MCP 架构模拟",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "模拟 MCP 的主机-客户端-服务器架构",
+    "starter_code": "# 模拟 MCP 架构\nclass MCPHost:\n    pass\n\nclass MCPClient:\n    pass\n\nclass MCPServer:\n    pass",
+    "solution": "class MCPServer:\n    \"\"\"MCP 服务器\"\"\"\n    def __init__(self, name):\n        self.name = name\n        self.tools = {}\n        print(f'服务器 {name} 启动')\n    \n    def register_tool(self, tool):\n        self.tools[tool['name']] = tool\n    \n    def list_tools(self):\n        return list(self.tools.values())\n    \n    def call_tool(self, name, args):\n        if name in self.tools:\n            # 简化：直接返回参数\n            return f'执行 {name}: {args}'\n        return '工具不存在'\n\nclass MCPClient:\n    \"\"\"MCP 客户端\"\"\"\n    def __init__(self, server):\n        self.server = server\n    \n    def list_tools(self):\n        return self.server.list_tools()\n    \n    def call_tool(self, name, args):\n        return self.server.call_tool(name, args)\n\nclass MCPHost:\n    \"\"\"MCP 主机\"\"\"\n    def __init__(self):\n        self.server = MCPServer('MyServer')\n        self.client = MCPClient(self.server)\n    \n    def process(self, request):\n        # 处理请求\n        print(f'处理请求: {request}')\n        result = self.client.call_tool('calculate', request)\n        return result\n\n# 测试\nhost = MCPHost()\nhost.server.register_tool({'name': 'calculate', 'description': '计算器'})\nprint(f'可用工具: {host.client.list_tools()}')\nresult = host.process({'expression': '2+3'})\nprint(f'结果: {result}')",
+    "tags": [
+      "MCP",
+      "架构"
+    ]
+  },
+  {
+    "id": "ex_mcp_server_001",
+    "module": "mcp_server",
+    "title": "基础 MCP 服务器",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "创建一个简单的 MCP 服务器框架",
+    "starter_code": "class MCPServer:\n    def __init__(self, name):\n        self.name = name\n        self.tools = {}\n    \n    def on_list_tools(self):\n        # 返回工具列表\n        pass\n    \n    def on_call_tool(self, name, args):\n        # 调用工具\n        pass\n    \n    def run(self):\n        print(f'{self.name} 运行中...')",
+    "solution": "class SimpleMCPServer:\n    \"\"\"简单 MCP 服务器\"\"\"\n    def __init__(self, name='SimpleServer'):\n        self.name = name\n        self.tools = {}\n        self._register_default_tools()\n    \n    def _register_default_tools(self):\n        self.tools = {\n            'greet': self._greet,\n            'echo': self._echo,\n            'status': self._status\n        }\n    \n    def _greet(self, name='World'):\n        return f'Hello, {name}!'\n    \n    def _echo(self, message=''):\n        return f'ECHO: {message}'\n    \n    def _status(self):\n        return f'Server: {self.name}, Tools: {len(self.tools)}'\n    \n    def on_list_tools(self):\n        \"\"\"列出工具\"\"\"\n        return [\n            {'name': name, 'description': func.__doc__ or '无描述'}\n            for name, func in self.tools.items()\n        ]\n    \n    def on_call_tool(self, name, args):\n        \"\"\"调用工具\"\"\"\n        if name in self.tools:\n            try:\n                return self.tools[name](**args)\n            except Exception as e:\n                return f'错误: {str(e)}'\n        return f'工具不存在: {name}'\n    \n    def run(self):\n        print(f'🖥️  {self.name} 启动')\n        print(f'已注册 {len(self.tools)} 个工具')\n        print('工具列表:')\n        for tool in self.on_list_tools():\n            print(f'  - {tool[\"name\"]}: {tool[\"description\"]}')\n\n# 测试\nserver = SimpleMCPServer()\nserver.run()\nprint()\nprint('调用测试:')\nprint(server.on_call_tool('greet', {'name': 'Alice'}))\nprint(server.on_call_tool('echo', {'message': 'Test'}))\nprint(server.on_call_tool('status', {}))",
+    "tags": [
+      "MCP Server",
+      "基础"
+    ]
+  },
+  {
+    "id": "ex_mcp_server_002",
+    "module": "mcp_server",
+    "title": "MCP 服务器工具注册",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现动态工具注册功能",
+    "starter_code": "class ToolRegistry:\n    def __init__(self):\n        self.tools = {}\n    \n    def register(self, name, handler, description=''):\n        # 注册工具\n        pass\n    \n    def unregister(self, name):\n        # 注销工具\n        pass\n    \n    def list_tools(self):\n        # 列出工具\n        pass",
+    "solution": "class ToolRegistry:\n    \"\"\"工具注册表\"\"\"\n    def __init__(self):\n        self.tools = {}\n    \n    def register(self, name, handler, description=''):\n        self.tools[name] = {\n            'handler': handler,\n            'description': description\n        }\n        print(f'✓ 注册工具: {name}')\n    \n    def unregister(self, name):\n        if name in self.tools:\n            del self.tools[name]\n            print(f'✓ 注销工具: {name}')\n        else:\n            print(f'工具不存在: {name}')\n    \n    def list_tools(self):\n        return [\n            {'name': name, 'description': info['description']}\n            for name, info in self.tools.items()\n        ]\n\n# 测试\nregistry = ToolRegistry()\n\n# 注册工具\ndef add(a, b):\n    '''计算两个数的和'''\n    return a + b\n\ndef multiply(a, b):\n    '''计算两个数的积'''\n    return a * b\n\ndef to_upper(text):\n    '''转换为大写'''\n    return text.upper()\n\nregistry.register('add', add, '计算两个数的和')\nregistry.register('multiply', multiply, '计算两个数的积')\nregistry.register('to_upper', to_upper, '文本转大写')\n\n# 列出工具\nprint()\nprint('工具列表:')\nfor tool in registry.list_tools():\n    print(f'  - {tool[\"name\"]}: {tool[\"description\"]}')\n\n# 注销工具\nprint()\nregistry.unregister('multiply')",
+    "tags": [
+      "MCP Server",
+      "工具注册"
+    ]
+  },
+  {
+    "id": "ex_custom_skill_001",
+    "module": "custom_skill",
+    "title": "Skill 配置定义",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "创建 Skill 的 SKILL.md 配置文件",
+    "starter_code": "# Skill 配置\nskill_config = {\n    'name': 'my_skill',\n    # 添加其他配置\n}",
+    "solution": "# Skill 配置文件示例\nskill_config = '''\n---\nname: data_processor\ntitle: 数据处理\ndescription: 提供数据处理、转换和分析能力\nversion: 1.0.0\nauthor: MCP Team\nlocation: plugin\ntrigger: 数据|处理|转换|分析\n---\n\ncapabilities:\n  tools:\n    - name: process_csv\n      description: 处理CSV文件\n      script: tools/processor.py\n      function: process_csv\n    \n    - name: convert_format\n      description: 转换数据格式\n      script: tools/converter.py\n      function: convert_format\n\n  workflows:\n    - name: data_pipeline\n      description: 完整数据处理流水线\n      script: workflows/pipeline.py\n'''\n\nprint(skill_config)",
+    "tags": [
+      "Skill",
+      "配置"
+    ]
+  },
+  {
+    "id": "ex_custom_skill_002",
+    "module": "custom_skill",
+    "title": "Skill 工具开发",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "在 Skill 中实现可调用的工具函数",
+    "starter_code": "# Skill 工具函数\ndef process_data(data, mode='default'):\n    '''处理数据的工具函数'''\n    # 实现\n    pass\n\ndef transform_format(data, target='json'):\n    '''格式转换工具'''\n    # 实现\n    pass",
+    "solution": "import json\n\ndef process_data(data, mode='default'):\n    '''\n    数据处理工具\n    \n    参数:\n        data: 输入数据\n        mode: 处理模式 (default/advanced)\n    \n    返回:\n        处理后的数据\n    '''\n    if mode == 'default':\n        return f'默认处理: {data}'\n    elif mode == 'advanced':\n        return f'高级处理: {data.upper()} * 2'\n    return data\n\ndef transform_format(data, target='json'):\n    '''\n    格式转换工具\n    \n    参数:\n        data: 输入数据\n        target: 目标格式 (json/csv/text)\n    '''\n    if target == 'json':\n        return json.dumps(data, ensure_ascii=False)\n    elif target == 'csv':\n        if isinstance(data, list):\n            return ','.join(str(v) for v in data)\n        return str(data)\n    return str(data)\n\n# 测试\nprint(process_data('hello', 'default'))\nprint(process_data('hello', 'advanced'))\nprint()\nprint(transform_format({'name': 'test'}, 'json'))\nprint(transform_format([1, 2, 3], 'csv'))",
+    "tags": [
+      "Skill",
+      "工具"
+    ]
+  },
+  {
+    "id": "ex_multi_agent_001",
+    "module": "multi_agent",
+    "title": "基础 Agent 实现",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "创建一个能收发消息的基础 Agent",
+    "starter_code": "class BaseAgent:\n    def __init__(self, agent_id, name):\n        self.agent_id = agent_id\n        self.name = name\n        self.inbox = []\n        self.outbox = []\n    \n    def receive(self, message):\n        # 接收消息\n        pass\n    \n    def send(self, receiver, message):\n        # 发送消息\n        pass\n    \n    def process(self):\n        # 处理消息\n        pass",
+    "solution": "class BaseAgent:\n    \"\"\"基础 Agent\"\"\"\n    def __init__(self, agent_id, name):\n        self.agent_id = agent_id\n        self.name = name\n        self.inbox = []\n        self.outbox = []\n    \n    def receive(self, message):\n        self.inbox.append(message)\n        print(f'📥 {self.name} 收到消息: {message.get(\"type\")}')\n    \n    def send(self, receiver, message):\n        message['from'] = self.agent_id\n        message['to'] = receiver.agent_id\n        self.outbox.append(message)\n        print(f'📤 {self.name} 发送消息给 {receiver.name}')\n    \n    def process(self):\n        while self.inbox:\n            message = self.inbox.pop(0)\n            print(f'🔄 {self.name} 处理: {message}')\n            # 简单处理：返回确认\n            self.outbox.append({\n                'type': 'response',\n                'content': f'已处理: {message.get(\"content\")}'\n            })\n\n# 测试\nalice = BaseAgent('agent1', 'Alice')\nbob = BaseAgent('agent2', 'Bob')\n\n# 发送消息\nalice.send(bob, {'type': 'greeting', 'content': '你好！'})\n\n# Bob 处理消息\nbob.process()\n\nprint(f'Alice 收件箱: {len(alice.inbox)}')\nprint(f'Bob 收件箱: {len(bob.inbox)}')\nprint(f'Alice 发件箱: {len(alice.outbox)}')\nprint(f'Bob 发件箱: {len(bob.outbox)}')",
+    "tags": [
+      "Agent",
+      "通信"
+    ]
+  },
+  {
+    "id": "ex_multi_agent_002",
+    "module": "multi_agent",
+    "title": "任务分配器",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现智能任务分配系统",
+    "starter_code": "class TaskScheduler:\n    def __init__(self):\n        self.agents = {}\n        self.tasks = []\n    \n    def add_agent(self, agent_id, capabilities):\n        # 添加 Agent\n        pass\n    \n    def add_task(self, task):\n        # 添加任务\n        pass\n    \n    def schedule(self):\n        # 分配任务\n        pass",
+    "solution": "class TaskScheduler:\n    \"\"\"任务调度器\"\"\"\n    def __init__(self):\n        self.agents = {}\n        self.tasks = []\n    \n    def add_agent(self, agent_id, capabilities, load=0):\n        self.agents[agent_id] = {\n            'capabilities': capabilities,\n            'load': load\n        }\n        print(f'✓ Agent {agent_id}: {capabilities}')\n    \n    def add_task(self, task_name, required_skill, priority=1):\n        self.tasks.append({\n            'name': task_name,\n            'skill': required_skill,\n            'priority': priority\n        })\n        print(f'+ 任务: {task_name} (需要: {required_skill})')\n    \n    def schedule(self):\n        assignments = []\n        for task in self.tasks:\n            best_agent = None\n            best_score = -1\n            \n            for agent_id, agent in self.agents.items():\n                if task['skill'] in agent['capabilities']:\n                    score = 100 - agent['load']  # 负载越低分数越高\n                    if score > best_score:\n                        best_score = score\n                        best_agent = agent_id\n            \n            if best_agent:\n                assignments.append((best_agent, task))\n                self.agents[best_agent]['load'] += 1\n                print(f'✓ 任务 \"{task[\"name\"]}\" -> {best_agent}')\n            else:\n                print(f'✗ 任务 \"{task[\"name\"]}\" 无可用 Agent')\n        \n        return assignments\n\n# 测试\nscheduler = TaskScheduler()\n\n# 添加 Agent\nscheduler.add_agent('Agent1', ['python', 'data'])\nscheduler.add_agent('Agent2', ['web', 'api'])\nscheduler.add_agent('Agent3', ['python', 'ml'])\n\nprint()\n# 添加任务\nscheduler.add_task('数据分析', 'python')\nscheduler.add_task('Web 开发', 'web')\nscheduler.add_task('机器学习', 'python')\nscheduler.add_task('API 开发', 'api')\n\nprint()\n# 调度\nscheduler.schedule()",
+    "tags": [
+      "Agent",
+      "任务分配"
+    ]
+  },
+  {
+    "id": "ex_multi_agent_003",
+    "module": "multi_agent",
+    "title": "多 Agent 协作工作流",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "实现多 Agent 协同完成复杂任务",
+    "starter_code": "class Workflow:\n    def __init__(self):\n        self.steps = []\n    \n    def add_step(self, agent_role, action):\n        # 添加步骤\n        pass\n    \n    def execute(self, initial_data):\n        # 执行工作流\n        pass",
+    "solution": "class MultiAgentWorkflow:\n    \"\"\"多 Agent 协作工作流\"\"\"\n    def __init__(self, name):\n        self.name = name\n        self.steps = []\n    \n    def add_step(self, agent_role, action):\n        self.steps.append({\n            'role': agent_role,\n            'action': action\n        })\n    \n    def execute(self, context):\n        print(f'🚀 开始执行工作流: {self.name}')\n        print(f'初始数据: {context}')\n        print()\n        \n        results = []\n        current_data = context.copy()\n        \n        for i, step in enumerate(self.steps, 1):\n            print(f'步骤 {i}: {step[\"role\"]} 执行 {step[\"action\"]}')\n            \n            # 模拟执行\n            if step['role'] == 'researcher':\n                result = f'研究发现: {current_data.get(\"topic\", \"N/A\")} 相关资料'\n            elif step['role'] == 'coder':\n                result = f'代码实现: 完成 {current_data.get(\"topic\", \"N/A\")} 功能'\n            elif step['role'] == 'tester':\n                result = '测试通过: 所有用例通过'\n            elif step['role'] == 'writer':\n                result = '文档完成: 完整使用文档'\n            else:\n                result = '未知角色'\n            \n            print(f'  结果: {result}')\n            print()\n            results.append(result)\n            current_data[f'step_{i}'] = result\n        \n        print(f'✅ 工作流完成! 共 {len(results)} 个步骤')\n        return current_data\n\n# 创建工作流\nworkflow = MultiAgentWorkflow('新功能开发')\nworkflow.add_step('researcher', '调研 AI 技术')\nworkflow.add_step('coder', '实现核心功能')\nworkflow.add_step('tester', '测试功能')\nworkflow.add_step('writer', '编写文档')\n\n# 执行\nresult = workflow.execute({'topic': '用户认证'})\nprint(f'最终数据: {result}')",
+    "tags": [
+      "Agent",
+      "工作流"
+    ]
+  },
+  {
+    "id": "ex_langchain_001",
+    "module": "langchain_framework",
+    "title": "LangChain 安装与基础",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 LangChain 创建一个简单的提示模板并格式化",
+    "starter_code": "from langchain.prompts import PromptTemplate\n\n# 创建提示模板\ntemplate = \"请用中文介绍 {topic}\"\n# 创建 PromptTemplate 对象\n# 格式化模板",
+    "solution": "from langchain.prompts import PromptTemplate\n\ntemplate = \"请用中文介绍 {topic}\"\nprompt = PromptTemplate(template=template, input_variables=[\"topic\"])\nresult = prompt.format(topic=\"Python 编程\")\nprint(result)",
+    "tags": [
+      "LangChain",
+      "PromptTemplate"
+    ]
+  },
+  {
+    "id": "ex_langchain_002",
+    "module": "langchain_framework",
+    "title": "消息类型使用",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 LangChain 的消息类型构建对话",
+    "starter_code": "from langchain.schema import HumanMessage, AIMessage, SystemMessage\n\n# 创建一组对话消息\nmessages = [\n    # system 消息\n    # human 消息\n    # ai 消息\n]\nfor msg in messages:\n    print(type(msg).__name__, ':', msg.content)",
+    "solution": "from langchain.schema import HumanMessage, AIMessage, SystemMessage\n\nmessages = [\n    SystemMessage(content='你是一个 Python 教学助手'),\n    HumanMessage(content='什么是列表推导式？'),\n    AIMessage(content='列表推导式是一种简洁的构建列表的语法。')\n]\nfor msg in messages:\n    print(type(msg).__name__, ':', msg.content)",
+    "tags": [
+      "LangChain",
+      "消息"
+    ]
+  },
+  {
+    "id": "ex_langchain_003",
+    "module": "langchain_framework",
+    "title": "OutputParser 使用",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 StrOutputParser 解析模型输出",
+    "starter_code": "# 模拟 LangChain 输出解析器的用法\nclass MockModel:\n    def invoke(self, prompt):\n        return type('obj', (object,), {'content': f'回答: {prompt}'})()\n\nclass StrOutputParser:\n    def invoke(self, model_output):\n        # 提取内容\n        pass\n\n# 组合使用",
+    "solution": "class MockModel:\n    def invoke(self, prompt):\n        return type('obj', (object,), {'content': f'回答: {prompt}'})()\n\nclass StrOutputParser:\n    def invoke(self, model_output):\n        return model_output.content\n\nmodel = MockModel()\nparser = StrOutputParser()\n\nresult = model.invoke('Python 是什么？')\noutput = parser.invoke(result)\nprint(output)",
+    "tags": [
+      "LangChain",
+      "OutputParser"
+    ]
+  },
+  {
+    "id": "ex_langchain_004",
+    "module": "langchain_framework",
+    "title": "Chain 链接",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现一个简单的 Chain，将提示模板和模型链接起来",
+    "starter_code": "# 模拟 LangChain Chain\nclass SimpleChain:\n    def __init__(self, prompt, model):\n        self.prompt = prompt\n        self.model = model\n    \n    def invoke(self, inputs):\n        # 格式化提示并调用模型\n        pass",
+    "solution": "class MockPrompt:\n    def __init__(self, template):\n        self.template = template\n    def format(self, **kwargs):\n        result = self.template\n        for k, v in kwargs.items():\n            result = result.replace('{' + k + '}', str(v))\n        return result\n\nclass MockModel:\n    def invoke(self, text):\n        return f'[模型回答] {text}'\n\nclass SimpleChain:\n    def __init__(self, prompt, model):\n        self.prompt = prompt\n        self.model = model\n    \n    def invoke(self, inputs):\n        formatted = self.prompt.format(**inputs)\n        return self.model.invoke(formatted)\n\nchain = SimpleChain(\n    MockPrompt('请介绍{topic}'),\n    MockModel()\n)\nresult = chain.invoke({'topic': 'Python'})\nprint(result)",
+    "tags": [
+      "LangChain",
+      "Chain"
+    ]
+  },
+  {
+    "id": "ex_langchain_005",
+    "module": "langchain_framework",
+    "title": "Memory 记忆",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现对话记忆功能，保存并加载历史对话",
+    "starter_code": "class ConversationMemory:\n    def __init__(self):\n        self.history = []\n    \n    def add(self, role, content):\n        # 添加消息\n        pass\n    \n    def get_history(self):\n        # 返回历史\n        pass\n    \n    def clear(self):\n        # 清空历史\n        pass",
+    "solution": "class ConversationMemory:\n    def __init__(self):\n        self.history = []\n    \n    def add(self, role, content):\n        self.history.append({'role': role, 'content': content})\n    \n    def get_history(self):\n        return self.history\n    \n    def get_context(self):\n        return '\\n'.join([f\"{m['role']}: {m['content']}\" for m in self.history])\n    \n    def clear(self):\n        self.history = []\n\nmemory = ConversationMemory()\nmemory.add('user', '你好，介绍一下 Python')\nmemory.add('assistant', 'Python 是一种高级编程语言')\nmemory.add('user', '它有什么特点？')\n\nprint('对话历史:')\nprint(memory.get_context())\nprint('\\n历史条数:', len(memory.get_history()))",
+    "tags": [
+      "LangChain",
+      "Memory"
+    ]
+  },
+  {
+    "id": "ex_langchain_006",
+    "module": "langchain_framework",
+    "title": "工具定义",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "定义 LangChain 格式的工具函数",
+    "starter_code": "# 定义工具类\nclass Tool:\n    def __init__(self, name, description, func):\n        self.name = name\n        self.description = description\n        self.func = func\n    \n    def run(self, input_str):\n        # 调用工具\n        pass",
+    "solution": "class Tool:\n    def __init__(self, name, description, func):\n        self.name = name\n        self.description = description\n        self.func = func\n    \n    def run(self, input_str):\n        return self.func(input_str)\n\n# 定义工具\ndef search_tool(query):\n    return f'搜索结果: {query}'\n\ndef calc_tool(expr):\n    try:\n        return str(eval(expr))\n    except:\n        return '计算错误'\n\ntools = [\n    Tool('search', '搜索信息', search_tool),\n    Tool('calculator', '数学计算', calc_tool),\n]\n\n# 使用工具\nfor tool in tools:\n    print(f'工具: {tool.name}')\n    print(f'  描述: {tool.description}')\n\nprint(tools[0].run('Python 教程'))\nprint(tools[1].run('2 + 3 * 4'))",
+    "tags": [
+      "LangChain",
+      "Tools"
+    ]
+  },
+  {
+    "id": "ex_langchain_007",
+    "module": "langchain_framework",
+    "title": "文档分割器",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现文本分块功能，模拟 LangChain 的 TextSplitter",
+    "starter_code": "class TextSplitter:\n    def __init__(self, chunk_size=100, overlap=20):\n        self.chunk_size = chunk_size\n        self.overlap = overlap\n    \n    def split(self, text):\n        # 分割文本\n        pass",
+    "solution": "class TextSplitter:\n    def __init__(self, chunk_size=100, overlap=20):\n        self.chunk_size = chunk_size\n        self.overlap = overlap\n    \n    def split(self, text):\n        chunks = []\n        start = 0\n        while start < len(text):\n            end = start + self.chunk_size\n            chunk = text[start:end]\n            chunks.append(chunk)\n            start = end - self.overlap\n        return chunks\n\ntext = 'Python 是一种广泛使用的高级编程语言。它以简洁易读的语法著称，支持多种编程范式，包括面向对象、函数式和过程式编程。Python 有丰富的标准库和第三方库生态系统。' * 5\n\nsplitter = TextSplitter(chunk_size=50, overlap=10)\nchunks = splitter.split(text)\nprint(f'原始文本长度: {len(text)}')\nprint(f'分块数量: {len(chunks)}')\nprint(f'第一块: {chunks[0]}')",
+    "tags": [
+      "LangChain",
+      "TextSplitter"
+    ]
+  },
+  {
+    "id": "ex_langchain_008",
+    "module": "langchain_framework",
+    "title": "LCEL 管道模拟",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "模拟 LangChain LCEL 的管道语法（| 操作符）",
+    "starter_code": "# 实现支持 | 操作符的组件\nclass Runnable:\n    def invoke(self, input):\n        raise NotImplementedError\n    \n    def __or__(self, other):\n        # 实现管道操作\n        pass",
+    "solution": "class Runnable:\n    def invoke(self, input):\n        raise NotImplementedError\n    \n    def __or__(self, other):\n        return RunnableSequence(self, other)\n\nclass RunnableSequence(Runnable):\n    def __init__(self, first, second):\n        self.first = first\n        self.second = second\n    \n    def invoke(self, input):\n        return self.second.invoke(self.first.invoke(input))\n\nclass PromptTemplate(Runnable):\n    def __init__(self, template):\n        self.template = template\n    def invoke(self, inputs):\n        result = self.template\n        for k, v in inputs.items():\n            result = result.replace('{' + k + '}', str(v))\n        return result\n\nclass MockLLM(Runnable):\n    def invoke(self, prompt):\n        return f'[LLM 回答]: {prompt[:30]}...'\n\nclass StrParser(Runnable):\n    def invoke(self, text):\n        return text.strip()\n\n# 使用 LCEL 管道\nchain = PromptTemplate('请介绍 {topic}') | MockLLM() | StrParser()\nresult = chain.invoke({'topic': 'Python'})\nprint(result)",
+    "tags": [
+      "LangChain",
+      "LCEL"
+    ]
+  },
+  {
+    "id": "ex_langchain_009",
+    "module": "langchain_framework",
+    "title": "文档加载模拟",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现文档加载器，从文本生成文档对象",
+    "starter_code": "class Document:\n    def __init__(self, page_content, metadata=None):\n        self.page_content = page_content\n        self.metadata = metadata or {}\n\nclass TextLoader:\n    def __init__(self, text):\n        self.text = text\n    \n    def load(self):\n        # 返回 Document 列表\n        pass",
+    "solution": "class Document:\n    def __init__(self, page_content, metadata=None):\n        self.page_content = page_content\n        self.metadata = metadata or {}\n    def __repr__(self):\n        return f'Document(content={self.page_content[:30]}..., meta={self.metadata})'\n\nclass TextLoader:\n    def __init__(self, text, source='text'):\n        self.text = text\n        self.source = source\n    \n    def load(self):\n        paragraphs = [p.strip() for p in self.text.split('\\n\\n') if p.strip()]\n        return [\n            Document(\n                page_content=para,\n                metadata={'source': self.source, 'index': i}\n            )\n            for i, para in enumerate(paragraphs)\n        ]\n\ntext = '''\nPython 是一种编程语言。\n\nPython 易于学习和使用。\n\nPython 有丰富的库生态系统。\n'''\n\nloader = TextLoader(text, source='intro.txt')\ndocs = loader.load()\nfor doc in docs:\n    print(doc)",
+    "tags": [
+      "LangChain",
+      "文档加载"
+    ]
+  },
+  {
+    "id": "ex_langchain_010",
+    "module": "langchain_framework",
+    "title": "RetrievalQA 模拟",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "模拟 LangChain RetrievalQA 的完整流程",
+    "starter_code": "# 模拟检索问答流程\nclass VectorStore:\n    def __init__(self, docs):\n        self.docs = docs\n    \n    def similarity_search(self, query, k=2):\n        # 简单关键词匹配\n        pass\n\nclass RetrievalQA:\n    def __init__(self, retriever, llm):\n        self.retriever = retriever\n        self.llm = llm\n    \n    def invoke(self, question):\n        # 检索+生成\n        pass",
+    "solution": "class Document:\n    def __init__(self, content):\n        self.page_content = content\n\nclass VectorStore:\n    def __init__(self, docs):\n        self.docs = docs\n    \n    def similarity_search(self, query, k=2):\n        scored = [(doc, sum(1 for w in query.split() if w in doc.page_content)) for doc in self.docs]\n        scored.sort(key=lambda x: x[1], reverse=True)\n        return [doc for doc, _ in scored[:k]]\n\nclass MockLLM:\n    def invoke(self, prompt):\n        return f'基于上下文，回答是：{prompt[:50]}'\n\nclass RetrievalQA:\n    def __init__(self, retriever, llm):\n        self.retriever = retriever\n        self.llm = llm\n    \n    def invoke(self, question):\n        docs = self.retriever.similarity_search(question)\n        context = '\\n'.join([d.page_content for d in docs])\n        prompt = f'上下文: {context}\\n问题: {question}'\n        return self.llm.invoke(prompt)\n\ndocs = [\n    Document('Python 是一种高级编程语言，由 Guido van Rossum 创建'),\n    Document('Python 支持面向对象、函数式和过程式编程'),\n    Document('Java 是一种静态类型的编程语言'),\n]\n\nvs = VectorStore(docs)\nqa = RetrievalQA(vs, MockLLM())\nanswer = qa.invoke('Python 是什么？')\nprint(answer)",
+    "tags": [
+      "LangChain",
+      "RAG",
+      "RetrievalQA"
+    ]
+  },
+  {
+    "id": "ex_vector_001",
+    "module": "vector_databases",
+    "title": "向量创建与表示",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "创建和操作基本向量，计算向量的模长",
+    "starter_code": "import math\n\ndef vector_magnitude(v):\n    # 计算向量的模长\n    pass\n\ndef normalize(v):\n    # 归一化向量\n    pass\n\nv = [3, 4]\nprint('模长:', vector_magnitude(v))\nprint('归一化:', normalize(v))",
+    "solution": "import math\n\ndef vector_magnitude(v):\n    return math.sqrt(sum(x**2 for x in v))\n\ndef normalize(v):\n    mag = vector_magnitude(v)\n    return [x / mag for x in v]\n\nv = [3, 4]\nprint('模长:', vector_magnitude(v))  # 5.0\nprint('归一化:', normalize(v))  # [0.6, 0.8]",
+    "tags": [
+      "向量",
+      "基础"
+    ]
+  },
+  {
+    "id": "ex_vector_002",
+    "module": "vector_databases",
+    "title": "余弦相似度",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "实现余弦相似度计算函数",
+    "starter_code": "import math\n\ndef cosine_similarity(v1, v2):\n    # 计算余弦相似度\n    pass\n\nv1 = [1, 2, 3]\nv2 = [1, 2, 4]\nprint('相似度:', cosine_similarity(v1, v2))",
+    "solution": "import math\n\ndef dot_product(v1, v2):\n    return sum(a * b for a, b in zip(v1, v2))\n\ndef magnitude(v):\n    return math.sqrt(sum(x**2 for x in v))\n\ndef cosine_similarity(v1, v2):\n    dot = dot_product(v1, v2)\n    mag1 = magnitude(v1)\n    mag2 = magnitude(v2)\n    if mag1 == 0 or mag2 == 0:\n        return 0\n    return dot / (mag1 * mag2)\n\nv1 = [1, 2, 3]\nv2 = [1, 2, 4]\nprint(f'相似度: {cosine_similarity(v1, v2):.4f}')\n\n# 相同向量\nprint(f'自身相似度: {cosine_similarity(v1, v1):.4f}')",
+    "tags": [
+      "向量",
+      "余弦相似度"
+    ]
+  },
+  {
+    "id": "ex_vector_003",
+    "module": "vector_databases",
+    "title": "欧氏距离",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "实现欧氏距离和曼哈顿距离",
+    "starter_code": "import math\n\ndef euclidean_distance(v1, v2):\n    # 欧氏距离\n    pass\n\ndef manhattan_distance(v1, v2):\n    # 曼哈顿距离\n    pass\n\nv1 = [0, 0]\nv2 = [3, 4]",
+    "solution": "import math\n\ndef euclidean_distance(v1, v2):\n    return math.sqrt(sum((a - b)**2 for a, b in zip(v1, v2)))\n\ndef manhattan_distance(v1, v2):\n    return sum(abs(a - b) for a, b in zip(v1, v2))\n\nv1 = [0, 0]\nv2 = [3, 4]\nprint(f'欧氏距离: {euclidean_distance(v1, v2):.2f}')  # 5.0\nprint(f'曼哈顿距离: {manhattan_distance(v1, v2)}')  # 7",
+    "tags": [
+      "向量",
+      "距离"
+    ]
+  },
+  {
+    "id": "ex_vector_004",
+    "module": "vector_databases",
+    "title": "简单向量索引",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现一个简单的向量索引，支持添加和搜索",
+    "starter_code": "import math\n\nclass SimpleVectorIndex:\n    def __init__(self):\n        self.vectors = {}\n    \n    def add(self, id, vector, metadata=None):\n        # 添加向量\n        pass\n    \n    def search(self, query_vector, k=3):\n        # 搜索最相似的 k 个向量\n        pass",
+    "solution": "import math\n\ndef cosine_sim(v1, v2):\n    dot = sum(a*b for a, b in zip(v1, v2))\n    m1 = math.sqrt(sum(x**2 for x in v1))\n    m2 = math.sqrt(sum(x**2 for x in v2))\n    return dot / (m1 * m2) if m1 and m2 else 0\n\nclass SimpleVectorIndex:\n    def __init__(self):\n        self.vectors = {}\n    \n    def add(self, id, vector, metadata=None):\n        self.vectors[id] = {'vector': vector, 'metadata': metadata or {}}\n    \n    def search(self, query_vector, k=3):\n        scores = []\n        for id, item in self.vectors.items():\n            sim = cosine_sim(query_vector, item['vector'])\n            scores.append((id, sim, item['metadata']))\n        scores.sort(key=lambda x: x[1], reverse=True)\n        return scores[:k]\n\nindex = SimpleVectorIndex()\nindex.add('python', [1, 0, 0], {'text': 'Python 编程语言'})\nindex.add('java', [0.8, 0.2, 0], {'text': 'Java 编程语言'})\nindex.add('ml', [0, 0.8, 0.6], {'text': '机器学习'})\nindex.add('dl', [0, 0.6, 0.8], {'text': '深度学习'})\n\nresults = index.search([0, 0.7, 0.7], k=2)\nfor id, score, meta in results:\n    print(f'{id}: {score:.3f} - {meta[\"text\"]}')",
+    "tags": [
+      "向量索引",
+      "搜索"
+    ]
+  },
+  {
+    "id": "ex_vector_005",
+    "module": "vector_databases",
+    "title": "简单词向量",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现简单的词袋模型向量化",
+    "starter_code": "def vectorize(texts):\n    # 词袋模型向量化\n    pass\n\ntexts = ['Python 是编程语言', 'Java 是编程语言', 'Python 用于机器学习']",
+    "solution": "from collections import Counter\n\ndef build_vocab(texts):\n    vocab = set()\n    for text in texts:\n        vocab.update(text.split())\n    return sorted(vocab)\n\ndef vectorize(text, vocab):\n    counter = Counter(text.split())\n    return [counter.get(word, 0) for word in vocab]\n\ntexts = ['Python 是 编程语言', 'Java 是 编程语言', 'Python 用于 机器学习']\nvocab = build_vocab(texts)\nprint('词汇表:', vocab)\n\nfor text in texts:\n    vec = vectorize(text, vocab)\n    print(f'{text} -> {vec}')",
+    "tags": [
+      "词向量",
+      "词袋模型"
+    ]
+  },
+  {
+    "id": "ex_vector_006",
+    "module": "vector_databases",
+    "title": "KNN 搜索",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现 K 近邻搜索算法",
+    "starter_code": "def knn_search(query, vectors, k=3):\n    # 找到 query 的 K 个最近邻\n    pass",
+    "solution": "import math\n\ndef euclidean_dist(v1, v2):\n    return math.sqrt(sum((a-b)**2 for a, b in zip(v1, v2)))\n\ndef knn_search(query, vectors, k=3):\n    distances = [(label, euclidean_dist(query, vec)) for label, vec in vectors]\n    distances.sort(key=lambda x: x[1])\n    return distances[:k]\n\n# 测试数据\nvectors = [\n    ('苹果', [1, 0, 0]),\n    ('香蕉', [0.9, 0.1, 0]),\n    ('狗', [0, 1, 0]),\n    ('猫', [0, 0.9, 0.1]),\n    ('汽车', [0, 0, 1]),\n]\n\nquery = [0.95, 0.05, 0]  # 接近苹果的向量\nresults = knn_search(query, vectors, k=2)\nprint('最近邻:')\nfor label, dist in results:\n    print(f'  {label}: {dist:.3f}')",
+    "tags": [
+      "KNN",
+      "搜索"
+    ]
+  },
+  {
+    "id": "ex_vector_007",
+    "module": "vector_databases",
+    "title": "向量数据库操作",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "实现一个带持久化的向量数据库",
+    "starter_code": "import json\n\nclass VectorDB:\n    def __init__(self):\n        self.data = []\n    \n    def insert(self, id, vector, payload):\n        pass\n    \n    def search(self, query, top_k=5):\n        pass\n    \n    def delete(self, id):\n        pass\n    \n    def save(self, path):\n        pass\n    \n    def load(self, path):\n        pass",
+    "solution": "import json\nimport math\n\ndef cosine_sim(v1, v2):\n    dot = sum(a*b for a, b in zip(v1, v2))\n    m1 = math.sqrt(sum(x**2 for x in v1)) or 1\n    m2 = math.sqrt(sum(x**2 for x in v2)) or 1\n    return dot / (m1 * m2)\n\nclass VectorDB:\n    def __init__(self):\n        self.data = []\n    \n    def insert(self, id, vector, payload):\n        self.data.append({'id': id, 'vector': vector, 'payload': payload})\n    \n    def search(self, query, top_k=5):\n        scored = [(item, cosine_sim(query, item['vector'])) for item in self.data]\n        scored.sort(key=lambda x: x[1], reverse=True)\n        return [(item['id'], score, item['payload']) for item, score in scored[:top_k]]\n    \n    def delete(self, id):\n        self.data = [item for item in self.data if item['id'] != id]\n    \n    def save(self, path):\n        with open(path, 'w', encoding='utf-8') as f:\n            json.dump(self.data, f)\n    \n    def load(self, path):\n        with open(path, 'r', encoding='utf-8') as f:\n            self.data = json.load(f)\n\n# 测试\ndb = VectorDB()\ndb.insert('doc1', [1, 0, 0], {'text': 'Python 文档'})\ndb.insert('doc2', [0, 1, 0], {'text': 'Java 文档'})\ndb.insert('doc3', [0.8, 0.2, 0], {'text': 'Python 教程'})\n\nresults = db.search([1, 0, 0], top_k=2)\nfor id, score, payload in results:\n    print(f'{id}: {score:.3f} {payload[\"text\"]}')",
+    "tags": [
+      "向量数据库",
+      "持久化"
+    ]
+  },
+  {
+    "id": "ex_prompt_001",
+    "module": "prompt_engineering",
+    "title": "角色提示",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "编写有效的角色提示（System Prompt）",
+    "starter_code": "def create_system_prompt(role, expertise, style):\n    # 构建角色提示\n    pass\n\nprompt = create_system_prompt('Python 导师', ['算法', '数据结构'], '专业友好')\nprint(prompt)",
+    "solution": "def create_system_prompt(role, expertise, style):\n    expertise_str = ', '.join(expertise)\n    return f\"\"\"你是一位专业的{role}。\n你的专业领域包括：{expertise_str}。\n你的回答风格：{style}。\n当遇到你不确定的问题时，请坦诚说明。\n请始终给出清晰、有条理的回答。\"\"\"\n\nprompt = create_system_prompt('Python 导师', ['算法', '数据结构'], '专业友好')\nprint(prompt)",
+    "tags": [
+      "提示工程",
+      "角色提示"
+    ]
+  },
+  {
+    "id": "ex_prompt_002",
+    "module": "prompt_engineering",
+    "title": "Few-shot 示例",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "构建 Few-shot 提示，通过示例引导模型输出",
+    "starter_code": "def build_few_shot_prompt(task, examples, query):\n    # 构建 few-shot 提示\n    pass\n\nexamples = [\n    ('Python 是什么？', 'Python 是一种高级编程语言，以简洁著称。'),\n    ('Java 是什么？', 'Java 是一种面向对象的编程语言，一次编写到处运行。')\n]\n\nprompt = build_few_shot_prompt('请介绍编程语言', examples, 'JavaScript 是什么？')\nprint(prompt)",
+    "solution": "def build_few_shot_prompt(task, examples, query):\n    prompt = f'任务：{task}\\n\\n示例：\\n'\n    for i, (q, a) in enumerate(examples, 1):\n        prompt += f'问：{q}\\n答：{a}\\n\\n'\n    prompt += f'现在回答以下问题：\\n问：{query}\\n答：'\n    return prompt\n\nexamples = [\n    ('Python 是什么？', 'Python 是一种高级编程语言，以简洁著称。'),\n    ('Java 是什么？', 'Java 是一种面向对象的编程语言，一次编写到处运行。')\n]\n\nprompt = build_few_shot_prompt('请介绍编程语言', examples, 'JavaScript 是什么？')\nprint(prompt)",
+    "tags": [
+      "Few-shot",
+      "提示"
+    ]
+  },
+  {
+    "id": "ex_prompt_003",
+    "module": "prompt_engineering",
+    "title": "CoT 提示",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "构建 Chain of Thought 提示，引导逐步推理",
+    "starter_code": "def cot_prompt(problem, steps_hint=None):\n    # 构建 CoT 提示\n    pass\n\nproblem = '一个班级有 30 名学生，其中 60% 是女生，女生中有 40% 喜欢数学，请问喜欢数学的女生有多少人？'\nprompt = cot_prompt(problem)\nprint(prompt)",
+    "solution": "def cot_prompt(problem, steps_hint=None):\n    prompt = f'请一步步思考以下问题：\\n\\n{problem}\\n\\n'\n    if steps_hint:\n        prompt += '解题步骤提示：\\n'\n        for i, hint in enumerate(steps_hint, 1):\n            prompt += f'{i}. {hint}\\n'\n        prompt += '\\n'\n    prompt += '让我一步步来解：\\n步骤1：'\n    return prompt\n\nproblem = '一个班级有 30 名学生，其中 60% 是女生，女生中有 40% 喜欢数学，喜欢数学的女生有多少人？'\nhints = ['先计算女生总数', '再计算喜欢数学的女生', '得出答案']\nprompt = cot_prompt(problem, hints)\nprint(prompt)",
+    "tags": [
+      "CoT",
+      "推理"
+    ]
+  },
+  {
+    "id": "ex_prompt_004",
+    "module": "prompt_engineering",
+    "title": "输出格式控制",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "编写提示控制模型输出的格式（JSON/Markdown等）",
+    "starter_code": "def format_prompt(task, output_format):\n    # 构建要求特定格式输出的提示\n    pass\n\nprompt = format_prompt('分析 Python 的优缺点', 'json')\nprint(prompt)",
+    "solution": "def format_prompt(task, output_format):\n    format_instructions = {\n        'json': '请以 JSON 格式输出，包含 advantages 和 disadvantages 两个数组字段。',\n        'markdown': '请以 Markdown 格式输出，使用 ## 标题和 - 列表。',\n        'table': '请以 Markdown 表格格式输出，包含 方面、优点、缺点 三列。',\n        'list': '请以编号列表格式输出，清晰列举各点。'\n    }\n    instruction = format_instructions.get(output_format, '请结构化输出。')\n    return f'{task}\\n\\n输出要求：{instruction}\\n\\n输出：'\n\nprompt = format_prompt('分析 Python 的优缺点', 'json')\nprint(prompt)\n\nprompt2 = format_prompt('比较 Python 和 Java', 'table')\nprint(prompt2)",
+    "tags": [
+      "格式控制",
+      "提示"
+    ]
+  },
+  {
+    "id": "ex_prompt_005",
+    "module": "prompt_engineering",
+    "title": "提示模板库",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "构建可复用的提示模板库",
+    "starter_code": "class PromptLibrary:\n    def __init__(self):\n        self.templates = {}\n    \n    def register(self, name, template):\n        pass\n    \n    def render(self, name, **kwargs):\n        pass\n    \n    def list_templates(self):\n        pass",
+    "solution": "class PromptLibrary:\n    def __init__(self):\n        self.templates = {}\n    \n    def register(self, name, template, description=''):\n        self.templates[name] = {'template': template, 'desc': description}\n    \n    def render(self, name, **kwargs):\n        if name not in self.templates:\n            raise ValueError(f'模板不存在: {name}')\n        tpl = self.templates[name]['template']\n        return tpl.format(**kwargs)\n    \n    def list_templates(self):\n        return [(name, info['desc']) for name, info in self.templates.items()]\n\nlibrary = PromptLibrary()\n\nlibrary.register('code_review', '请审查以下 {language} 代码，指出问题和改进建议：\\n```{language}\\n{code}\\n```', '代码审查')\nlibrary.register('translate', '请将以下文本翻译成{target_lang}，保持原意：\\n{text}', '文本翻译')\nlibrary.register('summarize', '请用{max_words}字以内总结以下内容：\\n{content}', '文本摘要')\n\nprint('模板列表:')\nfor name, desc in library.list_templates():\n    print(f'  {name}: {desc}')\n\nprint()\nprint(library.render('translate', target_lang='英文', text='Python 是一种高级编程语言'))",
+    "tags": [
+      "提示模板",
+      "复用"
+    ]
+  },
+  {
+    "id": "ex_rag_001",
+    "module": "rag_architecture",
+    "title": "简单RAG流程",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现一个基础的 RAG（检索增强生成）流程",
+    "starter_code": "class SimpleRAG:\n    def __init__(self):\n        self.knowledge_base = {}\n    \n    def add_document(self, doc_id, text):\n        # 添加文档到知识库\n        pass\n    \n    def retrieve(self, query, k=2):\n        # 简单关键词匹配检索\n        pass\n    \n    def answer(self, question):\n        # 检索 + 生成答案\n        pass",
+    "solution": "class SimpleRAG:\n    def __init__(self):\n        self.knowledge_base = {}\n    \n    def add_document(self, doc_id, text):\n        self.knowledge_base[doc_id] = text\n    \n    def retrieve(self, query, k=2):\n        query_words = set(query.split())\n        scored = []\n        for doc_id, text in self.knowledge_base.items():\n            text_words = set(text.split())\n            score = len(query_words & text_words)\n            scored.append((doc_id, text, score))\n        scored.sort(key=lambda x: x[2], reverse=True)\n        return [(d[0], d[1]) for d in scored[:k]]\n    \n    def answer(self, question):\n        docs = self.retrieve(question)\n        context = ' '.join([text for _, text in docs])\n        return f'基于以下信息回答: {context[:100]}...'\n\nrag = SimpleRAG()\nrag.add_document('d1', 'Python 是一种高级编程语言')\nrag.add_document('d2', 'Python 常用于数据分析和机器学习')\nrag.add_document('d3', 'Java 是企业级开发常用语言')\nprint(rag.answer('Python 用途是什么'))",
+    "tags": [
+      "RAG",
+      "检索增强"
+    ]
+  },
+  {
+    "id": "ex_rag_002",
+    "module": "rag_architecture",
+    "title": "文档分块策略",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现固定大小分块和句子分块两种策略",
+    "starter_code": "def fixed_size_chunk(text, chunk_size=100, overlap=20):\n    # 固定大小分块\n    pass\n\ndef sentence_chunk(text):\n    # 按句子分块\n    pass",
+    "solution": "def fixed_size_chunk(text, chunk_size=100, overlap=20):\n    chunks = []\n    start = 0\n    while start < len(text):\n        end = min(start + chunk_size, len(text))\n        chunks.append(text[start:end])\n        start = end - overlap\n    return chunks\n\ndef sentence_chunk(text):\n    import re\n    sentences = re.split(r'[。！？.!?]', text)\n    return [s.strip() for s in sentences if s.strip()]\n\ntext = 'Python 是一种编程语言。它简单易学。Python 用于机器学习和数据分析。'\nprint('固定分块:', fixed_size_chunk(text, 30, 5))\nprint('句子分块:', sentence_chunk(text))",
+    "tags": [
+      "RAG",
+      "分块"
+    ]
+  },
+  {
+    "id": "ex_rag_003",
+    "module": "rag_architecture",
+    "title": "向量相似度检索",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "基于余弦相似度实现向量检索",
+    "starter_code": "import math\n\nclass VectorRetriever:\n    def __init__(self):\n        self.index = []  # [(id, vector, text)]\n    \n    def add(self, doc_id, vector, text):\n        pass\n    \n    def search(self, query_vector, top_k=3):\n        pass",
+    "solution": "import math\n\ndef cosine_sim(v1, v2):\n    dot = sum(a * b for a, b in zip(v1, v2))\n    mag1 = math.sqrt(sum(x**2 for x in v1))\n    mag2 = math.sqrt(sum(x**2 for x in v2))\n    return dot / (mag1 * mag2 + 1e-9)\n\nclass VectorRetriever:\n    def __init__(self):\n        self.index = []\n    \n    def add(self, doc_id, vector, text):\n        self.index.append((doc_id, vector, text))\n    \n    def search(self, query_vector, top_k=3):\n        scored = [(did, cosine_sim(query_vector, vec), txt) \n                  for did, vec, txt in self.index]\n        scored.sort(key=lambda x: x[1], reverse=True)\n        return scored[:top_k]\n\nretriever = VectorRetriever()\nretriever.add('d1', [1, 0, 0], 'Python 编程')\nretriever.add('d2', [0.9, 0.1, 0], 'Python 教程')\nretriever.add('d3', [0, 1, 0], 'Java 开发')\n\nfor did, score, txt in retriever.search([1, 0, 0], 2):\n    print(f'{did}: {score:.3f} - {txt}')",
+    "tags": [
+      "RAG",
+      "向量检索"
+    ]
+  },
+  {
+    "id": "ex_rag_004",
+    "module": "rag_architecture",
+    "title": "上下文构建",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "将检索到的文档构建为模型上下文",
+    "starter_code": "def build_context(docs, max_length=500):\n    # 将文档列表构建为上下文字符串\n    pass\n\ndef build_prompt(question, context):\n    # 构建包含上下文的提示词\n    pass",
+    "solution": "def build_context(docs, max_length=500):\n    context_parts = []\n    total_len = 0\n    for i, doc in enumerate(docs, 1):\n        part = f'[文档{i}] {doc}'\n        if total_len + len(part) > max_length:\n            break\n        context_parts.append(part)\n        total_len += len(part)\n    return '\\n\\n'.join(context_parts)\n\ndef build_prompt(question, context):\n    return f'''请根据以下参考资料回答问题。\n\n参考资料：\n{context}\n\n问题：{question}\n\n回答：'''\n\ndocs = ['Python 是一种高级语言', 'Python 支持多种编程范式', 'Python 有丰富的库']\nctx = build_context(docs)\nprompt = build_prompt('Python 是什么？', ctx)\nprint(prompt)",
+    "tags": [
+      "RAG",
+      "上下文"
+    ]
+  },
+  {
+    "id": "ex_rag_005",
+    "module": "rag_architecture",
+    "title": "混合检索",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "实现关键词检索与向量检索的混合策略",
+    "starter_code": "class HybridRetriever:\n    def __init__(self):\n        self.docs = []\n    \n    def add(self, doc_id, text, vector):\n        pass\n    \n    def keyword_search(self, query, k=5):\n        pass\n    \n    def vector_search(self, query_vec, k=5):\n        pass\n    \n    def hybrid_search(self, query, query_vec, alpha=0.5, k=5):\n        # 合并两种检索结果\n        pass",
+    "solution": "import math\n\nclass HybridRetriever:\n    def __init__(self):\n        self.docs = []\n    \n    def add(self, doc_id, text, vector):\n        self.docs.append({'id': doc_id, 'text': text, 'vector': vector})\n    \n    def keyword_search(self, query, k=5):\n        qwords = set(query.split())\n        scored = []\n        for doc in self.docs:\n            score = len(qwords & set(doc['text'].split())) / (len(qwords) + 1)\n            scored.append((doc['id'], score))\n        return dict(sorted(scored, key=lambda x: x[1], reverse=True)[:k])\n    \n    def vector_search(self, query_vec, k=5):\n        def cos_sim(v1, v2):\n            dot = sum(a*b for a,b in zip(v1,v2))\n            m = math.sqrt(sum(x*x for x in v1)) * math.sqrt(sum(x*x for x in v2))\n            return dot / (m + 1e-9)\n        scored = [(doc['id'], cos_sim(query_vec, doc['vector'])) for doc in self.docs]\n        return dict(sorted(scored, key=lambda x: x[1], reverse=True)[:k])\n    \n    def hybrid_search(self, query, query_vec, alpha=0.5, k=5):\n        kw = self.keyword_search(query)\n        vec = self.vector_search(query_vec)\n        all_ids = set(kw) | set(vec)\n        fused = {}\n        for did in all_ids:\n            fused[did] = alpha * kw.get(did, 0) + (1-alpha) * vec.get(did, 0)\n        return sorted(fused.items(), key=lambda x: x[1], reverse=True)[:k]\n\nhr = HybridRetriever()\nhr.add('d1', 'Python 编程语言', [1, 0, 0])\nhr.add('d2', 'Python 机器学习', [0.9, 0.1, 0])\nhr.add('d3', 'Java 编程', [0, 1, 0])\nprint(hr.hybrid_search('Python 编程', [1, 0, 0]))",
+    "tags": [
+      "RAG",
+      "混合检索"
+    ]
+  },
+  {
+    "id": "ex_finetune_001",
+    "module": "model_finetuning",
+    "title": "LoRA 原理实现",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "实现 LoRA 的核心思路：低秩矩阵分解",
+    "starter_code": "import numpy as np\n\nclass LoRALayer:\n    def __init__(self, in_dim, out_dim, rank=4, alpha=1.0):\n        # 初始化原始权重和 LoRA 矩阵\n        self.W = np.random.randn(out_dim, in_dim) * 0.01\n        # A 初始化为随机值，B 初始化为零\n        self.A = None\n        self.B = None\n        self.alpha = alpha\n        self.rank = rank\n    \n    def forward(self, x):\n        # W + (alpha/rank) * B @ A\n        pass",
+    "solution": "import numpy as np\n\nclass LoRALayer:\n    def __init__(self, in_dim, out_dim, rank=4, alpha=1.0):\n        self.W = np.random.randn(out_dim, in_dim) * 0.01\n        self.A = np.random.randn(rank, in_dim) * 0.01\n        self.B = np.zeros((out_dim, rank))\n        self.alpha = alpha\n        self.rank = rank\n        self.scale = alpha / rank\n    \n    def forward(self, x):\n        return (self.W + self.scale * self.B @ self.A) @ x\n    \n    def trainable_params(self):\n        return self.A.size + self.B.size\n    \n    def total_params(self):\n        return self.W.size\n\nlayer = LoRALayer(512, 256, rank=8)\nx = np.random.randn(512)\nout = layer.forward(x)\nprint(f'输出形状: {out.shape}')\nprint(f'全参数量: {layer.total_params()}')\nprint(f'LoRA参数量: {layer.trainable_params()}')\nprint(f'参数压缩比: {layer.trainable_params()/layer.total_params():.2%}')",
+    "tags": [
+      "LoRA",
+      "微调"
+    ]
+  },
+  {
+    "id": "ex_finetune_002",
+    "module": "model_finetuning",
+    "title": "数据集构建",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "构建 Instruction Tuning 格式的训练数据",
+    "starter_code": "def build_instruction_dataset(raw_data):\n    # 将原始数据转换为指令微调格式\n    # 格式: {'instruction': ..., 'input': ..., 'output': ...}\n    pass\n\nraw_data = [\n    ('什么是列表推导式？', '列表推导式是一种快速创建列表的方式'),\n    ('如何处理Python异常？', '使用 try-except 语句捕获异常')\n]",
+    "solution": "def build_instruction_dataset(raw_data, system='你是一个Python教学助手'):\n    dataset = []\n    for question, answer in raw_data:\n        item = {\n            'instruction': question,\n            'input': '',\n            'output': answer,\n            'system': system,\n            'history': []\n        }\n        dataset.append(item)\n    return dataset\n\ndef format_prompt(item):\n    prompt = f'[INST] <<SYS>>\\n{item[\"system\"]}\\n<</SYS>>\\n\\n{item[\"instruction\"]}'\n    if item['input']:\n        prompt += f'\\n\\n输入：{item[\"input\"]}'\n    prompt += ' [/INST]'\n    return prompt\n\nraw_data = [\n    ('什么是列表推导式？', '列表推导式是一种快速创建列表的方式'),\n    ('如何处理Python异常？', '使用 try-except 语句捕获异常')\n]\ndataset = build_instruction_dataset(raw_data)\nfor item in dataset:\n    print(format_prompt(item))\n    print(f'输出: {item[\"output\"]}')\n    print()",
+    "tags": [
+      "数据集",
+      "微调"
+    ]
+  },
+  {
+    "id": "ex_finetune_003",
+    "module": "model_finetuning",
+    "title": "训练配置",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "配置 LoRA 微调的训练参数",
+    "starter_code": "def get_lora_config(r=8, lora_alpha=32, target_modules=None):\n    # 构建 LoRA 配置\n    pass\n\ndef get_training_args(output_dir='./output', epochs=3):\n    # 构建训练参数\n    pass",
+    "solution": "def get_lora_config(r=8, lora_alpha=32, target_modules=None, lora_dropout=0.1):\n    if target_modules is None:\n        target_modules = ['q_proj', 'v_proj']\n    return {\n        'r': r,\n        'lora_alpha': lora_alpha,\n        'target_modules': target_modules,\n        'lora_dropout': lora_dropout,\n        'bias': 'none',\n        'task_type': 'CAUSAL_LM'\n    }\n\ndef get_training_args(output_dir='./output', epochs=3, batch_size=4, lr=2e-4):\n    return {\n        'output_dir': output_dir,\n        'num_train_epochs': epochs,\n        'per_device_train_batch_size': batch_size,\n        'learning_rate': lr,\n        'warmup_ratio': 0.1,\n        'lr_scheduler_type': 'cosine',\n        'logging_steps': 10,\n        'save_strategy': 'epoch',\n        'fp16': True\n    }\n\nimport json\nprint('LoRA配置:')\nprint(json.dumps(get_lora_config(), indent=2))\nprint('\\n训练参数:')\nprint(json.dumps(get_training_args(), indent=2))",
+    "tags": [
+      "训练配置",
+      "LoRA"
+    ]
+  },
+  {
+    "id": "ex_finetune_004",
+    "module": "model_finetuning",
+    "title": "损失计算",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "实现语言模型的交叉熵损失计算",
+    "starter_code": "import numpy as np\n\ndef softmax(logits):\n    # 实现 softmax\n    pass\n\ndef cross_entropy_loss(logits, targets):\n    # 计算交叉熵损失\n    pass",
+    "solution": "import numpy as np\n\ndef softmax(logits):\n    # 数值稳定的 softmax\n    shifted = logits - np.max(logits, axis=-1, keepdims=True)\n    exp_x = np.exp(shifted)\n    return exp_x / exp_x.sum(axis=-1, keepdims=True)\n\ndef cross_entropy_loss(logits, targets):\n    # logits: (batch, vocab) targets: (batch,)\n    probs = softmax(logits)\n    batch_size = logits.shape[0]\n    correct_probs = probs[np.arange(batch_size), targets]\n    loss = -np.mean(np.log(correct_probs + 1e-9))\n    return loss\n\n# 测试\nbatch_size, vocab_size = 4, 100\nlogits = np.random.randn(batch_size, vocab_size)\ntargets = np.random.randint(0, vocab_size, size=batch_size)\nloss = cross_entropy_loss(logits, targets)\nprint(f'Loss: {loss:.4f}')\nprint(f'理论最大损失: {np.log(vocab_size):.4f}')",
+    "tags": [
+      "损失函数",
+      "微调"
+    ]
+  },
+  {
+    "id": "ex_finetune_005",
+    "module": "model_finetuning",
+    "title": "过拟合检测",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现训练过程监控，检测过拟合",
+    "starter_code": "class TrainingMonitor:\n    def __init__(self, patience=3):\n        self.patience = patience\n        self.train_losses = []\n        self.val_losses = []\n    \n    def update(self, train_loss, val_loss):\n        pass\n    \n    def is_overfitting(self):\n        pass\n    \n    def should_stop_early(self):\n        pass",
+    "solution": "class TrainingMonitor:\n    def __init__(self, patience=3):\n        self.patience = patience\n        self.train_losses = []\n        self.val_losses = []\n        self.best_val_loss = float('inf')\n        self.no_improve_count = 0\n    \n    def update(self, train_loss, val_loss):\n        self.train_losses.append(train_loss)\n        self.val_losses.append(val_loss)\n        if val_loss < self.best_val_loss:\n            self.best_val_loss = val_loss\n            self.no_improve_count = 0\n        else:\n            self.no_improve_count += 1\n    \n    def is_overfitting(self):\n        if len(self.train_losses) < 2:\n            return False\n        gap = self.val_losses[-1] - self.train_losses[-1]\n        return gap > 0.5\n    \n    def should_stop_early(self):\n        return self.no_improve_count >= self.patience\n    \n    def report(self):\n        if not self.train_losses:\n            return\n        print(f'当前Epoch: {len(self.train_losses)}')\n        print(f'训练Loss: {self.train_losses[-1]:.4f}')\n        print(f'验证Loss: {self.val_losses[-1]:.4f}')\n        print(f'过拟合: {self.is_overfitting()}')\n        print(f'早停: {self.should_stop_early()}')\n\nmonitor = TrainingMonitor(patience=3)\nlosses = [(1.2, 1.3), (0.9, 1.0), (0.6, 1.1), (0.3, 1.4), (0.1, 1.6)]\nfor tl, vl in losses:\n    monitor.update(tl, vl)\n    monitor.report()\n    print()",
+    "tags": [
+      "监控",
+      "过拟合"
+    ]
+  },
+  {
+    "id": "ex_multimodal_001",
+    "module": "multimodal_ai",
+    "title": "图像特征提取",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现基于像素统计的图像特征提取",
+    "starter_code": "import numpy as np\n\ndef extract_image_features(image):\n    # 提取: 均值、标准差、最大值、最小值\n    # image shape: (H, W, C) 或 (H, W)\n    pass",
+    "solution": "import numpy as np\n\ndef extract_image_features(image):\n    if image.ndim == 3:\n        features = []\n        for c in range(image.shape[2]):\n            channel = image[:, :, c]\n            features.extend([\n                np.mean(channel),\n                np.std(channel),\n                np.max(channel),\n                np.min(channel)\n            ])\n    else:\n        features = [np.mean(image), np.std(image), np.max(image), np.min(image)]\n    return np.array(features)\n\n# 测试\nimg = np.random.randint(0, 256, (64, 64, 3), dtype=np.uint8)\nfeats = extract_image_features(img)\nprint(f'图像尺寸: {img.shape}')\nprint(f'特征向量维度: {feats.shape}')\nprint(f'特征值: {feats[:4].round(2)}')",
+    "tags": [
+      "图像",
+      "特征提取"
+    ]
+  },
+  {
+    "id": "ex_multimodal_002",
+    "module": "multimodal_ai",
+    "title": "多模态融合",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "实现早期融合（Early Fusion）和晚期融合（Late Fusion）",
+    "starter_code": "import numpy as np\n\ndef early_fusion(image_feat, text_feat):\n    # 直接拼接两种特征\n    pass\n\ndef late_fusion(image_score, text_score, weights=(0.5, 0.5)):\n    # 加权融合两种模型的分数\n    pass",
+    "solution": "import numpy as np\n\ndef early_fusion(image_feat, text_feat):\n    # 直接拼接特征向量\n    img = np.array(image_feat, dtype=float)\n    txt = np.array(text_feat, dtype=float)\n    return np.concatenate([img, txt])\n\ndef late_fusion(image_probs, text_probs, weights=(0.5, 0.5)):\n    # 加权平均两个模型的预测概率\n    img = np.array(image_probs, dtype=float)\n    txt = np.array(text_probs, dtype=float)\n    return weights[0] * img + weights[1] * txt\n\n# 测试早期融合\nimg_feat = [0.8, 0.2, 0.5]\ntxt_feat = [0.3, 0.7, 0.4]\nfused = early_fusion(img_feat, txt_feat)\nprint(f'早期融合特征: {fused}')\n\n# 测试晚期融合\nimg_probs = [0.7, 0.2, 0.1]\ntxt_probs = [0.4, 0.5, 0.1]\nfinal_probs = late_fusion(img_probs, txt_probs, weights=(0.6, 0.4))\nprint(f'晚期融合概率: {final_probs}')\nprint(f'预测类别: {np.argmax(final_probs)}')",
+    "tags": [
+      "多模态",
+      "融合"
+    ]
+  },
+  {
+    "id": "ex_multimodal_003",
+    "module": "multimodal_ai",
+    "title": "CLIP 图文相似度",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "模拟 CLIP 的图像-文本相似度计算",
+    "starter_code": "import numpy as np\n\nclass SimpleCLIP:\n    def __init__(self, embed_dim=64):\n        self.embed_dim = embed_dim\n    \n    def encode_image(self, image):\n        # 将图像编码为向量\n        pass\n    \n    def encode_text(self, text):\n        # 将文本编码为向量\n        pass\n    \n    def similarity(self, image_emb, text_emb):\n        # 计算余弦相似度\n        pass\n    \n    def zero_shot_classify(self, image, candidates):\n        pass",
+    "solution": "import numpy as np\n\nclass SimpleCLIP:\n    def __init__(self, embed_dim=4):\n        self.embed_dim = embed_dim\n        np.random.seed(42)\n        self.img_proj = np.random.randn(embed_dim, 3)\n        self.txt_vocab = {}\n        self.txt_proj = np.random.randn(embed_dim, 10)\n    \n    def encode_image(self, image_features):\n        vec = self.img_proj @ np.array(image_features[:3])\n        return vec / (np.linalg.norm(vec) + 1e-9)\n    \n    def encode_text(self, text):\n        # 简单词袋编码\n        words = text.lower().split()\n        vec = np.zeros(self.embed_dim)\n        for w in words:\n            if w not in self.txt_vocab:\n                self.txt_vocab[w] = np.random.randn(self.embed_dim)\n            vec += self.txt_vocab[w]\n        return vec / (np.linalg.norm(vec) + 1e-9)\n    \n    def similarity(self, img_emb, txt_emb):\n        return float(np.dot(img_emb, txt_emb))\n    \n    def zero_shot_classify(self, image_feat, candidates):\n        img_emb = self.encode_image(image_feat)\n        scores = {}\n        for label in candidates:\n            txt_emb = self.encode_text(label)\n            scores[label] = self.similarity(img_emb, txt_emb)\n        return sorted(scores.items(), key=lambda x: x[1], reverse=True)\n\nclip = SimpleCLIP()\nimg_feat = [0.8, 0.2, 0.5]\ncandidates = ['a photo of a cat', 'a photo of a dog', 'a mountain landscape']\nresults = clip.zero_shot_classify(img_feat, candidates)\nfor label, score in results:\n    print(f'{label}: {score:.4f}')",
+    "tags": [
+      "CLIP",
+      "多模态"
+    ]
+  },
+  {
+    "id": "ex_multimodal_004",
+    "module": "multimodal_ai",
+    "title": "VQA 视觉问答",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "实现简单的视觉问答系统",
+    "starter_code": "class SimpleVQA:\n    def __init__(self):\n        self.knowledge = {}  # image_id -> {property: value}\n    \n    def add_image_info(self, image_id, info):\n        # 添加图像信息\n        pass\n    \n    def answer(self, image_id, question):\n        # 根据问题回答\n        pass",
+    "solution": "class SimpleVQA:\n    def __init__(self):\n        self.knowledge = {}\n    \n    def add_image_info(self, image_id, info):\n        self.knowledge[image_id] = info\n    \n    def answer(self, image_id, question):\n        if image_id not in self.knowledge:\n            return '未找到该图像信息'\n        \n        info = self.knowledge[image_id]\n        question_lower = question.lower()\n        \n        if '颜色' in question or 'color' in question_lower:\n            return info.get('color', '未知')\n        elif '数量' in question or '几' in question:\n            return str(info.get('count', '未知'))\n        elif '是什么' in question or 'what' in question_lower:\n            return info.get('object', '未知物体')\n        elif '大小' in question or '尺寸' in question:\n            return info.get('size', '未知')\n        else:\n            return f'图像包含: {info}'\n    \n    def batch_answer(self, questions):\n        return [(img_id, q, self.answer(img_id, q)) for img_id, q in questions]\n\nvqa = SimpleVQA()\nvqa.add_image_info('img_001', {'object': '猫', 'color': '橙色', 'count': 1, 'size': '小'})\nvqa.add_image_info('img_002', {'object': '汽车', 'color': '红色', 'count': 2, 'size': '大'})\n\nquestions = [\n    ('img_001', '图片里是什么？'),\n    ('img_001', '这个物体是什么颜色？'),\n    ('img_002', '图中有几辆车？'),\n]\nfor img_id, q, ans in vqa.batch_answer(questions):\n    print(f'Q: {q}')\n    print(f'A: {ans}\\n')",
+    "tags": [
+      "VQA",
+      "多模态"
+    ]
+  },
+  {
+    "id": "ex_multimodal_005",
+    "module": "multimodal_ai",
+    "title": "图文匹配评分",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "计算图像和文本的匹配相关性分数",
+    "starter_code": "def image_text_score(image_features, text_keywords, image_labels):\n    # 计算图像和文本的匹配分数\n    # image_labels: 图像识别出的标签及置信度\n    pass",
+    "solution": "def image_text_score(image_labels, text_keywords):\n    score = 0.0\n    text_words = set(text_keywords)\n    for label, confidence in image_labels.items():\n        if label in text_words:\n            score += confidence\n    # 归一化\n    max_score = sum(image_labels.values())\n    return score / max_score if max_score > 0 else 0.0\n\n# 测试\nimage_1 = {'猫': 0.9, '动物': 0.8, '橙色': 0.7}\nimage_2 = {'汽车': 0.95, '红色': 0.85, '车辆': 0.9}\n\ntext_1 = ['橙色', '猫', '可爱']\ntext_2 = ['红色', '跑车', '速度']\n\nprint('图1-文1匹配度:', image_text_score(image_1, text_1))\nprint('图1-文2匹配度:', image_text_score(image_1, text_2))\nprint('图2-文1匹配度:', image_text_score(image_2, text_1))\nprint('图2-文2匹配度:', image_text_score(image_2, text_2))",
+    "tags": [
+      "图文匹配",
+      "相似度"
+    ]
+  },
+  {
+    "id": "ex_enterprise_mcp_001",
+    "module": "enterprise_mcp",
+    "title": "MCP 负载均衡",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "实现轮询和最少连接两种负载均衡策略",
+    "starter_code": "class RoundRobinLB:\n    def __init__(self):\n        self.servers = []\n        self.index = 0\n    \n    def add_server(self, server):\n        pass\n    \n    def get_server(self):\n        pass\n\nclass LeastConnectionLB:\n    def __init__(self):\n        self.servers = {}  # server -> connection_count\n    \n    def add_server(self, server):\n        pass\n    \n    def acquire(self):\n        pass\n    \n    def release(self, server):\n        pass",
+    "solution": "class RoundRobinLB:\n    def __init__(self):\n        self.servers = []\n        self.index = 0\n    \n    def add_server(self, server):\n        self.servers.append(server)\n    \n    def get_server(self):\n        if not self.servers:\n            return None\n        server = self.servers[self.index % len(self.servers)]\n        self.index += 1\n        return server\n\nclass LeastConnectionLB:\n    def __init__(self):\n        self.servers = {}\n    \n    def add_server(self, server):\n        self.servers[server] = 0\n    \n    def acquire(self):\n        server = min(self.servers, key=self.servers.get)\n        self.servers[server] += 1\n        return server\n    \n    def release(self, server):\n        if server in self.servers and self.servers[server] > 0:\n            self.servers[server] -= 1\n\n# 测试\nrr = RoundRobinLB()\nfor i in range(1, 4):\n    rr.add_server(f'server-{i}')\nprint('轮询:', [rr.get_server() for _ in range(5)])\n\nlc = LeastConnectionLB()\nfor i in range(1, 4):\n    lc.add_server(f'server-{i}')\ns1 = lc.acquire(); s2 = lc.acquire(); s3 = lc.acquire()\nlc.release(s1)\nprint('最少连接状态:', lc.servers)\nprint('下次分配:', lc.acquire())",
+    "tags": [
+      "负载均衡",
+      "MCP"
+    ]
+  },
+  {
+    "id": "ex_enterprise_mcp_002",
+    "module": "enterprise_mcp",
+    "title": "健康检查机制",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现 MCP 服务的健康检查",
+    "starter_code": "import time\n\nclass HealthChecker:\n    def __init__(self, interval=30):\n        self.interval = interval\n        self.services = {}\n    \n    def register(self, name, check_fn):\n        pass\n    \n    def check_all(self):\n        pass\n    \n    def get_healthy(self):\n        pass",
+    "solution": "import time\nimport random\n\nclass HealthChecker:\n    def __init__(self, interval=30):\n        self.interval = interval\n        self.services = {}\n    \n    def register(self, name, check_fn):\n        self.services[name] = {\n            'check': check_fn,\n            'healthy': True,\n            'last_check': None,\n            'failures': 0\n        }\n    \n    def check_all(self):\n        results = {}\n        for name, info in self.services.items():\n            try:\n                healthy = info['check']()\n                info['healthy'] = healthy\n                info['failures'] = 0 if healthy else info['failures'] + 1\n            except Exception:\n                info['healthy'] = False\n                info['failures'] += 1\n            info['last_check'] = time.time()\n            results[name] = info['healthy']\n        return results\n    \n    def get_healthy(self):\n        return [n for n, i in self.services.items() if i['healthy']]\n\nchecker = HealthChecker()\nchecker.register('mcp-1', lambda: random.random() > 0.2)\nchecker.register('mcp-2', lambda: True)\nchecker.register('mcp-3', lambda: random.random() > 0.7)\n\nresults = checker.check_all()\nfor name, healthy in results.items():\n    print(f'{name}: {\"健康\" if healthy else \"异常\"}')\nprint('健康服务:', checker.get_healthy())",
+    "tags": [
+      "健康检查",
+      "MCP"
+    ]
+  },
+  {
+    "id": "ex_enterprise_mcp_003",
+    "module": "enterprise_mcp",
+    "title": "多环境配置",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现 MCP 多环境配置管理",
+    "starter_code": "class ConfigManager:\n    def __init__(self):\n        self.configs = {}\n        self.env = 'dev'\n    \n    def load_config(self, env, config):\n        pass\n    \n    def switch_env(self, env):\n        pass\n    \n    def get(self, key, default=None):\n        pass",
+    "solution": "class ConfigManager:\n    def __init__(self, default_env='dev'):\n        self.configs = {}\n        self.env = default_env\n    \n    def load_config(self, env, config):\n        self.configs[env] = config\n    \n    def switch_env(self, env):\n        if env not in self.configs:\n            raise ValueError(f'环境不存在: {env}')\n        self.env = env\n        print(f'切换环境: {env}')\n    \n    def get(self, key, default=None):\n        return self.configs.get(self.env, {}).get(key, default)\n    \n    def get_all(self):\n        return self.configs.get(self.env, {})\n\ncm = ConfigManager()\ncm.load_config('dev', {'debug': True, 'log_level': 'DEBUG', 'max_workers': 2})\ncm.load_config('prod', {'debug': False, 'log_level': 'INFO', 'max_workers': 10})\n\nprint('Dev 配置:', cm.get_all())\ncm.switch_env('prod')\nprint('Prod 配置:', cm.get_all())\nprint('max_workers:', cm.get('max_workers'))",
+    "tags": [
+      "配置管理",
+      "多环境"
+    ]
+  },
+  {
+    "id": "ex_enterprise_mcp_004",
+    "module": "enterprise_mcp",
+    "title": "容器化部署模拟",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "模拟 MCP 服务的容器化部署和扩缩容",
+    "starter_code": "class MCPDeployment:\n    def __init__(self, name):\n        self.name = name\n        self.replicas = 0\n        self.instances = []\n    \n    def deploy(self, replicas):\n        pass\n    \n    def scale(self, replicas):\n        pass\n    \n    def rolling_update(self, new_version):\n        pass",
+    "solution": "class MCPInstance:\n    def __init__(self, id, version):\n        self.id = id\n        self.version = version\n        self.healthy = True\n\nclass MCPDeployment:\n    def __init__(self, name):\n        self.name = name\n        self.instances = []\n        self.version = '1.0.0'\n    \n    def deploy(self, replicas, version='1.0.0'):\n        self.version = version\n        self.instances = [MCPInstance(f'{self.name}-{i}', version) for i in range(replicas)]\n        print(f'部署 {self.name} x{replicas} v{version}')\n    \n    def scale(self, replicas):\n        current = len(self.instances)\n        if replicas > current:\n            for i in range(current, replicas):\n                self.instances.append(MCPInstance(f'{self.name}-{i}', self.version))\n            print(f'扩容: {current} -> {replicas}')\n        elif replicas < current:\n            self.instances = self.instances[:replicas]\n            print(f'缩容: {current} -> {replicas}')\n    \n    def rolling_update(self, new_version):\n        for inst in self.instances:\n            inst.version = new_version\n            print(f'更新 {inst.id} -> v{new_version}')\n        self.version = new_version\n    \n    def status(self):\n        print(f'{self.name}: {len(self.instances)}个实例, v{self.version}')\n\ndep = MCPDeployment('mcp-api')\ndep.deploy(3)\ndep.scale(5)\ndep.rolling_update('2.0.0')\ndep.status()",
+    "tags": [
+      "容器化",
+      "部署"
+    ]
+  },
+  {
+    "id": "ex_enterprise_mcp_005",
+    "module": "enterprise_mcp",
+    "title": "服务发现",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "实现 MCP 服务注册与发现",
+    "starter_code": "class ServiceRegistry:\n    def __init__(self):\n        self.services = {}\n    \n    def register(self, name, host, port, meta=None):\n        pass\n    \n    def deregister(self, name, host, port):\n        pass\n    \n    def discover(self, name):\n        pass",
+    "solution": "import time\n\nclass ServiceInstance:\n    def __init__(self, host, port, meta=None):\n        self.host = host\n        self.port = port\n        self.meta = meta or {}\n        self.registered_at = time.time()\n        self.healthy = True\n\nclass ServiceRegistry:\n    def __init__(self):\n        self.services = {}  # name -> [ServiceInstance]\n    \n    def register(self, name, host, port, meta=None):\n        if name not in self.services:\n            self.services[name] = []\n        instance = ServiceInstance(host, port, meta)\n        self.services[name].append(instance)\n        print(f'注册服务: {name} @ {host}:{port}')\n    \n    def deregister(self, name, host, port):\n        if name in self.services:\n            self.services[name] = [\n                i for i in self.services[name]\n                if not (i.host == host and i.port == port)\n            ]\n    \n    def discover(self, name):\n        instances = [i for i in self.services.get(name, []) if i.healthy]\n        return [{'host': i.host, 'port': i.port, 'meta': i.meta} for i in instances]\n\nregistry = ServiceRegistry()\nregistry.register('mcp-server', 'localhost', 8001, {'version': '1.0'})\nregistry.register('mcp-server', 'localhost', 8002, {'version': '1.0'})\nregistry.register('mcp-monitor', 'localhost', 9000)\n\nprint('发现 mcp-server:', registry.discover('mcp-server'))\nregistry.deregister('mcp-server', 'localhost', 8001)\nprint('注销后:', registry.discover('mcp-server'))",
+    "tags": [
+      "服务发现",
+      "注册"
+    ]
+  },
+  {
+    "id": "ex_mcp_security_001",
+    "module": "mcp_security",
+    "title": "API 密钥认证",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现 MCP API 密钥认证系统",
+    "starter_code": "import hashlib\nimport time\n\nclass APIKeyManager:\n    def __init__(self):\n        self.keys = {}\n    \n    def create_key(self, user_id, permissions=None):\n        pass\n    \n    def validate_key(self, key):\n        pass\n    \n    def revoke_key(self, key):\n        pass",
+    "solution": "import hashlib\nimport time\nimport secrets\n\nclass APIKeyManager:\n    def __init__(self):\n        self.keys = {}\n    \n    def create_key(self, user_id, permissions=None):\n        raw = secrets.token_hex(16)\n        key = f'mcp_{raw}'\n        self.keys[key] = {\n            'user_id': user_id,\n            'permissions': permissions or ['read'],\n            'created_at': time.time(),\n            'active': True\n        }\n        print(f'创建密钥: 用户={user_id}, 权限={permissions}')\n        return key\n    \n    def validate_key(self, key):\n        info = self.keys.get(key)\n        if not info:\n            return None, '密钥不存在'\n        if not info['active']:\n            return None, '密钥已撤销'\n        return info, 'OK'\n    \n    def revoke_key(self, key):\n        if key in self.keys:\n            self.keys[key]['active'] = False\n            print(f'已撤销密钥')\n\nmanager = APIKeyManager()\nkey = manager.create_key('alice', ['read', 'write'])\nprint(f'密钥: {key[:20]}...')\ninfo, msg = manager.validate_key(key)\nprint(f'验证结果: {msg}, 用户: {info[\"user_id\"]}')\nmanager.revoke_key(key)\n_, msg = manager.validate_key(key)\nprint(f'撤销后验证: {msg}')",
+    "tags": [
+      "认证",
+      "API密钥"
+    ]
+  },
+  {
+    "id": "ex_mcp_security_002",
+    "module": "mcp_security",
+    "title": "RBAC 权限控制",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现基于角色的访问控制（RBAC）",
+    "starter_code": "class RBACManager:\n    def __init__(self):\n        self.roles = {}      # role -> permissions\n        self.users = {}      # user -> roles\n    \n    def define_role(self, role, permissions):\n        pass\n    \n    def assign_role(self, user, role):\n        pass\n    \n    def check_permission(self, user, permission):\n        pass",
+    "solution": "class RBACManager:\n    def __init__(self):\n        self.roles = {}\n        self.users = {}\n    \n    def define_role(self, role, permissions):\n        self.roles[role] = set(permissions)\n        print(f'定义角色 {role}: {permissions}')\n    \n    def assign_role(self, user, role):\n        if user not in self.users:\n            self.users[user] = set()\n        self.users[user].add(role)\n    \n    def get_permissions(self, user):\n        perms = set()\n        for role in self.users.get(user, []):\n            perms |= self.roles.get(role, set())\n        return perms\n    \n    def check_permission(self, user, permission):\n        return permission in self.get_permissions(user)\n\nrbac = RBACManager()\nrbac.define_role('admin', ['read', 'write', 'delete', 'manage'])\nrbac.define_role('operator', ['read', 'write'])\nrbac.define_role('viewer', ['read'])\n\nrbac.assign_role('alice', 'admin')\nrbac.assign_role('bob', 'operator')\nrbac.assign_role('charlie', 'viewer')\n\nfor user in ['alice', 'bob', 'charlie']:\n    for perm in ['read', 'write', 'delete']:\n        allowed = rbac.check_permission(user, perm)\n        print(f'{user} {perm}: {\"允许\" if allowed else \"拒绝\"}')",
+    "tags": [
+      "RBAC",
+      "权限"
+    ]
+  },
+  {
+    "id": "ex_mcp_security_003",
+    "module": "mcp_security",
+    "title": "审计日志系统",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现 MCP 操作审计日志",
+    "starter_code": "import json\nimport time\n\nclass AuditLogger:\n    def __init__(self):\n        self.logs = []\n    \n    def log(self, user, action, resource, result, details=None):\n        pass\n    \n    def query(self, user=None, action=None, start_time=None):\n        pass\n    \n    def export(self):\n        pass",
+    "solution": "import json\nimport time\nfrom datetime import datetime\n\nclass AuditLogger:\n    def __init__(self):\n        self.logs = []\n    \n    def log(self, user, action, resource, result, details=None):\n        entry = {\n            'id': len(self.logs) + 1,\n            'timestamp': datetime.now().isoformat(),\n            'user': user,\n            'action': action,\n            'resource': resource,\n            'result': result,\n            'details': details or {}\n        }\n        self.logs.append(entry)\n        status = 'SUCCESS' if result else 'FAILED'\n        print(f'[AUDIT] {status} | {user} | {action} | {resource}')\n    \n    def query(self, user=None, action=None):\n        result = self.logs\n        if user:\n            result = [l for l in result if l['user'] == user]\n        if action:\n            result = [l for l in result if l['action'] == action]\n        return result\n    \n    def export(self):\n        return json.dumps(self.logs, indent=2, ensure_ascii=False)\n\nlogger = AuditLogger()\nlogger.log('alice', 'call_tool', 'calculator', True, {'input': '2+3', 'output': '5'})\nlogger.log('bob', 'access_resource', 'secret.txt', False)\nlogger.log('alice', 'call_tool', 'file_reader', True)\n\nprint('Alice的操作:', len(logger.query(user='alice')))\nprint('工具调用:', len(logger.query(action='call_tool')))",
+    "tags": [
+      "审计",
+      "日志"
+    ]
+  },
+  {
+    "id": "ex_mcp_security_004",
+    "module": "mcp_security",
+    "title": "数据脱敏",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现敏感数据脱敏处理",
+    "starter_code": "import re\n\nclass DataMasker:\n    def mask_phone(self, phone):\n        # 手机号中间4位脱敏\n        pass\n    \n    def mask_email(self, email):\n        # 邮箱脱敏\n        pass\n    \n    def mask_id_card(self, id_card):\n        # 身份证脱敏\n        pass\n    \n    def mask_dict(self, data, sensitive_keys):\n        # 字典中敏感字段脱敏\n        pass",
+    "solution": "import re\n\nclass DataMasker:\n    def mask_phone(self, phone):\n        if len(phone) == 11:\n            return phone[:3] + '****' + phone[7:]\n        return '***'\n    \n    def mask_email(self, email):\n        if '@' in email:\n            local, domain = email.split('@', 1)\n            return local[0] + '***@' + domain\n        return '***'\n    \n    def mask_id_card(self, id_card):\n        if len(id_card) >= 6:\n            return id_card[:6] + '****' + id_card[-4:]\n        return '***'\n    \n    def mask_dict(self, data, sensitive_keys=None):\n        if sensitive_keys is None:\n            sensitive_keys = ['password', 'token', 'secret', 'key', 'phone', 'email']\n        result = {}\n        for k, v in data.items():\n            if any(sk in k.lower() for sk in sensitive_keys):\n                result[k] = '****'\n            elif isinstance(v, dict):\n                result[k] = self.mask_dict(v, sensitive_keys)\n            else:\n                result[k] = v\n        return result\n\nmasker = DataMasker()\nprint(masker.mask_phone('13812345678'))\nprint(masker.mask_email('zhangsan@example.com'))\nprint(masker.mask_id_card('110101199001011234'))\nprint(masker.mask_dict({'name': '张三', 'phone': '13812345678', 'password': 'secret123'}))",
+    "tags": [
+      "脱敏",
+      "安全"
+    ]
+  },
+  {
+    "id": "ex_mcp_security_005",
+    "module": "mcp_security",
+    "title": "限流器",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "实现令牌桶限流算法",
+    "starter_code": "import time\n\nclass TokenBucketRateLimiter:\n    def __init__(self, capacity, refill_rate):\n        # capacity: 桶容量\n        # refill_rate: 每秒补充令牌数\n        pass\n    \n    def is_allowed(self, tokens=1):\n        # 判断是否允许通过\n        pass",
+    "solution": "import time\n\nclass TokenBucketRateLimiter:\n    def __init__(self, capacity, refill_rate):\n        self.capacity = capacity\n        self.tokens = float(capacity)\n        self.refill_rate = refill_rate\n        self.last_refill = time.time()\n    \n    def _refill(self):\n        now = time.time()\n        elapsed = now - self.last_refill\n        refill = elapsed * self.refill_rate\n        self.tokens = min(self.capacity, self.tokens + refill)\n        self.last_refill = now\n    \n    def is_allowed(self, tokens=1):\n        self._refill()\n        if self.tokens >= tokens:\n            self.tokens -= tokens\n            return True\n        return False\n    \n    def status(self):\n        self._refill()\n        return f'令牌: {self.tokens:.1f}/{self.capacity}'\n\nlimiter = TokenBucketRateLimiter(capacity=5, refill_rate=1)\nfor i in range(8):\n    allowed = limiter.is_allowed()\n    print(f'请求{i+1}: {\"允许\" if allowed else \"拒绝\"} | {limiter.status()}')\n    time.sleep(0.2)",
+    "tags": [
+      "限流",
+      "令牌桶"
+    ]
+  },
+  {
+    "id": "ex_database_001",
+    "module": "database",
+    "title": "SQLite 基本操作",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 sqlite3 创建数据库表并插入数据",
+    "starter_code": "import sqlite3\n\nconn = sqlite3.connect('test.db')\ncursor = conn.cursor()\n\n# 创建表\ncursor.execute('''\n    CREATE TABLE IF NOT EXISTS users \n    (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)\n''')\n\n# 插入数据\n# 你的代码\n\nconn.commit()\nconn.close()",
+    "solution": "import sqlite3\n\nconn = sqlite3.connect('test.db')\ncursor = conn.cursor()\n\n# 创建表\ncursor.execute('''\n    CREATE TABLE IF NOT EXISTS users \n    (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)\n''')\n\n# 插入数据\ncursor.execute(\"INSERT INTO users (name, age) VALUES ('Alice', 25)\")\ncursor.execute(\"INSERT INTO users (name, age) VALUES ('Bob', 30)\")\ncursor.execute(\"INSERT INTO users (name, age) VALUES ('Charlie', 22)\")\n\nconn.commit()\n\n# 查询数据\ncursor.execute('SELECT * FROM users')\nfor row in cursor.fetchall():\n    print(row)\n\nconn.close()",
+    "tags": [
+      "SQLite",
+      "数据库"
+    ]
+  },
+  {
+    "id": "ex_database_002",
+    "module": "database",
+    "title": "SQL 查询练习",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "编写 SQL 查询语句",
+    "starter_code": "# 假设有表 students(id, name, score, class_id)\n# 1. 查询所有学生信息\nquery1 = \"\"\"\n\n\"\"\"\n\n# 2. 查询分数大于等于60的学生\nquery2 = \"\"\"\n\n\"\"\"\n\n# 3. 查询每个班级的平均分\nquery3 = \"\"\"\n\n\"\"\"\n\n# 4. 查询最高分学生\nquery4 = \"\"\"\n\n\"\"\"\n\nprint('查询1:', query1.strip())\nprint('查询2:', query2.strip())\nprint('查询3:', query3.strip())\nprint('查询4:', query4.strip())",
+    "solution": "# 假设有表 students(id, name, score, class_id)\n# 1. 查询所有学生信息\nquery1 = \"\"\"\nSELECT * FROM students\n\"\"\"\n\n# 2. 查询分数大于等于60的学生\nquery2 = \"\"\"\nSELECT * FROM students WHERE score >= 60\n\"\"\"\n\n# 3. 查询每个班级的平均分\nquery3 = \"\"\"\nSELECT class_id, AVG(score) as avg_score \nFROM students \nGROUP BY class_id\n\"\"\"\n\n# 4. 查询最高分学生\nquery4 = \"\"\"\nSELECT * FROM students \nWHERE score = (SELECT MAX(score) FROM students)\n\"\"\"\n\nprint('查询1:', query1.strip())\nprint('查询2:', query2.strip())\nprint('查询3:', query3.strip())\nprint('查询4:', query4.strip())",
+    "tags": [
+      "SQL",
+      "查询"
+    ]
+  },
+  {
+    "id": "ex_database_003",
+    "module": "database",
+    "title": "使用 SQLAlchemy ORM",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 SQLAlchemy 定义模型并查询",
+    "starter_code": "from sqlalchemy import create_engine, Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import sessionmaker\n\nBase = declarative_base()\n\nclass User(Base):\n    __tablename__ = 'users'\n    \n    id = Column(Integer, primary_key=True)\n    name = Column(String(50))\n    email = Column(String(100))\n\n# 创建引擎和会话\nengine = create_engine('sqlite:///test2.db')\nBase.metadata.create_all(engine)\nSession = sessionmaker(bind=engine)\nsession = Session()\n\n# 添加用户\n# 你的代码\n\n# 查询用户\n# 你的代码\n\nsession.close()",
+    "solution": "from sqlalchemy import create_engine, Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import sessionmaker\n\nBase = declarative_base()\n\nclass User(Base):\n    __tablename__ = 'users'\n    \n    id = Column(Integer, primary_key=True)\n    name = Column(String(50))\n    email = Column(String(100))\n\n# 创建引擎和会话\nengine = create_engine('sqlite:///test2.db')\nBase.metadata.create_all(engine)\nSession = sessionmaker(bind=engine)\nsession = Session()\n\n# 添加用户\nuser1 = User(name='Alice', email='alice@example.com')\nuser2 = User(name='Bob', email='bob@example.com')\nsession.add_all([user1, user2])\nsession.commit()\n\n# 查询用户\nusers = session.query(User).all()\nfor user in users:\n    print(f'{user.id}: {user.name} <{user.email}>')\n\n# 条件查询\nuser = session.query(User).filter_by(name='Alice').first()\nprint(f'找到: {user.name}') if user else print('未找到')\n\nsession.close()",
+    "tags": [
+      "SQLAlchemy",
+      "ORM"
+    ]
+  },
+  {
+    "id": "ex_database_004",
+    "module": "database",
+    "title": "数据库事务处理",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现转账事务",
+    "starter_code": "import sqlite3\n\nconn = sqlite3.connect('bank.db')\ncursor = conn.cursor()\n\ncursor.execute('CREATE TABLE IF NOT EXISTS accounts (id INTEGER PRIMARY KEY, name TEXT, balance REAL)')\n\ndef transfer(from_id, to_id, amount):\n    # 转账逻辑\n    pass\n\n# 测试转账\n# 你的代码\n\nconn.close()",
+    "solution": "import sqlite3\n\nconn = sqlite3.connect('bank.db')\ncursor = conn.cursor()\n\ncursor.execute('CREATE TABLE IF NOT EXISTS accounts (id INTEGER PRIMARY KEY, name TEXT, balance REAL)')\ncursor.execute('DELETE FROM accounts')\ncursor.execute(\"INSERT INTO accounts (id, name, balance) VALUES (1, 'Alice', 1000)\")\ncursor.execute(\"INSERT INTO accounts (id, name, balance) VALUES (2, 'Bob', 500)\")\nconn.commit()\n\ndef transfer(from_id, to_id, amount):\n    try:\n        # 扣除转账人余额\n        cursor.execute('UPDATE accounts SET balance = balance - ? WHERE id = ? AND balance >= ?', \n                      (amount, from_id, amount))\n        if cursor.rowcount == 0:\n            print('余额不足或账户不存在')\n            conn.rollback()\n            return False\n        \n        # 增加收款人余额\n        cursor.execute('UPDATE accounts SET balance = balance + ? WHERE id = ?', \n                      (amount, to_id))\n        \n        conn.commit()\n        print(f'转账成功: {amount}')\n        return True\n    except Exception as e:\n        print(f'转账失败: {e}')\n        conn.rollback()\n        return False\n\n# 测试转账\nprint('转账前:')\ncursor.execute('SELECT * FROM accounts')\nfor row in cursor.fetchall():\n    print(f'  {row}')\n\ntransfer(1, 2, 200)\n\nprint('转账后:')\ncursor.execute('SELECT * FROM accounts')\nfor row in cursor.fetchall():\n    print(f'  {row}')\n\nconn.close()",
+    "tags": [
+      "事务",
+      "转账"
+    ]
+  },
+  {
+    "id": "ex_database_005",
+    "module": "database",
+    "title": "索引优化查询",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "创建索引并测试查询性能",
+    "starter_code": "import sqlite3\nimport time\n\nconn = sqlite3.connect('test_perf.db')\ncursor = conn.cursor()\n\n# 创建测试表\ncursor.execute('CREATE TABLE IF NOT EXISTS orders (id, customer_name, amount, order_date)')\n\n# 插入大量测试数据\n# 你的代码\n\n# 无索引查询\n# 你的代码\n\n# 创建索引\n# 你的代码\n\n# 有索引查询\n# 你的代码\n\nconn.close()",
+    "solution": "import sqlite3\nimport time\n\nconn = sqlite3.connect('test_perf.db')\ncursor = conn.cursor()\n\n# 创建测试表\ncursor.execute('DROP TABLE IF EXISTS orders')\ncursor.execute('CREATE TABLE orders (id INTEGER PRIMARY KEY, customer_name TEXT, amount REAL, order_date TEXT)')\n\n# 插入大量测试数据\ndata = [(i, f'Customer_{i % 100}', i * 10.5, f'2024-01-{(i % 28) + 1:02d}') for i in range(1, 10001)]\ncursor.executemany('INSERT INTO orders VALUES (?, ?, ?, ?)', data)\nconn.commit()\n\n# 无索引查询\nstart = time.time()\ncursor.execute('SELECT * FROM orders WHERE customer_name = \"Customer_50\"')\nresult = cursor.fetchall()\nprint(f'无索引查询: {len(result)} 条记录, 耗时: {(time.time()-start)*1000:.2f}ms')\n\n# 创建索引\ncursor.execute('CREATE INDEX idx_customer ON orders(customer_name)')\nconn.commit()\n\n# 有索引查询\nstart = time.time()\ncursor.execute('SELECT * FROM orders WHERE customer_name = \"Customer_50\"')\nresult = cursor.fetchall()\nprint(f'有索引查询: {len(result)} 条记录, 耗时: {(time.time()-start)*1000:.2f}ms')\n\nconn.close()",
+    "tags": [
+      "索引",
+      "性能"
+    ]
+  },
+  {
+    "id": "ex_design_001",
+    "module": "design_patterns",
+    "title": "单例模式",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "实现单例模式的数据库连接类",
+    "starter_code": "class Database:\n    # 实现单例模式\n    pass\n\n# 测试\ndb1 = Database()\ndb2 = Database()\nprint(f'同一个实例: {db1 is db2}')",
+    "solution": "class Database:\n    _instance = None\n    \n    def __new__(cls):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n            cls._instance.connected = False\n        return cls._instance\n    \n    def connect(self):\n        if not self.connected:\n            print('连接数据库...')\n            self.connected = True\n        else:\n            print('已连接')\n    \n    def query(self, sql):\n        print(f'执行SQL: {sql}')\n\n# 测试\ndb1 = Database()\ndb2 = Database()\nprint(f'同一个实例: {db1 is db2}')\n\ndb1.connect()\ndb2.connect()\ndb1.query('SELECT * FROM users')",
+    "solution_alt": "class Database:\n    _instance = None\n    \n    def __new__(cls):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n            cls._instance.connected = False\n        return cls._instance\n    \n    def connect(self):\n        if not self.connected:\n            print('连接数据库...')\n            self.connected = True\n        else:\n            print('已连接')\n    \n    def query(self, sql):\n        print(f'执行SQL: {sql}')\n\n# 测试\ndb1 = Database()\ndb2 = Database()\nprint(f'同一个实例: {db1 is db2}')\n\ndb1.connect()\ndb2.connect()\ndb1.query('SELECT * FROM users')",
+    "tags": [
+      "单例",
+      "设计模式"
+    ]
+  },
+  {
+    "id": "ex_design_002",
+    "module": "design_patterns",
+    "title": "工厂模式",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "实现工厂模式创建不同类型的通知",
+    "starter_code": "class Notification:\n    def send(self, message):\n        pass\n\nclass EmailNotification(Notification):\n    def send(self, message):\n        print(f'发送邮件: {message}')\n\nclass SMSNotification(Notification):\n    def send(self, message):\n        print(f'发送短信: {message}')\n\nclass PushNotification(Notification):\n    def send(self, message):\n        print(f'推送通知: {message}')\n\nclass NotificationFactory:\n    # 实现工厂方法\n    pass\n\n# 测试\nfactory = NotificationFactory()\nfactory.create('email').send('Hello!')\nfactory.create('sms').send('验证码: 1234')\nfactory.create('push').send('您有新消息')",
+    "solution": "class Notification:\n    def send(self, message):\n        pass\n\nclass EmailNotification(Notification):\n    def send(self, message):\n        print(f'发送邮件: {message}')\n\nclass SMSNotification(Notification):\n    def send(self, message):\n        print(f'发送短信: {message}')\n\nclass PushNotification(Notification):\n    def send(self, message):\n        print(f'推送通知: {message}')\n\nclass NotificationFactory:\n    _types = {\n        'email': EmailNotification,\n        'sms': SMSNotification,\n        'push': PushNotification\n    }\n    \n    def create(self, notif_type):\n        cls = self._types.get(notif_type)\n        if cls:\n            return cls()\n        raise ValueError(f'未知通知类型: {notif_type}')\n\n# 测试\nfactory = NotificationFactory()\nfactory.create('email').send('Hello!')\nfactory.create('sms').send('验证码: 1234')\nfactory.create('push').send('您有新消息')",
+    "tags": [
+      "工厂",
+      "设计模式"
+    ]
+  },
+  {
+    "id": "ex_design_003",
+    "module": "design_patterns",
+    "title": "观察者模式",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现新闻订阅系统",
+    "starter_code": "class Subject:\n    def __init__(self):\n        self.observers = []\n    \n    def attach(self, observer):\n        # 添加观察者\n        pass\n    \n    def detach(self, observer):\n        # 移除观察者\n        pass\n    \n    def notify(self, message):\n        # 通知所有观察者\n        pass\n\nclass Observer:\n    def update(self, message):\n        pass\n\nclass NewsSubscriber(Observer):\n    def __init__(self, name):\n        self.name = name\n    \n    def update(self, message):\n        print(f'{self.name} 收到: {message}')\n\n# 测试\nsubject = Subject()\nsub1 = NewsSubscriber('Alice')\nsub2 = NewsSubscriber('Bob')\nsubject.attach(sub1)\nsubject.attach(sub2)\nsubject.notify('Python 3.12 发布!')\nsubject.detach(sub1)\nsubject.notify('AI 技术新突破')",
+    "solution": "class Subject:\n    def __init__(self):\n        self.observers = []\n    \n    def attach(self, observer):\n        if observer not in self.observers:\n            self.observers.append(observer)\n            print(f'{observer.name} 已订阅')\n    \n    def detach(self, observer):\n        if observer in self.observers:\n            self.observers.remove(observer)\n            print(f'{observer.name} 已取消订阅')\n    \n    def notify(self, message):\n        print(f'\\n发布新消息: {message}')\n        for observer in self.observers:\n            observer.update(message)\n\nclass Observer:\n    def update(self, message):\n        pass\n\nclass NewsSubscriber(Observer):\n    def __init__(self, name):\n        self.name = name\n    \n    def update(self, message):\n        print(f'{self.name} 收到: {message}')\n\n# 测试\nsubject = Subject()\nsub1 = NewsSubscriber('Alice')\nsub2 = NewsSubscriber('Bob')\nsubject.attach(sub1)\nsubject.attach(sub2)\nsubject.notify('Python 3.12 发布!')\nsubject.detach(sub1)\nsubject.notify('AI 技术新突破')",
+    "tags": [
+      "观察者",
+      "设计模式"
+    ]
+  },
+  {
+    "id": "ex_design_004",
+    "module": "design_patterns",
+    "title": "装饰器模式",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现咖啡订单装饰器",
+    "starter_code": "class Coffee:\n    def cost(self):\n        return 10\n    \n    def description(self):\n        return '原味咖啡'\n\nclass CoffeeDecorator:\n    def __init__(self, coffee):\n        self.coffee = coffee\n    \n    def cost(self):\n        return self.coffee.cost()\n    \n    def description(self):\n        return self.coffee.description()\n\n# 实现具体装饰器\nclass Milk(CoffeeDecorator):\n    pass\n\nclass Sugar(CoffeeDecorator):\n    pass\n\nclass Whip(CoffeeDecorator):\n    pass\n\n# 测试\ncoffee = Coffee()\nprint(f'{coffee.description()}: ¥{coffee.cost()}')\n\n# 加牛奶和糖\ncoffee_with_milk = Milk(coffee)\nprint(f'{coffee_with_milk.description()}: ¥{coffee_with_milk.cost()}')\n\n# 加牛奶、糖和奶油\nfancy = Whip(Sugar(Milk(coffee)))\nprint(f'{fancy.description()}: ¥{fancy.cost()}')",
+    "solution": "class Coffee:\n    def cost(self):\n        return 10\n    \n    def description(self):\n        return '原味咖啡'\n\nclass CoffeeDecorator:\n    def __init__(self, coffee):\n        self.coffee = coffee\n    \n    def cost(self):\n        return self.coffee.cost()\n    \n    def description(self):\n        return self.coffee.description()\n\nclass Milk(CoffeeDecorator):\n    def cost(self):\n        return self.coffee.cost() + 3\n    \n    def description(self):\n        return self.coffee.description() + ' + 牛奶'\n\nclass Sugar(CoffeeDecorator):\n    def cost(self):\n        return self.coffee.cost() + 2\n    \n    def description(self):\n        return self.coffee.description() + ' + 糖'\n\nclass Whip(CoffeeDecorator):\n    def cost(self):\n        return self.coffee.cost() + 5\n    \n    def description(self):\n        return self.coffee.description() + ' + 奶油'\n\n# 测试\ncoffee = Coffee()\nprint(f'{coffee.description()}: ¥{coffee.cost()}')\n\ncoffee_with_milk = Milk(coffee)\nprint(f'{coffee_with_milk.description()}: ¥{coffee_with_milk.cost()}')\n\nfancy = Whip(Sugar(Milk(coffee)))\nprint(f'{fancy.description()}: ¥{fancy.cost()}')",
+    "tags": [
+      "装饰器",
+      "设计模式"
+    ]
+  },
+  {
+    "id": "ex_design_005",
+    "module": "design_patterns",
+    "title": "策略模式",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "实现支付策略",
+    "starter_code": "class PaymentStrategy:\n    def pay(self, amount):\n        pass\n\nclass CreditCardPayment(PaymentStrategy):\n    def __init__(self, card_number):\n        self.card_number = card_number\n    \n    def pay(self, amount):\n        print(f'信用卡 {self.card_number[-4:]} 支付 ¥{amount}')\n\nclass AlipayPayment(PaymentStrategy):\n    def pay(self, amount):\n        print(f'支付宝支付 ¥{amount}')\n\nclass WechatPayment(PaymentStrategy):\n    def pay(self, amount):\n        print(f'微信支付 ¥{amount}')\n\nclass ShoppingCart:\n    def __init__(self):\n        self.items = []\n    \n    def add_item(self, item, price):\n        self.items.append((item, price))\n    \n    def set_payment(self, payment_strategy):\n        # 设置支付策略\n        pass\n    \n    def checkout(self):\n        # 计算总价并支付\n        pass\n\n# 测试\ncart = ShoppingCart()\ncart.add_item('Python书籍', 89)\ncart.add_item('键盘', 199)\n\ncart.set_payment(CreditCardPayment('1234567890123456'))\ncart.checkout()",
+    "solution": "class PaymentStrategy:\n    def pay(self, amount):\n        pass\n\nclass CreditCardPayment(PaymentStrategy):\n    def __init__(self, card_number):\n        self.card_number = card_number\n    \n    def pay(self, amount):\n        print(f'信用卡 {self.card_number[-4:]} 支付 ¥{amount}')\n\nclass AlipayPayment(PaymentStrategy):\n    def pay(self, amount):\n        print(f'支付宝支付 ¥{amount}')\n\nclass WechatPayment(PaymentStrategy):\n    def pay(self, amount):\n        print(f'微信支付 ¥{amount}')\n\nclass ShoppingCart:\n    def __init__(self):\n        self.items = []\n        self.payment_strategy = None\n    \n    def add_item(self, item, price):\n        self.items.append((item, price))\n    \n    def set_payment(self, payment_strategy):\n        self.payment_strategy = payment_strategy\n    \n    def checkout(self):\n        total = sum(price for _, price in self.items)\n        print(f'商品: {[item for item, _ in self.items]}')\n        print(f'总计: ¥{total}')\n        if self.payment_strategy:\n            self.payment_strategy.pay(total)\n\n# 测试\ncart = ShoppingCart()\ncart.add_item('Python书籍', 89)\ncart.add_item('键盘', 199)\n\ncart.set_payment(CreditCardPayment('1234567890123456'))\ncart.checkout()\n\nprint()\ncart.set_payment(AlipayPayment())\ncart.checkout()",
+    "tags": [
+      "策略",
+      "设计模式"
+    ]
+  },
+  {
+    "id": "ex_net_001",
+    "module": "networking",
+    "title": "HTTP 请求",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 requests 发送 HTTP GET 请求",
+    "starter_code": "import requests\n\n# 发送 GET 请求到 httpbin.org\n# 你的代码\n\nprint(f'状态码: {response.status_code}')\nprint(f'响应内容: {response.text[:100]}')",
+    "solution": "import requests\n\n# 发送 GET 请求到 httpbin.org\nresponse = requests.get('https://httpbin.org/get', timeout=10)\n\nprint(f'状态码: {response.status_code}')\nprint(f'响应类型: {response.headers.get(\"content-type\")}')\nprint(f'响应内容: {response.text[:200]}')",
+    "tags": [
+      "HTTP",
+      "requests"
+    ]
+  },
+  {
+    "id": "ex_net_002",
+    "module": "networking",
+    "title": "POST 请求与参数",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "发送 POST 请求并携带数据",
+    "starter_code": "import requests\n\n# 发送 POST 请求\ndata = {\n    'username': 'alice',\n    'password': 'secret'\n}\n\n# 你的代码\n\nprint(f'状态码: {response.status_code}')\nprint(f'响应: {response.json()}')",
+    "solution": "import requests\n\n# 发送 POST 请求\ndata = {\n    'username': 'alice',\n    'password': 'secret'\n}\n\nresponse = requests.post('https://httpbin.org/post', data=data, timeout=10)\n\nprint(f'状态码: {response.status_code}')\nresult = response.json()\nprint(f'表单数据: {result.get(\"form\", {})}')",
+    "tags": [
+      "POST",
+      "表单"
+    ]
+  },
+  {
+    "id": "ex_net_003",
+    "module": "networking",
+    "title": "TCP 简单通信",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现简单的 TCP 服务器和客户端",
+    "starter_code": "import socket\n\n# TCP 服务器\ndef start_server(port=9999):\n    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    server.bind(('', port))\n    server.listen(1)\n    print(f'服务器监听端口 {port}')\n    \n    conn, addr = server.accept()\n    print(f'连接来自: {addr}')\n    \n    # 接收并回复\n    # 你的代码\n    \n    conn.close()\n    server.close()\n\n# TCP 客户端\ndef start_client(port=9999):\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(('localhost', port))\n    \n    # 发送并接收\n    # 你的代码\n    \n    client.close()\n\nprint('请在两个终端分别运行服务器和客户端')",
+    "solution": "import socket\n\n# TCP 服务器\ndef start_server(port=9999):\n    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)\n    server.bind(('', port))\n    server.listen(1)\n    print(f'服务器监听端口 {port}')\n    \n    conn, addr = server.accept()\n    print(f'连接来自: {addr}')\n    \n    # 接收数据\n    data = conn.recv(1024).decode()\n    print(f'收到: {data}')\n    \n    # 回复\n    conn.sendall('Hello from server!'.encode())\n    \n    conn.close()\n    server.close()\n\n# TCP 客户端\ndef start_client(port=9999):\n    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    client.connect(('localhost', port))\n    \n    # 发送数据\n    client.sendall('Hello from client!'.encode())\n    \n    # 接收回复\n    response = client.recv(1024).decode()\n    print(f'收到回复: {response}')\n    \n    client.close()\n\nprint('示例代码已定义')",
+    "tags": [
+      "TCP",
+      "Socket"
+    ]
+  },
+  {
+    "id": "ex_net_004",
+    "module": "networking",
+    "title": "URL 解析",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 urllib 解析 URL",
+    "starter_code": "from urllib.parse import urlparse, parse_qs\n\nurl = 'https://example.com:8080/path/to/page?id=123&name=alice#section'\n\n# 解析 URL\nparsed = urlparse(url)\n\nprint(f'协议: {parsed.scheme}')\nprint(f'主机: {parsed.netloc}')\nprint(f'路径: {parsed.path}')\nprint(f'查询: {parsed.query}')\n\n# 解析查询参数\n# 你的代码\n\nprint(f'参数: {params}')",
+    "solution": "from urllib.parse import urlparse, parse_qs\n\nurl = 'https://example.com:8080/path/to/page?id=123&name=alice#section'\n\n# 解析 URL\nparsed = urlparse(url)\n\nprint(f'协议: {parsed.scheme}')\nprint(f'主机: {parsed.netloc}')\nprint(f'端口: {parsed.port}')\nprint(f'路径: {parsed.path}')\nprint(f'查询: {parsed.query}')\nprint(f'锚点: {parsed.fragment}')\n\n# 解析查询参数\nparams = parse_qs(parsed.query)\nprint(f'参数: {params}')\nprint(f'id值: {params.get(\"id\")}')",
+    "tags": [
+      "URL",
+      "urllib"
+    ]
+  },
+  {
+    "id": "ex_net_005",
+    "module": "networking",
+    "title": "简单 HTTP 服务器",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "创建简单的 HTTP 服务器",
+    "starter_code": "from http.server import HTTPServer, BaseHTTPRequestHandler\nimport json\n\nclass SimpleHandler(BaseHTTPRequestHandler):\n    def do_GET(self):\n        if self.path == '/':\n            self.send_response(200)\n            self.send_header('Content-type', 'text/html')\n            self.end_headers()\n            self.wfile.write(b'<h1>Welcome!</h1>')\n        elif self.path == '/api/status':\n            # 返回 JSON 状态\n            # 你的代码\n            pass\n        else:\n            self.send_error(404)\n    \n    def log_message(self, format, *args):\n        print(f'{self.address_string()} - {format % args}')\n\nserver = HTTPServer(('localhost', 8888), SimpleHandler)\nprint('服务器运行在 http://localhost:8888')\nserver.serve_forever()",
+    "solution": "from http.server import HTTPServer, BaseHTTPRequestHandler\nimport json\nfrom datetime import datetime\n\nclass SimpleHandler(BaseHTTPRequestHandler):\n    def do_GET(self):\n        if self.path == '/':\n            self.send_response(200)\n            self.send_header('Content-type', 'text/html')\n            self.end_headers()\n            self.wfile.write(b'<h1>Welcome to Simple HTTP Server!</h1>')\n            self.wfile.write(b'<p><a href=\"/api/status\">API Status</a></p>')\n        elif self.path == '/api/status':\n            self.send_response(200)\n            self.send_header('Content-type', 'application/json')\n            self.end_headers()\n            status = {\n                'status': 'running',\n                'time': datetime.now().isoformat(),\n                'version': '1.0'\n            }\n            self.wfile.write(json.dumps(status).encode())\n        else:\n            self.send_error(404, 'Not Found')\n    \n    def log_message(self, format, *args):\n        print(f'{self.address_string()} - {format % args}')\n\nprint('启动 HTTP 服务器...')\nserver = HTTPServer(('localhost', 8888), SimpleHandler)\nprint('服务器运行在 http://localhost:8888')\nprint('按 Ctrl+C 停止')\nserver.serve_forever()",
+    "tags": [
+      "HTTP",
+      "服务器"
+    ]
+  },
+  {
+    "id": "ex_data_001",
+    "module": "data_processing",
+    "title": "CSV 数据读取",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 pandas 读取和处理 CSV 数据",
+    "starter_code": "import pandas as pd\n\n# 读取 CSV 文件\n# 如果没有文件可以创建一个\ndata = '''name,age,city,salary\nAlice,25,Beijing,15000\nBob,30,Shanghai,18000\nCharlie,28,Guangzhou,16000\nDavid,35,Shenzhen,20000\nEva,27,Chengdu,14000'''\n\n# 写入临时文件\nwith open('temp_data.csv', 'w') as f:\n    f.write(data)\n\n# 读取并处理\n# 你的代码",
+    "solution": "import pandas as pd\n\n# 如果没有文件可以创建一个\ndata = '''name,age,city,salary\nAlice,25,Beijing,15000\nBob,30,Shanghai,18000\nCharlie,28,Guangzhou,16000\nDavid,35,Shenzhen,20000\nEva,27,Chengdu,14000'''\n\n# 写入临时文件\nwith open('temp_data.csv', 'w') as f:\n    f.write(data)\n\n# 读取 CSV\ndf = pd.read_csv('temp_data.csv')\nprint('数据预览:')\nprint(df.head())\n\nprint(f'\\n平均工资: {df[\"salary\"].mean():.2f}')\nprint(f'最高工资: {df[\"salary\"].max()}')\nprint(f'人数: {len(df)}')",
+    "tags": [
+      "pandas",
+      "CSV"
+    ]
+  },
+  {
+    "id": "ex_data_002",
+    "module": "data_processing",
+    "title": "数据筛选与排序",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "对数据进行筛选和排序",
+    "starter_code": "import pandas as pd\n\ndata = {\n    'name': ['Alice', 'Bob', 'Charlie', 'David', 'Eva'],\n    'score': [85, 92, 78, 95, 88],\n    'grade': ['A', 'A', 'B', 'A', 'B']\n}\ndf = pd.DataFrame(data)\n\n# 筛选分数大于85的学生\nhigh_scores = # 你的代码\n\n# 按分数降序排序\nsorted_df = # 你的代码\n\nprint('高分学生:')\nprint(high_scores)\nprint('\\n排序后:')\nprint(sorted_df)",
+    "solution": "import pandas as pd\n\ndata = {\n    'name': ['Alice', 'Bob', 'Charlie', 'David', 'Eva'],\n    'score': [85, 92, 78, 95, 88],\n    'grade': ['A', 'A', 'B', 'A', 'B']\n}\ndf = pd.DataFrame(data)\n\n# 筛选分数大于85的学生\nhigh_scores = df[df['score'] > 85]\n\n# 按分数降序排序\nsorted_df = df.sort_values('score', ascending=False)\n\nprint('高分学生:')\nprint(high_scores)\nprint('\\n排序后:')\nprint(sorted_df)",
+    "tags": [
+      "筛选",
+      "排序"
+    ]
+  },
+  {
+    "id": "ex_data_003",
+    "module": "data_processing",
+    "title": "数据分组统计",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 groupby 进行分组统计",
+    "starter_code": "import pandas as pd\n\ndata = {\n    'department': ['IT', 'HR', 'IT', 'Sales', 'HR', 'IT'],\n    'employee': ['Alice', 'Bob', 'Charlie', 'David', 'Eva', 'Frank'],\n    'salary': [15000, 12000, 14000, 13000, 11000, 16000]\n}\ndf = pd.DataFrame(data)\n\n# 按部门统计平均工资\ndept_stats = # 你的代码\n\n# 统计各部门人数\ndept_count = # 你的代码\n\nprint('各部门平均工资:')\nprint(dept_stats)\nprint('\\n各部门人数:')\nprint(dept_count)",
+    "solution": "import pandas as pd\n\ndata = {\n    'department': ['IT', 'HR', 'IT', 'Sales', 'HR', 'IT'],\n    'employee': ['Alice', 'Bob', 'Charlie', 'David', 'Eva', 'Frank'],\n    'salary': [15000, 12000, 14000, 13000, 11000, 16000]\n}\ndf = pd.DataFrame(data)\n\n# 按部门统计平均工资\ndept_stats = df.groupby('department')['salary'].mean()\n\n# 统计各部门人数\ndept_count = df.groupby('department').size()\n\nprint('各部门平均工资:')\nprint(dept_stats)\nprint('\\n各部门人数:')\nprint(dept_count)",
+    "tags": [
+      "groupby",
+      "统计"
+    ]
+  },
+  {
+    "id": "ex_data_004",
+    "module": "data_processing",
+    "title": "数据清洗",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "处理缺失值和重复数据",
+    "starter_code": "import pandas as pd\nimport numpy as np\n\ndata = {\n    'name': ['Alice', 'Bob', 'Charlie', 'Bob', 'Eva', None],\n    'age': [25, None, 28, 35, 27, 30],\n    'score': [85, 92, None, 95, 88, 90]\n}\ndf = pd.DataFrame(data)\n\nprint('原始数据:')\nprint(df)\nprint(f'缺失值:\\n{df.isnull().sum()}')\n\n# 删除重复行\ndf_no_dup = # 你的代码\n\n# 填充缺失值\ndf_filled = # 你的代码\n\nprint('\\n去重后:')\nprint(df_no_dup)\nprint('\\n填充后:')\nprint(df_filled)",
+    "solution": "import pandas as pd\nimport numpy as np\n\ndata = {\n    'name': ['Alice', 'Bob', 'Charlie', 'Bob', 'Eva', None],\n    'age': [25, None, 28, 35, 27, 30],\n    'score': [85, 92, None, 95, 88, 90]\n}\ndf = pd.DataFrame(data)\n\nprint('原始数据:')\nprint(df)\nprint(f'缺失值:\\n{df.isnull().sum()}')\n\n# 删除重复行\ndf_no_dup = df.drop_duplicates()\n\n# 填充缺失值\ndf_filled = df.copy()\ndf_filled['age'].fillna(df_filled['age'].mean(), inplace=True)\ndf_filled['score'].fillna(df_filled['score'].median(), inplace=True)\n\nprint('\\n去重后:')\nprint(df_no_dup)\nprint('\\n填充后:')\nprint(df_filled)",
+    "tags": [
+      "清洗",
+      "缺失值"
+    ]
+  },
+  {
+    "id": "ex_data_005",
+    "module": "data_processing",
+    "title": "数据合并",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "合并多个数据集",
+    "starter_code": "import pandas as pd\n\n# 创建两个数据集\ndf1 = pd.DataFrame({\n    'id': [1, 2, 3],\n    'name': ['Alice', 'Bob', 'Charlie'],\n    'dept_id': [101, 102, 101]\n})\n\ndf2 = pd.DataFrame({\n    'dept_id': [101, 102, 103],\n    'department': ['IT', 'HR', 'Sales'],\n    'location': ['Beijing', 'Shanghai', 'Guangzhou']\n})\n\n# 内连接合并\nmerged = # 你的代码\n\nprint('合并结果:')\nprint(merged)",
+    "solution": "import pandas as pd\n\n# 创建两个数据集\ndf1 = pd.DataFrame({\n    'id': [1, 2, 3],\n    'name': ['Alice', 'Bob', 'Charlie'],\n    'dept_id': [101, 102, 101]\n})\n\ndf2 = pd.DataFrame({\n    'dept_id': [101, 102, 103],\n    'department': ['IT', 'HR', 'Sales'],\n    'location': ['Beijing', 'Shanghai', 'Guangzhou']\n})\n\n# 内连接合并\nmerged = pd.merge(df1, df2, on='dept_id', how='inner')\n\nprint('内连接结果:')\nprint(merged)\n\n# 左连接\nmerged_left = pd.merge(df1, df2, on='dept_id', how='left')\nprint('\\n左连接结果:')\nprint(merged_left)",
+    "tags": [
+      "合并",
+      "join"
+    ]
+  },
+  {
+    "id": "ex_web_001",
+    "module": "web_development",
+    "title": "Flask 基础",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "创建简单的 Flask 应用",
+    "starter_code": "from flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/')\ndef index():\n    return '<h1>Welcome!</h1><p><a href=\"/hello\">Hello</a></p>'\n\n@app.route('/hello')\ndef hello():\n    return '<h1>Hello, World!</h1>'\n\n@app.route('/user/<name>')\ndef user(name):\n    return f'<h1>Hello, {name}!</h1>'\n\nif __name__ == '__main__':\n    app.run(debug=True)",
+    "solution": "from flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/')\ndef index():\n    return '<h1>Welcome!</h1><p><a href=\"/hello\">Hello</a></p>'\n\n@app.route('/hello')\ndef hello():\n    return '<h1>Hello, World!</h1>'\n\n@app.route('/user/<name>')\ndef user(name):\n    return f'<h1>Hello, {name}!</h1>'\n\nif __name__ == '__main__':\n    print('启动 Flask 应用...')\n    app.run(debug=True, port=5000)",
+    "tags": [
+      "Flask",
+      "路由"
+    ]
+  },
+  {
+    "id": "ex_web_002",
+    "module": "web_development",
+    "title": "Flask 模板",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 Jinja2 模板",
+    "starter_code": "from flask import Flask, render_template_string\n\napp = Flask(__name__)\n\n# 内联模板\nhtml = '''\n<!DOCTYPE html>\n<html>\n<head><title>用户列表</title></head>\n<body>\n    <h1>用户列表</h1>\n    <ul>\n    {% for user in users %}\n        <li>{{ user.name }} - {{ user.email }}</li>\n    {% endfor %}\n    </ul>\n</body>\n</html>\n'''\n\nusers = [\n    {'name': 'Alice', 'email': 'alice@example.com'},\n    {'name': 'Bob', 'email': 'bob@example.com'},\n]\n\n@app.route('/')\ndef index():\n    return render_template_string(html, users=users)\n\nif __name__ == '__main__':\n    app.run(debug=True)",
+    "solution": "from flask import Flask, render_template_string\n\napp = Flask(__name__)\n\n# 内联模板\nhtml = '''\n<!DOCTYPE html>\n<html>\n<head><title>用户列表</title></head>\n<body>\n    <h1>用户列表</h1>\n    <ul>\n    {% for user in users %}\n        <li>{{ user.name }} - {{ user.email }}</li>\n    {% endfor %}\n    </ul>\n    <p>共 {{ users|length }} 位用户</p>\n</body>\n</html>\n'''\n\nusers = [\n    {'name': 'Alice', 'email': 'alice@example.com'},\n    {'name': 'Bob', 'email': 'bob@example.com'},\n]\n\n@app.route('/')\ndef index():\n    return render_template_string(html, users=users)\n\nif __name__ == '__main__':\n    app.run(debug=True)",
+    "tags": [
+      "Jinja2",
+      "模板"
+    ]
+  },
+  {
+    "id": "ex_web_003",
+    "module": "web_development",
+    "title": "REST API",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "创建 RESTful API",
+    "starter_code": "from flask import Flask, jsonify, request\n\napp = Flask(__name__)\n\n# 模拟数据\ntasks = [\n    {'id': 1, 'title': '学习 Python', 'done': False},\n    {'id': 2, 'title': '写代码', 'done': True},\n]\n\n@app.route('/api/tasks', methods=['GET'])\ndef get_tasks():\n    return jsonify({'tasks': tasks})\n\n@app.route('/api/tasks/<int:task_id>', methods=['GET'])\ndef get_task(task_id):\n    task = next((t for t in tasks if t['id'] == task_id), None)\n    if task:\n        return jsonify(task)\n    return jsonify({'error': 'Task not found'}), 404\n\n@app.route('/api/tasks', methods=['POST'])\ndef create_task():\n    # 创建任务\n    pass\n\nif __name__ == '__main__':\n    app.run(debug=True)",
+    "solution": "from flask import Flask, jsonify, request\n\napp = Flask(__name__)\n\n# 模拟数据\ntasks = [\n    {'id': 1, 'title': '学习 Python', 'done': False},\n    {'id': 2, 'title': '写代码', 'done': True},\n]\nnext_id = 3\n\n@app.route('/api/tasks', methods=['GET'])\ndef get_tasks():\n    return jsonify({'tasks': tasks})\n\n@app.route('/api/tasks/<int:task_id>', methods=['GET'])\ndef get_task(task_id):\n    task = next((t for t in tasks if t['id'] == task_id), None)\n    if task:\n        return jsonify(task)\n    return jsonify({'error': 'Task not found'}), 404\n\n@app.route('/api/tasks', methods=['POST'])\ndef create_task():\n    global next_id\n    data = request.json\n    task = {\n        'id': next_id,\n        'title': data.get('title', ''),\n        'done': False\n    }\n    tasks.append(task)\n    next_id += 1\n    return jsonify(task), 201\n\nif __name__ == '__main__':\n    app.run(debug=True)",
+    "tags": [
+      "REST",
+      "API"
+    ]
+  },
+  {
+    "id": "ex_web_004",
+    "module": "web_development",
+    "title": "表单处理",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "处理 HTML 表单",
+    "starter_code": "from flask import Flask, request, render_template_string\n\napp = Flask(__name__)\n\nhtml = '''\n<!DOCTYPE html>\n<html>\n<body>\n    <form method=\"post\">\n        <label>用户名: <input type=\"text\" name=\"username\"></label><br>\n        <label>密码: <input type=\"password\" name=\"password\"></label><br>\n        <button type=\"submit\">登录</button>\n    </form>\n</body>\n</html>\n'''\n\n@app.route('/login', methods=['GET', 'POST'])\ndef login():\n    if request.method == 'POST':\n        username = request.form['username']\n        password = request.form['password']\n        return f'<h1>Welcome, {username}!</h1>'\n    return render_template_string(html)\n\nif __name__ == '__main__':\n    app.run(debug=True)",
+    "solution": "from flask import Flask, request, render_template_string\n\napp = Flask(__name__)\n\nhtml = '''\n<!DOCTYPE html>\n<html>\n<body>\n    <h2>用户登录</h2>\n    <form method=\"post\">\n        <label>用户名: <input type=\"text\" name=\"username\" required></label><br><br>\n        <label>密码: <input type=\"password\" name=\"password\" required></label><br><br>\n        <button type=\"submit\">登录</button>\n    </form>\n    {% if error %}\n    <p style=\"color:red;\">{{ error }}</p>\n    {% endif %}\n</body>\n</html>\n'''\n\nusers = {'admin': '123456', 'user': 'password'}\n\n@app.route('/login', methods=['GET', 'POST'])\ndef login():\n    if request.method == 'POST':\n        username = request.form['username']\n        password = request.form['password']\n        if username in users and users[username] == password:\n            return f'<h1>Welcome, {username}!</h1>'\n        return render_template_string(html, error='用户名或密码错误')\n    return render_template_string(html)\n\nif __name__ == '__main__':\n    app.run(debug=True)",
+    "tags": [
+      "表单",
+      "POST"
+    ]
+  },
+  {
+    "id": "ex_web_005",
+    "module": "web_development",
+    "title": "FastAPI 基础",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "使用 FastAPI 创建 API",
+    "starter_code": "from fastapi import FastAPI\nfrom pydantic import BaseModel\n\napp = FastAPI()\n\nclass Item(BaseModel):\n    name: str\n    description: str = None\n    price: float\n    quantity: int\n\nitems = {}\n\n@app.get('/')\ndef read_root():\n    return {'message': 'Welcome to FastAPI'}\n\n@app.get('/items/{item_id}')\ndef read_item(item_id: int):\n    return items.get(item_id, {'error': 'Item not found'})\n\n@app.post('/items')\ndef create_item(item: Item):\n    item_id = len(items) + 1\n    items[item_id] = item.dict()\n    return {'item_id': item_id, 'item': item}\n\n# 运行: uvicorn main:app --reload",
+    "solution": "from fastapi import FastAPI, HTTPException\nfrom pydantic import BaseModel\nfrom typing import Optional\n\napp = FastAPI(title='物品管理 API', version='1.0.0')\n\nclass Item(BaseModel):\n    name: str\n    description: Optional[str] = None\n    price: float\n    quantity: int = 0\n\nitems = {}\n\n@app.get('/')\ndef read_root():\n    return {\n        'message': 'Welcome to FastAPI',\n        'docs': '/docs',\n        'items_count': len(items)\n    }\n\n@app.get('/items/{item_id}')\ndef read_item(item_id: int):\n    if item_id not in items:\n        raise HTTPException(status_code=404, detail='Item not found')\n    return items[item_id]\n\n@app.post('/items', status_code=201)\ndef create_item(item: Item):\n    item_id = len(items) + 1\n    items[item_id] = item.dict()\n    return {'item_id': item_id, 'item': item}\n\n@app.get('/items')\ndef list_items():\n    return {'items': items}\n\nif __name__ == '__main__':\n    import uvicorn\n    uvicorn.run(app, host='127.0.0.1', port=8000)",
+    "tags": [
+      "FastAPI",
+      "REST"
+    ]
+  },
+  {
+    "id": "ex_ai_ml_001",
+    "module": "ai_ml_basics",
+    "title": "线性回归",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 sklearn 实现线性回归",
+    "starter_code": "import numpy as np\nfrom sklearn.linear_model import LinearRegression\nimport matplotlib.pyplot as plt\n\n# 准备数据\nX = np.array([[1], [2], [3], [4], [5]])\ny = np.array([2.1, 4.2, 5.8, 8.1, 10.3])\n\n# 创建并训练模型\nmodel = LinearRegression()\n# 你的代码\n\n# 预测\nX_test = np.array([[6], [7]])\ny_pred = model.predict(X_test)\n\nprint(f'系数: {model.coef_[0]:.2f}')\nprint(f'截距: {model.intercept_:.2f}')\nprint(f'预测值: {y_pred}')",
+    "solution": "import numpy as np\nfrom sklearn.linear_model import LinearRegression\n\n# 准备数据\nX = np.array([[1], [2], [3], [4], [5]])\ny = np.array([2.1, 4.2, 5.8, 8.1, 10.3])\n\n# 创建并训练模型\nmodel = LinearRegression()\nmodel.fit(X, y)\n\n# 预测\nX_test = np.array([[6], [7]])\ny_pred = model.predict(X_test)\n\nprint(f'系数: {model.coef_[0]:.2f}')\nprint(f'截距: {model.intercept_:.2f}')\nprint(f'R² 分数: {model.score(X, y):.4f}')\nprint(f'预测 x=6: {y_pred[0]:.2f}')\nprint(f'预测 x=7: {y_pred[1]:.2f}')",
+    "tags": [
+      "线性回归",
+      "sklearn"
+    ]
+  },
+  {
+    "id": "ex_ai_ml_002",
+    "module": "ai_ml_basics",
+    "title": "K-Means 聚类",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 K-Means 进行数据聚类",
+    "starter_code": "import numpy as np\nfrom sklearn.cluster import KMeans\n\n# 生成数据\nnp.random.seed(42)\nX = np.random.randn(100, 2)\nX[:30] += [3, 3]  # 第一个簇\nX[30:60] += [-3, 3]  # 第二个簇\n\n# 聚类\nkmeans = KMeans(n_clusters=3, random_state=42)\n# 你的代码\n\nprint(f'聚类中心:\\n{kmeans.cluster_centers_}')\nprint(f'标签: {kmeans.labels_[:10]}')",
+    "solution": "import numpy as np\nfrom sklearn.cluster import KMeans\n\n# 生成数据\nnp.random.seed(42)\nX = np.random.randn(100, 2)\nX[:30] += [3, 3]  # 第一个簇\nX[30:60] += [-3, 3]  # 第二个簇\n\n# 聚类\nkmeans = KMeans(n_clusters=3, random_state=42)\nkmeans.fit(X)\n\nprint(f'聚类中心:\\n{kmeans.cluster_centers_}')\nprint(f'标签: {kmeans.labels_[:10]}')\nprint(f'惯性(簇内距离): {kmeans.inertia_:.2f}')",
+    "tags": [
+      "K-Means",
+      "聚类"
+    ]
+  },
+  {
+    "id": "ex_ai_ml_003",
+    "module": "ai_ml_basics",
+    "title": "决策树分类",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用决策树进行分类",
+    "starter_code": "from sklearn.datasets import load_iris\nfrom sklearn.tree import DecisionTreeClassifier, plot_tree\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import accuracy_score, classification_report\n\n# 加载数据\niris = load_iris()\nX, y = iris.data, iris.target\n\n# 划分训练集和测试集\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.2, random_state=42\n)\n\n# 创建并训练模型\nclf = DecisionTreeClassifier(max_depth=3, random_state=42)\n# 你的代码\n\n# 预测和评估\ny_pred = clf.predict(X_test)\nprint(f'准确率: {accuracy_score(y_test, y_pred):.2f}')",
+    "solution": "from sklearn.datasets import load_iris\nfrom sklearn.tree import DecisionTreeClassifier\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import accuracy_score, classification_report\n\n# 加载数据\niris = load_iris()\nX, y = iris.data, iris.target\n\n# 划分训练集和测试集\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.2, random_state=42\n)\n\n# 创建并训练模型\nclf = DecisionTreeClassifier(max_depth=3, random_state=42)\nclf.fit(X_train, y_train)\n\n# 预测和评估\ny_pred = clf.predict(X_test)\nprint(f'准确率: {accuracy_score(y_test, y_pred):.2f}')\nprint('分类报告:')\nprint(classification_report(y_test, y_pred, target_names=iris.target_names))",
+    "tags": [
+      "决策树",
+      "分类"
+    ]
+  },
+  {
+    "id": "ex_ai_ml_004",
+    "module": "ai_ml_basics",
+    "title": "模型评估指标",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "计算分类模型的评估指标",
+    "starter_code": "from sklearn.metrics import confusion_matrix, precision_score, recall_score, f1_score\n\n# 真实标签和预测标签\ny_true = [1, 0, 1, 1, 0, 1, 0, 0, 1, 0]\ny_pred = [1, 0, 1, 0, 0, 1, 1, 0, 1, 0]\n\n# 计算混淆矩阵\ncm = confusion_matrix(y_true, y_pred)\n\n# 计算各项指标\n# 你的代码\n\nprint(f'混淆矩阵:\\n{cm}')\nprint(f'精确率: {precision:.2f}')\nprint(f'召回率: {recall:.2f}')\nprint(f'F1分数: {f1:.2f}')",
+    "solution": "from sklearn.metrics import confusion_matrix, precision_score, recall_score, f1_score\n\n# 真实标签和预测标签\ny_true = [1, 0, 1, 1, 0, 1, 0, 0, 1, 0]\ny_pred = [1, 0, 1, 0, 0, 1, 1, 0, 1, 0]\n\n# 计算混淆矩阵\ncm = confusion_matrix(y_true, y_pred)\n\n# 计算各项指标\nprecision = precision_score(y_true, y_pred)\nrecall = recall_score(y_true, y_pred)\nf1 = f1_score(y_true, y_pred)\n\nprint(f'混淆矩阵:\\n{cm}')\nprint(f'TN={cm[0][0]}, FP={cm[0][1]}')\nprint(f'FN={cm[1][0]}, TP={cm[1][1]}')\nprint(f'精确率: {precision:.2f}')\nprint(f'召回率: {recall:.2f}')\nprint(f'F1分数: {f1:.2f}')",
+    "tags": [
+      "评估",
+      "指标"
+    ]
+  },
+  {
+    "id": "ex_ai_ml_005",
+    "module": "ai_ml_basics",
+    "title": "交叉验证",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "使用交叉验证评估模型",
+    "starter_code": "from sklearn.datasets import load_iris\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.model_selection import cross_val_score\n\n# 加载数据\niris = load_iris()\nX, y = iris.data, iris.target\n\n# 创建模型\nmodel = LogisticRegression(max_iter=200, random_state=42)\n\n# 5折交叉验证\n# 你的代码\n\nprint(f'各折分数: {scores}')\nprint(f'平均分数: {scores.mean():.4f}')\nprint(f'标准差: {scores.std():.4f}')",
+    "solution": "from sklearn.datasets import load_iris\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.model_selection import cross_val_score\n\n# 加载数据\niris = load_iris()\nX, y = iris.data, iris.target\n\n# 创建模型\nmodel = LogisticRegression(max_iter=200, random_state=42)\n\n# 5折交叉验证\nscores = cross_val_score(model, X, y, cv=5)\n\nprint(f'各折分数: {scores}')\nprint(f'平均分数: {scores.mean():.4f}')\nprint(f'标准差: {scores.std():.4f}')",
+    "tags": [
+      "交叉验证",
+      "评估"
+    ]
+  },
+  {
+    "id": "ex_dl_001",
+    "module": "deep_learning",
+    "title": "神经网络基础",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 PyTorch 构建简单神经网络",
+    "starter_code": "import torch\nimport torch.nn as nn\n\n# 定义神经网络\nclass SimpleNN(nn.Module):\n    def __init__(self, input_size, hidden_size, num_classes):\n        super(SimpleNN, self).__init__()\n        # 定义层\n        # 你的代码\n        \n    def forward(self, x):\n        # 前向传播\n        # 你的代码\n        return x\n\n# 测试\nmodel = SimpleNN(784, 128, 10)\nprint(model)\n\n# 测试输入\nx = torch.randn(1, 784)\noutput = model(x)\nprint(f'输出形状: {output.shape}')",
+    "solution": "import torch\nimport torch.nn as nn\n\n# 定义神经网络\nclass SimpleNN(nn.Module):\n    def __init__(self, input_size, hidden_size, num_classes):\n        super(SimpleNN, self).__init__()\n        self.layer1 = nn.Linear(input_size, hidden_size)\n        self.relu = nn.ReLU()\n        self.layer2 = nn.Linear(hidden_size, num_classes)\n        \n    def forward(self, x):\n        x = self.layer1(x)\n        x = self.relu(x)\n        x = self.layer2(x)\n        return x\n\n# 测试\nmodel = SimpleNN(784, 128, 10)\nprint('模型结构:')\nprint(model)\n\n# 统计参数\ntotal_params = sum(p.numel() for p in model.parameters())\nprint(f'\\n总参数量: {total_params:,}')\n\n# 测试输入\nx = torch.randn(1, 784)\noutput = model(x)\nprint(f'输入形状: {x.shape}')\nprint(f'输出形状: {output.shape}')",
+    "tags": [
+      "神经网络",
+      "PyTorch"
+    ]
+  },
+  {
+    "id": "ex_dl_002",
+    "module": "deep_learning",
+    "title": "卷积神经网络",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "构建 CNN 进行图像分类",
+    "starter_code": "import torch\nimport torch.nn as nn\n\nclass CNN(nn.Module):\n    def __init__(self):\n        super(CNN, self).__init__()\n        # 卷积层\n        self.conv1 = nn.Conv2d(3, 32, kernel_size=3, padding=1)\n        self.conv2 = nn.Conv2d(32, 64, kernel_size=3, padding=1)\n        # 池化层\n        self.pool = nn.MaxPool2d(2, 2)\n        # 全连接层\n        self.fc1 = nn.Linear(64 * 8 * 8, 128)\n        self.fc2 = nn.Linear(128, 10)\n        \n    def forward(self, x):\n        # 实现前向传播\n        # 你的代码\n        return x\n\nmodel = CNN()\nprint(model)\n\n# 测试\nx = torch.randn(1, 3, 32, 32)\noutput = model(x)\nprint(f'输出形状: {output.shape}')",
+    "solution": "import torch\nimport torch.nn as nn\n\nclass CNN(nn.Module):\n    def __init__(self):\n        super(CNN, self).__init__()\n        # 卷积层\n        self.conv1 = nn.Conv2d(3, 32, kernel_size=3, padding=1)\n        self.conv2 = nn.Conv2d(32, 64, kernel_size=3, padding=1)\n        # 池化层\n        self.pool = nn.MaxPool2d(2, 2)\n        self.relu = nn.ReLU()\n        # 全连接层\n        self.fc1 = nn.Linear(64 * 8 * 8, 128)\n        self.fc2 = nn.Linear(128, 10)\n        \n    def forward(self, x):\n        x = self.pool(self.relu(self.conv1(x)))  # 32->16\n        x = self.pool(self.relu(self.conv2(x)))  # 64->8\n        x = x.view(-1, 64 * 8 * 8)\n        x = self.relu(self.fc1(x))\n        x = self.fc2(x)\n        return x\n\nmodel = CNN()\nprint('CNN 模型结构:')\nprint(model)\n\n# 测试\nx = torch.randn(1, 3, 32, 32)\noutput = model(x)\nprint(f'\\n输入形状: {x.shape}')\nprint(f'输出形状: {output.shape}')",
+    "tags": [
+      "CNN",
+      "图像"
+    ]
+  },
+  {
+    "id": "ex_dl_003",
+    "module": "deep_learning",
+    "title": "训练循环",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "实现完整的训练循环",
+    "starter_code": "import torch\nimport torch.nn as nn\nimport torch.optim as optim\n\n# 简单模型和数据\nmodel = nn.Linear(10, 2)\ncriterion = nn.CrossEntropyLoss()\noptimizer = optim.SGD(model.parameters(), lr=0.01)\n\n# 模拟数据\nX = torch.randn(100, 10)\ny = torch.randint(0, 2, (100,))\n\n# 训练循环\nfor epoch in range(5):\n    # 前向传播\n    # 你的代码\n    \n    # 反向传播\n    # 你的代码\n    \n    # 更新参数\n    # 你的代码\n    \n    print(f'Epoch {epoch+1}, Loss: {loss.item():.4f}')",
+    "solution": "import torch\nimport torch.nn as nn\nimport torch.optim as optim\n\n# 简单模型和数据\nmodel = nn.Linear(10, 2)\ncriterion = nn.CrossEntropyLoss()\noptimizer = optim.SGD(model.parameters(), lr=0.01)\n\n# 模拟数据\nX = torch.randn(100, 10)\ny = torch.randint(0, 2, (100,))\n\n# 训练循环\nfor epoch in range(5):\n    # 前向传播\n    outputs = model(X)\n    loss = criterion(outputs, y)\n    \n    # 反向传播\n    optimizer.zero_grad()\n    loss.backward()\n    \n    # 更新参数\n    optimizer.step()\n    \n    print(f'Epoch {epoch+1}, Loss: {loss.item():.4f}')\n\nprint('\\n训练完成!')",
+    "tags": [
+      "训练",
+      "优化"
+    ]
+  },
+  {
+    "id": "ex_dl_004",
+    "module": "deep_learning",
+    "title": "Dropout 和正则化",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "使用 Dropout 防止过拟合",
+    "starter_code": "import torch\nimport torch.nn as nn\n\nclass DropoutNet(nn.Module):\n    def __init__(self, input_size, hidden_size, num_classes, dropout_rate=0.5):\n        super(DropoutNet, self).__init__()\n        self.fc1 = nn.Linear(input_size, hidden_size)\n        self.relu = nn.ReLU()\n        # 添加 Dropout\n        # 你的代码\n        self.fc2 = nn.Linear(hidden_size, hidden_size)\n        self.fc3 = nn.Linear(hidden_size, num_classes)\n        \n    def forward(self, x):\n        x = self.relu(self.fc1(x))\n        x = self.dropout(x)  # 训练时丢弃\n        x = self.relu(self.fc2(x))\n        x = self.dropout(x)\n        x = self.fc3(x)\n        return x\n\nmodel = DropoutNet(784, 256, 10)\nprint(model)\n\n# 测试训练和评估模式\nmodel.train()  # 训练模式\nmodel.eval()   # 评估模式",
+    "solution": "import torch\nimport torch.nn as nn\n\nclass DropoutNet(nn.Module):\n    def __init__(self, input_size, hidden_size, num_classes, dropout_rate=0.5):\n        super(DropoutNet, self).__init__()\n        self.fc1 = nn.Linear(input_size, hidden_size)\n        self.relu = nn.ReLU()\n        self.dropout = nn.Dropout(p=dropout_rate)\n        self.fc2 = nn.Linear(hidden_size, hidden_size)\n        self.fc3 = nn.Linear(hidden_size, num_classes)\n        \n    def forward(self, x):\n        x = self.relu(self.fc1(x))\n        x = self.dropout(x)\n        x = self.relu(self.fc2(x))\n        x = self.dropout(x)\n        x = self.fc3(x)\n        return x\n\nmodel = DropoutNet(784, 256, 10)\nprint('Dropout 网络:')\nprint(model)\n\n# 测试训练和评估模式\nmodel.train()\nprint('\\n训练模式: dropout 生效')\nmodel.eval()\nprint('评估模式: dropout 禁用')",
+    "tags": [
+      "Dropout",
+      "正则化"
+    ]
+  },
+  {
+    "id": "ex_dl_005",
+    "module": "deep_learning",
+    "title": "迁移学习",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "使用预训练模型",
+    "starter_code": "import torchvision.models as models\n\n# 加载预训练 ResNet\nmodel = models.resnet18(pretrained=True)\n\n# 查看模型结构\nprint(model)\n\n# 冻结部分参数\nfor param in model.parameters():\n    param.requires_grad = False\n\n# 替换最后的全连接层\n# 你的代码\n\nprint('\\n修改后的分类层:')\nprint(model.fc)",
+    "solution": "import torchvision.models as models\nimport torch.nn as nn\n\n# 加载预训练 ResNet\nmodel = models.resnet18(weights='IMAGENET1K_V1')\n\n# 查看模型结构\nprint('原始 ResNet18 最后层:')\nprint(model.fc)\n\n# 冻结部分参数\nfor param in model.parameters():\n    param.requires_grad = False\n\n# 替换最后的全连接层 (512 -> 10 类)\nnum_features = model.fc.in_features\nmodel.fc = nn.Linear(num_features, 10)\n\nprint('\\n修改后的分类层:')\nprint(model.fc)\n\n# 只有新层需要训练\ntrainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)\nprint(f'\\n可训练参数量: {trainable_params:,}')",
+    "tags": [
+      "迁移学习",
+      "ResNet"
+    ]
+  },
+  {
+    "id": "ex_nlp_001",
+    "module": "nlp_and_llm",
+    "title": "文本分词",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用分词器处理文本",
+    "starter_code": "# 使用 transformers 进行分词\nfrom transformers import AutoTokenizer\n\n# 加载分词器\ntokenizer = AutoTokenizer.from_pretrained('bert-base-chinese')\n\ntext = \"今天天气真好，我们去公园玩吧！\"\n\n# 分词\n# 你的代码\n\nprint(f'原始文本: {text}')\nprint(f'分词结果: {tokens}')\nprint(f'词数: {len(tokens)}')",
+    "solution": "# 使用 transformers 进行分词\nfrom transformers import AutoTokenizer\n\n# 加载分词器\ntry:\n    tokenizer = AutoTokenizer.from_pretrained('bert-base-chinese')\n    \n    text = \"今天天气真好，我们去公园玩吧！\"\n    \n    # 分词\n    tokens = tokenizer.tokenize(text)\n    \n    print(f'原始文本: {text}')\n    print(f'分词结果: {tokens}')\n    print(f'词数: {len(tokens)}')\n    \nexcept Exception as e:\n    print('使用模拟分词器演示:')\n    text = \"今天天气真好，我们去公园玩吧！\"\n    # 简单按字符分词\n    tokens = list(text.replace('！', '').replace('，', '').replace(' ', ''))\n    print(f'原始文本: {text}')\n    print(f'分词结果: {tokens}')\n    print(f'词数: {len(tokens)}')",
+    "tags": [
+      "分词",
+      "BERT"
+    ]
+  },
+  {
+    "id": "ex_nlp_002",
+    "module": "nlp_and_llm",
+    "title": "文本分类",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用预训练模型进行情感分类",
+    "starter_code": "from transformers import pipeline\n\n# 加载情感分析 pipeline\nclassifier = pipeline('sentiment-analysis')\n\ntexts = [\n    \"I love this product, it's amazing!\",\n    \"This is the worst experience ever.\",\n    \"The movie was okay, nothing special.\"\n]\n\n# 批量分类\n# 你的代码\n\nfor text, result in zip(texts, results):\n    print(f'文本: {text}')\n    print(f'情感: {result[\"label\"]}, 置信度: {result[\"score\"]:.4f}')\n    print()",
+    "solution": "from transformers import pipeline\n\n# 加载情感分析 pipeline\ntry:\n    classifier = pipeline('sentiment-analysis')\n    \n    texts = [\n        \"I love this product, it's amazing!\",\n        \"This is the worst experience ever.\",\n        \"The movie was okay, nothing special.\"\n    ]\n    \n    # 批量分类\n    results = classifier(texts)\n    \n    for text, result in zip(texts, results):\n        print(f'文本: {text}')\n        print(f'情感: {result[\"label\"]}, 置信度: {result[\"score\"]:.4f}')\n        print()\n        \nexcept Exception as e:\n    print('演示结果:')\n    texts = [\"I love this product!\", \"This is terrible.\"]\n    for text in texts:\n        label = 'POSITIVE' if 'love' in text else 'NEGATIVE'\n        print(f'{text} -> {label}')",
+    "tags": [
+      "情感分析",
+      "分类"
+    ]
+  },
+  {
+    "id": "ex_nlp_003",
+    "module": "nlp_and_llm",
+    "title": "命名实体识别",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 NER 识别文本中的实体",
+    "starter_code": "from transformers import pipeline\n\n# 加载 NER pipeline\nner = pipeline('ner', aggregation_strategy='simple')\n\ntext = \"Elon Musk founded Tesla in California and SpaceX in 2002.\"\n\n# 识别实体\n# 你的代码\n\nprint(f'原文: {text}')\nprint('\\n识别出的实体:')\nfor entity in entities:\n    print(f'  {entity[\"word\"]} -> {entity[\"entity_group\"]} ({entity[\"score\"]:.2f})')",
+    "solution": "from transformers import pipeline\n\n# 加载 NER pipeline\ntry:\n    ner = pipeline('ner', aggregation_strategy='simple')\n    \n    text = \"Elon Musk founded Tesla in California and SpaceX in 2002.\"\n    \n    # 识别实体\n    entities = ner(text)\n    \n    print(f'原文: {text}')\n    print('\\n识别出的实体:')\n    for entity in entities:\n        print(f'  {entity[\"word\"]} -> {entity[\"entity_group\"]} ({entity[\"score\"]:.2f})')\n        \nexcept Exception as e:\n    print('演示结果:')\n    print('原文: Elon Musk founded Tesla in California.')\n    print('实体: Elon Musk -> PERSON, Tesla -> ORG, California -> LOC')",
+    "tags": [
+      "NER",
+      "实体识别"
+    ]
+  },
+  {
+    "id": "ex_nlp_004",
+    "module": "nlp_and_llm",
+    "title": "文本生成",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 GPT 生成文本",
+    "starter_code": "from transformers import pipeline\n\n# 加载文本生成 pipeline\ngenerator = pipeline('text-generation', model='gpt2')\n\nprompt = \"Once upon a time\"\n\n# 生成文本\n# 你的代码\n\nprint(f'提示: {prompt}')\nprint(f'生成: {generated_text[0][\"generated_text\"]}')",
+    "solution": "from transformers import pipeline\n\n# 加载文本生成 pipeline\ntry:\n    generator = pipeline('text-generation', model='gpt2')\n    \n    prompt = \"Once upon a time\"\n    \n    # 生成文本\n    generated_text = generator(prompt, max_length=50, num_return_sequences=1)\n    \n    print(f'提示: {prompt}')\n    print(f'生成: {generated_text[0][\"generated_text\"]}')\n    \nexcept Exception as e:\n    print('演示结果:')\n    prompt = \"Once upon a time\"\n    print(f'提示: {prompt}')\n    print(f'生成: {prompt} in a distant land, there lived a brave hero...')",
+    "tags": [
+      "GPT",
+      "文本生成"
+    ]
+  },
+  {
+    "id": "ex_nlp_005",
+    "module": "nlp_and_llm",
+    "title": "文本嵌入",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "获取文本的向量表示",
+    "starter_code": "from sentence_transformers import SentenceTransformer\n\n# 加载模型\nmodel = SentenceTransformer('all-MiniLM-L6-v2')\n\nsentences = [\n    \"The cat is sleeping on the couch\",\n    \"A dog is playing in the garden\",\n    \"The weather is nice today\"\n]\n\n# 获取嵌入\n# 你的代码\n\n# 计算相似度\nfrom sklearn.metrics.pairwise import cosine_similarity\nsimilarity = cosine_similarity(embeddings)\nprint('\\n句子相似度矩阵:')\nprint(similarity)",
+    "solution": "from sentence_transformers import SentenceTransformer\nfrom sklearn.metrics.pairwise import cosine_similarity\nimport numpy as np\n\ntry:\n    # 加载模型\n    model = SentenceTransformer('all-MiniLM-L6-v2')\n    \n    sentences = [\n        \"The cat is sleeping on the couch\",\n        \"A dog is playing in the garden\",\n        \"The weather is nice today\"\n    ]\n    \n    # 获取嵌入\n    embeddings = model.encode(sentences)\n    \n    print(f'嵌入维度: {embeddings.shape}')\n    print(f'句子数: {len(sentences)}')\n    \n    # 计算相似度\n    similarity = cosine_similarity(embeddings)\n    print('\\n句子相似度矩阵:')\n    for i, s1 in enumerate(sentences):\n        for j, s2 in enumerate(sentences):\n            if i < j:\n                print(f'  \"{s1[:20]}...\" vs \"{s2[:20]}...\": {similarity[i][j]:.4f}')\n                \nexcept Exception as e:\n    print('演示 - 句子嵌入概念:')\n    print('cat vs dog: 0.85 (语义相似)')\n    print('cat vs weather: 0.12 (语义不相似)')",
+    "tags": [
+      "嵌入",
+      "相似度"
+    ]
+  },
+  {
+    "id": "ex_cv_001",
+    "module": "cv_computer_vision",
+    "title": "图像读取与显示",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 OpenCV 读取和处理图像",
+    "starter_code": "import cv2\nimport numpy as np\n\n# 创建一个简单的测试图像\n# 实际使用时替换为 cv2.imread('image.jpg')\nimage = np.zeros((200, 300, 3), dtype=np.uint8)\nimage[:] = (100, 150, 200)  # 蓝色背景\n\n# 绘制矩形\ncv2.rectangle(image, (50, 50), (150, 150), (0, 255, 0), 2)\n\n# 绘制文字\ncv2.putText(image, 'Hello!', (80, 100), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)\n\n# 显示图像信息\nprint(f'图像形状: {image.shape}')\nprint(f'图像大小: {image.size}')\nprint(f'数据类型: {image.dtype}')",
+    "solution": "import cv2\nimport numpy as np\n\n# 创建一个简单的测试图像\nimage = np.zeros((200, 300, 3), dtype=np.uint8)\nimage[:] = (100, 150, 200)  # 蓝色背景\n\n# 绘制矩形\ncv2.rectangle(image, (50, 50), (150, 150), (0, 255, 0), 2)\n\n# 绘制文字\ncv2.putText(image, 'Hello!', (80, 100), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)\n\n# 显示图像信息\nprint(f'图像形状: {image.shape}')\nprint(f'图像大小: {image.size}')\nprint(f'数据类型: {image.dtype}')\nprint(f'图像尺寸: {image.shape[1]}x{image.shape[0]}')\n\n# 保存图像\ncv2.imwrite('test_image.png', image)\nprint('图像已保存为 test_image.png')",
+    "tags": [
+      "OpenCV",
+      "图像"
+    ]
+  },
+  {
+    "id": "ex_cv_002",
+    "module": "cv_computer_vision",
+    "title": "图像滤波",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用滤波器处理图像",
+    "starter_code": "import cv2\nimport numpy as np\n\n# 创建测试图像\nimage = cv2.imread('test_image.png') if False else np.zeros((100, 100, 3), dtype=np.uint8)\n\n# 添加一些特征\nimage[20:80, 20:80] = 200\n\n# 高斯模糊\nblurred = cv2.GaussianBlur(image, (5, 5), 0)\n\n# 均值模糊\nmean_blur = cv2.blur(image, (5, 5))\n\n# 边缘检测 (Sobel)\ngray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)\nsobelx = cv2.Sobel(gray, cv2.CV_64F, 1, 0, ksize=3)\nsobely = cv2.Sobel(gray, cv2.CV_64F, 0, 1, ksize=3)\n\nprint('原图像素值范围:', image.min(), '-', image.max())\nprint('高斯模糊后:', blurred.min(), '-', blurred.max())",
+    "solution": "import cv2\nimport numpy as np\n\n# 创建测试图像\nimage = np.zeros((100, 100, 3), dtype=np.uint8)\nimage[20:80, 20:80] = 200  # 添加一个白色块\n\n# 高斯模糊\nblurred = cv2.GaussianBlur(image, (5, 5), 0)\n\n# 均值模糊\nmean_blur = cv2.blur(image, (5, 5))\n\n# 中值模糊 (对椒盐噪声效果好)\nmedian_blur = cv2.medianBlur(image, 5)\n\n# 边缘检测 (Canny)\ngray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)\nedges = cv2.Canny(gray, 50, 150)\n\nprint('滤波效果演示:')\nprint(f'原图形状: {image.shape}')\nprint(f'高斯模糊后: {blurred.shape}')\nprint(f'边缘检测结果形状: {edges.shape}')\nprint('\\n边缘像素数量:', edges.sum() // 255)",
+    "tags": [
+      "滤波",
+      "模糊"
+    ]
+  },
+  {
+    "id": "ex_cv_003",
+    "module": "cv_computer_vision",
+    "title": "卷积操作",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "手动实现卷积操作",
+    "starter_code": "import numpy as np\nimport cv2\n\ndef convolve2d(image, kernel):\n    \"\"\"手动实现2D卷积\"\"\"\n    # 获取图像和核的尺寸\n    ih, iw = image.shape[:2]\n    kh, kw = kernel.shape\n    \n    # 计算输出尺寸\n    oh = ih - kh + 1\n    ow = iw - kw + 1\n    \n    # 初始化输出\n    output = np.zeros((oh, ow))\n    \n    # 遍历并计算\n    # 你的代码\n    \n    return output\n\n# 测试\nimage = np.array([\n    [1, 2, 3, 0, 1],\n    [4, 5, 6, 1, 2],\n    [7, 8, 9, 2, 3],\n    [1, 2, 3, 0, 1],\n    [4, 5, 6, 1, 2]\n], dtype=np.float32)\n\n# 锐化核\nkernel = np.array([\n    [0, -1, 0],\n    [-1, 5, -1],\n    [0, -1, 0]\n], dtype=np.float32)\n\nresult = convolve2d(image, kernel)\nprint('卷积结果:')\nprint(result)",
+    "solution": "import numpy as np\nimport cv2\n\ndef convolve2d(image, kernel):\n    \"\"\"手动实现2D卷积\"\"\"\n    ih, iw = image.shape[:2]\n    kh, kw = kernel.shape\n    \n    oh = ih - kh + 1\n    ow = iw - kw + 1\n    \n    output = np.zeros((oh, ow))\n    \n    for i in range(oh):\n        for j in range(ow):\n            output[i, j] = np.sum(image[i:i+kh, j:j+kw] * kernel)\n    \n    return output\n\n# 测试\nimage = np.array([\n    [1, 2, 3, 0, 1],\n    [4, 5, 6, 1, 2],\n    [7, 8, 9, 2, 3],\n    [1, 2, 3, 0, 1],\n    [4, 5, 6, 1, 2]\n], dtype=np.float32)\n\n# 锐化核\nkernel = np.array([\n    [0, -1, 0],\n    [-1, 5, -1],\n    [0, -1, 0]\n], dtype=np.float32)\n\nresult = convolve2d(image, kernel)\nprint('输入图像:')\nprint(image)\nprint('\\n锐化核:')\nprint(kernel)\nprint('\\n卷积结果 (锐化):')\nprint(result)",
+    "tags": [
+      "卷积",
+      "滤波器"
+    ]
+  },
+  {
+    "id": "ex_cv_004",
+    "module": "cv_computer_vision",
+    "title": "图像分割",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用阈值分割图像",
+    "starter_code": "import cv2\nimport numpy as np\n\n# 创建测试图像\ngray = np.zeros((100, 100), dtype=np.uint8)\ngray[20:80, 20:80] = 200\n\n# 全局阈值分割\n_, binary = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)\n\n# 自适应阈值\nadaptive = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, \n                                  cv2.THRESH_BINARY, 11, 2)\n\nprint(f'原图唯一值: {np.unique(gray)}')\nprint(f'二值化后唯一值: {np.unique(binary)}')\nprint(f'自适应阈值后唯一值: {np.unique(adaptive)}')",
+    "solution": "import cv2\nimport numpy as np\n\n# 创建测试图像\ngray = np.zeros((100, 100), dtype=np.uint8)\ngray[20:80, 20:80] = 200  # 中间一个亮块\n\n# 全局阈值分割\n_, binary = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)\n\n# Otsu 自动阈值\n_, otsu = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)\n\n# 自适应阈值\nadaptive = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, \n                                  cv2.THRESH_BINARY, 11, 2)\n\nprint(f'原图唯一值: {np.unique(gray)}')\nprint(f'二值化(阈值127)唯一值: {np.unique(binary)}')\nprint(f'Otsu自动阈值: {otsu}')\nprint(f'二值化后唯一值: {np.unique(binary)}')\nprint(f'自适应阈值后唯一值: {np.unique(adaptive)}')",
+    "tags": [
+      "阈值",
+      "分割"
+    ]
+  },
+  {
+    "id": "ex_cv_005",
+    "module": "cv_computer_vision",
+    "title": "图像变换",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "实现几何变换",
+    "starter_code": "import cv2\nimport numpy as np\n\n# 创建测试图像\nimage = np.zeros((100, 100, 3), dtype=np.uint8)\nimage[30:70, 30:70] = (0, 255, 0)  # 绿色方块\n\n# 缩放\nscale = 2\nh, w = image.shape[:2]\nscaled = cv2.resize(image, (w * scale, h * scale))\n\n# 旋转 45度\ncenter = (w // 2, h // 2)\nangle = 45\nscale = 1.0\nM = cv2.getRotationMatrix2D(center, angle, scale)\nrotated = cv2.warpAffine(image, M, (w, h))\n\n# 平移\nM = np.float32([[1, 0, 20], [0, 1, 10]])  # x方向20，y方向10\ntranslated = cv2.warpAffine(image, M, (w, h))\n\nprint(f'原图尺寸: {image.shape}')\nprint(f'缩放后尺寸: {scaled.shape}')\nprint(f'旋转后尺寸: {rotated.shape}')\nprint(f'平移后尺寸: {translated.shape}')",
+    "solution": "import cv2\nimport numpy as np\n\n# 创建测试图像\nimage = np.zeros((100, 100, 3), dtype=np.uint8)\nimage[30:70, 30:70] = (0, 255, 0)  # 绿色方块\n\n# 缩放\nscale = 2\nh, w = image.shape[:2]\nscaled = cv2.resize(image, (w * scale, h * scale))\n\n# 旋转 45度\ncenter = (w // 2, h // 2)\nangle = 45\nscale = 1.0\nM = cv2.getRotationMatrix2D(center, angle, scale)\nrotated = cv2.warpAffine(image, M, (w, h))\n\n# 平移\nM = np.float32([[1, 0, 20], [0, 1, 10]])\ntranslated = cv2.warpAffine(image, M, (w, h))\n\n# 透视变换\npts1 = np.float32([[30, 30], [70, 30], [30, 70], [70, 70]])\npts2 = np.float32([[20, 20], [80, 20], [30, 80], [70, 80]])\nM = cv2.getPerspectiveTransform(pts1, pts2)\nwarped = cv2.warpPerspective(image, M, (w, h))\n\nprint(f'原图尺寸: {image.shape}')\nprint(f'缩放后尺寸: {scaled.shape}')\nprint(f'旋转后尺寸: {rotated.shape}')\nprint(f'平移后尺寸: {translated.shape}')\nprint(f'透视变换后尺寸: {warped.shape}')",
+    "tags": [
+      "变换",
+      "仿射"
+    ]
+  },
+  {
+    "id": "ex_unit_001",
+    "module": "unit_testing",
+    "title": "unittest 基础",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 unittest 编写测试",
+    "starter_code": "import unittest\n\ndef add(a, b):\n    return a + b\n\ndef multiply(a, b):\n    return a * b\n\nclass TestMathFunctions(unittest.TestCase):\n    \n    def test_add(self):\n        self.assertEqual(add(1, 2), 3)\n        self.assertEqual(add(-1, 1), 0)\n    \n    def test_multiply(self):\n        # 添加测试\n        pass\n    \n    def test_add_strings(self):\n        # 测试字符串相加\n        pass\n\nif __name__ == '__main__':\n    unittest.main()",
+    "solution": "import unittest\n\ndef add(a, b):\n    return a + b\n\ndef multiply(a, b):\n    return a * b\n\nclass TestMathFunctions(unittest.TestCase):\n    \n    def test_add(self):\n        self.assertEqual(add(1, 2), 3)\n        self.assertEqual(add(-1, 1), 0)\n        self.assertEqual(add(0, 0), 0)\n    \n    def test_multiply(self):\n        self.assertEqual(multiply(3, 4), 12)\n        self.assertEqual(multiply(-2, 3), -6)\n        self.assertEqual(multiply(0, 100), 0)\n    \n    def test_add_strings(self):\n        self.assertEqual(add('Hello, ', 'World!'), 'Hello, World!')\n\nif __name__ == '__main__':\n    unittest.main()",
+    "tags": [
+      "unittest",
+      "测试"
+    ]
+  },
+  {
+    "id": "ex_unit_002",
+    "module": "unit_testing",
+    "title": "pytest 基础",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 pytest 编写测试",
+    "starter_code": "# pytest 测试示例\n\ndef is_prime(n):\n    \"\"\"判断是否为质数\"\"\"\n    if n < 2:\n        return False\n    for i in range(2, n):\n        if n % i == 0:\n            return False\n    return True\n\n# 编写测试\n# 你的代码\n\ndef test_one_is_not_prime():\n    assert not is_prime(1)\n\ndef test_two_is_prime():\n    assert is_prime(2)\n\ndef test_even_numbers_not_prime():\n    for n in [4, 6, 8, 10]:\n        assert not is_prime(n)\n\n# 运行: pytest test_file.py -v",
+    "solution": "# pytest 测试示例\n\ndef is_prime(n):\n    \"\"\"判断是否为质数\"\"\"\n    if n < 2:\n        return False\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\ndef test_one_is_not_prime():\n    assert not is_prime(1)\n\ndef test_two_is_prime():\n    assert is_prime(2)\n\ndef test_even_numbers_not_prime():\n    for n in [4, 6, 8, 10]:\n        assert not is_prime(n)\n\ndef test_known_primes():\n    primes = [2, 3, 5, 7, 11, 13, 17, 19, 23]\n    for p in primes:\n        assert is_prime(p)\n\ndef test_negative_numbers():\n    assert not is_prime(-1)\n    assert not is_prime(-5)\n\n# pytest 自动发现并运行所有 test_ 开头的函数",
+    "tags": [
+      "pytest",
+      "测试"
+    ]
+  },
+  {
+    "id": "ex_unit_003",
+    "module": "unit_testing",
+    "title": "测试夹具 (Fixtures)",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 pytest fixtures",
+    "starter_code": "import pytest\n\nclass Calculator:\n    def __init__(self):\n        self.result = 0\n    \n    def add(self, n):\n        self.result += n\n        return self\n    \n    def subtract(self, n):\n        self.result -= n\n        return self\n    \n    def get_result(self):\n        return self.result\n\n# 创建 fixture\n@pytest.fixture\ndef calculator():\n    return Calculator()\n\n# 使用 fixture\ndef test_calculator_add(calculator):\n    # 你的代码\n    pass\n\ndef test_calculator_chain(calculator):\n    # 测试链式调用\n    # 你的代码\n    pass",
+    "solution": "import pytest\n\nclass Calculator:\n    def __init__(self):\n        self.result = 0\n    \n    def add(self, n):\n        self.result += n\n        return self\n    \n    def subtract(self, n):\n        self.result -= n\n        return self\n    \n    def multiply(self, n):\n        self.result *= n\n        return self\n    \n    def get_result(self):\n        return self.result\n    \n    def reset(self):\n        self.result = 0\n        return self\n\n# 创建 fixture\n@pytest.fixture\ndef calculator():\n    return Calculator()\n\n# 使用 fixture\ndef test_calculator_add(calculator):\n    calculator.add(5)\n    assert calculator.get_result() == 5\n\ndef test_calculator_subtract(calculator):\n    calculator.add(10)\n    calculator.subtract(3)\n    assert calculator.get_result() == 7\n\ndef test_calculator_chain(calculator):\n    result = calculator.add(10).subtract(5).multiply(2).get_result()\n    assert result == 10\n\ndef test_calculator_reset(calculator):\n    calculator.add(100)\n    calculator.reset()\n    assert calculator.get_result() == 0",
+    "tags": [
+      "fixture",
+      "pytest"
+    ]
+  },
+  {
+    "id": "ex_unit_004",
+    "module": "unit_testing",
+    "title": "Mock 对象",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 unittest.mock",
+    "starter_code": "from unittest.mock import Mock, patch\n\ndef get_user_from_api(user_id):\n    import requests\n    response = requests.get(f'https://api.example.com/users/{user_id}')\n    return response.json()\n\n# 测试不依赖真实 API\ndef test_get_user():\n    # 使用 patch 模拟 requests.get\n    # 你的代码\n    \n    # 验证\n    user = get_user_from_api(123)\n    assert user['name'] == 'Alice'\n\ndef test_api_not_found():\n    # 测试 API 返回 404 的情况\n    pass",
+    "solution": "from unittest.mock import Mock, patch\n\ndef get_user_from_api(user_id):\n    import requests\n    response = requests.get(f'https://api.example.com/users/{user_id}')\n    if response.status_code == 200:\n        return response.json()\n    return None\n\n# 测试不依赖真实 API\ndef test_get_user():\n    mock_response = Mock()\n    mock_response.status_code = 200\n    mock_response.json.return_value = {'id': 123, 'name': 'Alice'}\n    \n    with patch('requests.get', return_value=mock_response):\n        user = get_user_from_api(123)\n        assert user['name'] == 'Alice'\n\ndef test_api_not_found():\n    mock_response = Mock()\n    mock_response.status_code = 404\n    \n    with patch('requests.get', return_value=mock_response):\n        user = get_user_from_api(999)\n        assert user is None\n\ndef test_api_error():\n    mock_response = Mock()\n    mock_response.status_code = 500\n    \n    with patch('requests.get', return_value=mock_response):\n        user = get_user_from_api(1)\n        assert user is None",
+    "tags": [
+      "Mock",
+      "unittest"
+    ]
+  },
+  {
+    "id": "ex_unit_005",
+    "module": "unit_testing",
+    "title": "测试覆盖率",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "使用 pytest-cov 计算覆盖率",
+    "starter_code": "def calculate_grade(score):\n    \"\"\"根据分数计算等级\"\"\"\n    if score >= 90:\n        return 'A'\n    elif score >= 80:\n        return 'B'\n    elif score >= 70:\n        return 'C'\n    elif score >= 60:\n        return 'D'\n    else:\n        return 'F'\n\ndef get_pass_status(score):\n    \"\"\"判断是否及格\"\"\"\n    return score >= 60\n\n# 编写完整测试\ndef test_grade_a():\n    assert calculate_grade(95) == 'A'\n\ndef test_grade_b():\n    assert calculate_grade(85) == 'B'\n\n# 添加更多测试覆盖所有分支\n\n# 运行: pytest test_file.py --cov=. --cov-report=term-missing",
+    "solution": "def calculate_grade(score):\n    \"\"\"根据分数计算等级\"\"\"\n    if score >= 90:\n        return 'A'\n    elif score >= 80:\n        return 'B'\n    elif score >= 70:\n        return 'C'\n    elif score >= 60:\n        return 'D'\n    else:\n        return 'F'\n\ndef get_pass_status(score):\n    \"\"\"判断是否及格\"\"\"\n    return score >= 60\n\n# 完整测试覆盖所有分支\ndef test_grade_a():\n    assert calculate_grade(95) == 'A'\n    assert calculate_grade(100) == 'A'\n\ndef test_grade_b():\n    assert calculate_grade(85) == 'B'\n    assert calculate_grade(80) == 'B'\n\ndef test_grade_c():\n    assert calculate_grade(75) == 'C'\n    assert calculate_grade(70) == 'C'\n\ndef test_grade_d():\n    assert calculate_grade(65) == 'D'\n    assert calculate_grade(60) == 'D'\n\ndef test_grade_f():\n    assert calculate_grade(59) == 'F'\n    assert calculate_grade(0) == 'F'\n    assert calculate_grade(-10) == 'F'\n\ndef test_pass():\n    assert get_pass_status(60) == True\n    assert get_pass_status(100) == True\n\ndef test_fail():\n    assert get_pass_status(59) == False\n    assert get_pass_status(0) == False\n\n# 运行: pytest test_file.py --cov=. --cov-report=term-missing",
+    "tags": [
+      "覆盖率",
+      "测试"
+    ]
+  },
+  {
+    "id": "ex_debug_001",
+    "module": "debugging",
+    "title": "pdb 调试基础",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 pdb 进行调试",
+    "starter_code": "# pdb 调试示例\n\ndef buggy_function(numbers):\n    result = 0\n    for i, num in enumerate(numbers):\n        result = result + num\n        if i == 2:\n            break  # 这里有 bug\n    return result\n\n# 使用 pdb.set_trace() 调试\n# 你的代码\n\ndata = [1, 2, 3, 4, 5]\nprint(f'求和结果: {buggy_function(data)}')",
+    "solution": "# pdb 调试示例\n\ndef buggy_function(numbers):\n    result = 0\n    for i, num in enumerate(numbers):\n        result = result + num\n        if i == 2:\n            break  # 这里有 bug: 提前退出循环\n    return result\n\ndef correct_function(numbers):\n    result = 0\n    for num in numbers:\n        result = result + num\n    return result\n\n# 不使用 pdb，直接演示\ndata = [1, 2, 3, 4, 5]\nprint(f'原函数结果: {buggy_function(data)}')  # 只求和前3个\nprint(f'正确结果: {correct_function(data)}')\n\n# pdb 常用命令:\n# n (next) - 执行下一行\n# s (step) - 进入函数\n# p variable - 打印变量\n# c (continue) - 继续执行\n# q (quit) - 退出\n\nprint('\\npdb 调试方法:')\nprint('import pdb; pdb.set_trace()')",
+    "tags": [
+      "pdb",
+      "调试"
+    ]
+  },
+  {
+    "id": "ex_debug_002",
+    "module": "debugging",
+    "title": "日志记录",
+    "difficulty": "easy",
+    "points": 10,
+    "description": "使用 logging 模块",
+    "starter_code": "import logging\n\n# 配置日志\nlogging.basicConfig(level=logging.DEBUG)\nlogger = logging.getLogger(__name__)\n\ndef divide(a, b):\n    logger.debug(f'开始计算: {a} / {b}')\n    if b == 0:\n        logger.error('除数不能为零!')\n        return None\n    result = a / b\n    logger.info(f'计算结果: {result}')\n    return result\n\n# 测试\nprint(divide(10, 2))\nprint(divide(10, 0))",
+    "solution": "import logging\n\n# 配置日志\nlogging.basicConfig(\n    level=logging.DEBUG,\n    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'\n)\nlogger = logging.getLogger(__name__)\n\ndef divide(a, b):\n    logger.debug(f'开始计算: {a} / {b}')\n    if b == 0:\n        logger.error('除数不能为零!')\n        return None\n    result = a / b\n    logger.info(f'计算结果: {result}')\n    return result\n\ndef process_data(data):\n    logger.info(f'处理数据: {data}')\n    try:\n        result = sum(data)\n        logger.info(f'求和结果: {result}')\n        return result\n    except Exception as e:\n        logger.error(f'处理失败: {e}')\n        return None\n\n# 测试\nprint('除法测试:')\nprint(divide(10, 2))\nprint(divide(10, 0))\n\nprint('\\n数据处理测试:')\nprint(process_data([1, 2, 3, 4, 5]))\nprint(process_data([]))",
+    "tags": [
+      "logging",
+      "日志"
+    ]
+  },
+  {
+    "id": "ex_debug_003",
+    "module": "debugging",
+    "title": "断言与异常",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用断言和异常处理调试",
+    "starter_code": "def calculate_average(numbers):\n    \"\"\"计算平均值\"\"\"\n    assert len(numbers) > 0, '列表不能为空'\n    \n    total = sum(numbers)\n    count = len(numbers)\n    \n    return total / count\n\ndef find_element(data, target):\n    \"\"\"在列表中查找元素\"\"\"\n    for i, item in enumerate(data):\n        if item == target:\n            return i\n    return -1\n\n# 测试断言\nprint(calculate_average([1, 2, 3, 4, 5]))\nprint(calculate_average([]))  # 会触发 AssertionError",
+    "solution": "def calculate_average(numbers):\n    \"\"\"计算平均值\"\"\"\n    assert len(numbers) > 0, '列表不能为空'\n    \n    total = sum(numbers)\n    count = len(numbers)\n    \n    return total / count\n\ndef find_element(data, target):\n    \"\"\"在列表中查找元素\"\"\"\n    for i, item in enumerate(data):\n        if item == target:\n            return i\n    raise ValueError(f'元素 {target} 不在列表中')\n\n# 测试断言\nprint('平均值测试:')\nprint(calculate_average([1, 2, 3, 4, 5]))\n\n# 测试异常处理\nprint('\\n查找测试:')\ndata = ['apple', 'banana', 'orange']\ntry:\n    idx = find_element(data, 'banana')\n    print(f'banana 在索引 {idx}')\n    \n    idx = find_element(data, 'grape')\n    print(f'grape 在索引 {idx}')\nexcept ValueError as e:\n    print(f'异常: {e}')\n\n# 演示 try-except-finally\nprint('\\nfinally 用法:')\ntry:\n    result = 10 / 2\nexcept ZeroDivisionError:\n    print('除数不能为零')\nfinally:\n    print('清理资源...')",
+    "tags": [
+      "断言",
+      "异常"
+    ]
+  },
+  {
+    "id": "ex_debug_004",
+    "module": "debugging",
+    "title": "性能分析",
+    "difficulty": "medium",
+    "points": 15,
+    "description": "使用 timeit 测量性能",
+    "starter_code": "import timeit\n\n# 方法1: 使用 timeit\ndef slow_function():\n    total = 0\n    for i in range(1000):\n        total += i\n    return total\n\ndef fast_function():\n    return sum(range(1000))\n\n# 测量执行时间\n# 你的代码\n\nprint(f'slow_function: {slow_time:.6f} 秒')\nprint(f'fast_function: {fast_time:.6f} 秒')",
+    "solution": "import timeit\n\n# 方法1: 使用 timeit\ndef slow_function():\n    total = 0\n    for i in range(1000):\n        total += i\n    return total\n\ndef fast_function():\n    return sum(range(1000))\n\ndef faster_function():\n    return sum(range(0, 1000, 1))\n\n# 测量执行时间\nslow_time = timeit.timeit(slow_function, number=10000)\nfast_time = timeit.timeit(fast_function, number=10000)\nfaster_time = timeit.timeit(faster_function, number=10000)\n\nprint('性能对比 (10000次):')\nprint(f'慢方法 (for循环): {slow_time:.6f} 秒')\nprint(f'快方法 (sum+range): {fast_time:.6f} 秒')\nprint(f'最快 (直接range): {faster_time:.6f} 秒')\nprint(f'\\n快速方法比慢方法快 {(slow_time/fast_time):.1f}x')",
+    "tags": [
+      "timeit",
+      "性能"
+    ]
+  },
+  {
+    "id": "ex_debug_005",
+    "module": "debugging",
+    "title": "内存分析",
+    "difficulty": "hard",
+    "points": 20,
+    "description": "使用 memory_profiler 分析内存",
+    "starter_code": "# memory_profiler 示例\n# pip install memory_profiler\n\n@profile\ndef memory_intensive_function():\n    \"\"\"模拟内存密集操作\"\"\"\n    data = []\n    for i in range(100000):\n        data.append(i * 2)\n    \n    result = sum(data)\n    return result\n\n# 简化演示\ndef demo_memory_usage():\n    import sys\n    \n    # 创建不同大小的对象\n    small_list = list(range(100))\n    large_list = list(range(100000))\n    \n    print(f'小列表大小: {sys.getsizeof(small_list)} bytes')\n    print(f'大列表大小: {sys.getsizeof(large_list)} bytes')\n    \n    return small_list, large_list\n\nsmall, large = demo_memory_usage()\nprint(f'返回后大列表仍然存在: {len(large)} 元素')",
+    "solution": "# memory_profiler 示例\n# 运行: python -m memory_profiler demo.py\n\ndef demo_memory_usage():\n    import sys\n    \n    # 创建不同大小的对象\n    small_list = list(range(100))\n    large_list = list(range(100000))\n    large_list_copy = large_list.copy()\n    \n    # 计算预估内存\n    small_size = sys.getsizeof(small_list) + sum(sys.getsizeof(x) for x in small_list)\n    large_size = sys.getsizeof(large_list) + sum(sys.getsizeof(x) for x in large_list)\n    \n    print(f'小列表 (100元素) 估计内存: ~{small_size/1024:.2f} KB')\n    print(f'大列表 (100000元素) 估计内存: ~{large_size/1024/1024:.2f} MB')\n    \n    # 使用生成器节省内存\n    def gen_range(n):\n        for i in range(n):\n            yield i\n    \n    gen = gen_range(100000)\n    gen_size = sys.getsizeof(gen)\n    print(f'\\n生成器对象大小: {gen_size} bytes')\n    print('生成器是惰性计算，不占用大量内存')\n    \n    return small_list, large_list\n\nsmall, large = demo_memory_usage()\nprint(f'\\n返回后大列表元素数: {len(large):,}')",
+    "tags": [
+      "内存",
+      "profiler"
+    ]
+  }
+]

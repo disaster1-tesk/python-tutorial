@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block title %}{{ APP_NAME }} - 首页{% endblock %}
+
+{% block content %}
+<div class="mb-8">
+    <h1 class="text-3xl font-bold text-gray-900 mb-2">{{ APP_ICON }} 欢迎来到 {{ APP_NAME }}</h1>
+    <p class="text-gray-600">系统学习 Python 编程，从基础到进阶的完整路径</p>
+</div>
+
+<!-- 统计卡片 -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+    <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 text-center">
+        <div class="text-3xl font-bold text-indigo-600">{{ total }}</div>
+        <div class="text-sm text-gray-500 mt-1">总模块数</div>
+    </div>
+    <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 text-center">
+        <div class="text-3xl font-bold text-green-600">{{ completed }}</div>
+        <div class="text-sm text-gray-500 mt-1">已完成</div>
+    </div>
+    <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 text-center">
+        <div class="text-3xl font-bold text-amber-600">{{ in_progress }}</div>
+        <div class="text-sm text-gray-500 mt-1">进行中</div>
+    </div>
+    <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 text-center">
+        <div class="text-3xl font-bold text-purple-600">{% if total > 0 %}{{ ((completed / total) * 100)|int }}{% else %}0{% endif %}%</div>
+        <div class="text-sm text-gray-500 mt-1">完成率</div>
+    </div>
+</div>
+
+<!-- 学习路径 -->
+{% if learning_path %}
+<div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-8">
+    <h2 class="text-lg font-bold mb-4">📍 推荐学习路径</h2>
+    <div class="flex flex-wrap gap-3">
+        {% for module in learning_path %}
+        {% set status = progress.modules.get(module.id, {}).get('status', 'not_started') %}
+        <a href="{{ url_for('learn', module_id=module.id) }}" 
+           class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm transition
+           {% if status == 'completed' %}bg-green-100 text-green-700
+           {% elif status == 'in_progress' %}bg-amber-100 text-amber-700
+           {% else %}bg-gray-100 text-gray-700 hover:bg-gray-200{% endif %}">
+            {% if status == 'completed' %}✅{% elif status == 'in_progress' %}🔄{% else %}📖{% endif %}
+            {{ module.icon }} {{ module.name }}
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<!-- 成就和统计 -->
+<div class="grid md:grid-cols-2 gap-6 mb-8">
+    <!-- 成就 -->
+    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+        <h2 class="text-lg font-bold mb-4">🏆 成就 ({{ unlocked_count }}/{{ achievements.achievements|length }})</h2>
+        <div class="flex flex-wrap gap-3">
+            {% if achievements.achievements %}
+            {% for ach in achievements.achievements[:6] %}
+            {% if ach.id in achievements.unlocked %}
+            <div class="text-2xl" title="{{ ach.description }}">{{ ach.icon }}</div>
+            {% else %}
+            <div class="text-2xl opacity-30" title="未解锁">🔒</div>
+            {% endif %}
+            {% endfor %}
+            {% else %}
+            <div class="text-gray-400">暂无成就</div>
+            {% endif %}
+            {% if achievements.achievements|length > 6 %}
+            <a href="{{ url_for('achievements') }}" class="text-sm text-indigo-600 self-center">查看全部 →</a>
+            {% endif %}
+        </div>
+    </div>
+    
+    <!-- 连续学习 -->
+    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+        <h2 class="text-lg font-bold mb-4">🔥 连续学习</h2>
+        <div class="text-center">
+            <div class="text-4xl font-bold text-orange-500">{{ streak }}</div>
+            <div class="text-sm text-gray-500 mt-1">天</div>
+        </div>
+    </div>
+</div>
+
+<!-- 功能介绍 -->
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+    <a href="{{ url_for('learn', module_id='base_syntax') }}" class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 hover:border-indigo-300 transition">
+        <div class="text-2xl mb-3">📖</div>
+        <h3 class="font-semibold mb-1">知识学习</h3>
+        <p class="text-sm text-gray-500">24 个精心编排的知识模块</p>
+    </a>
+    <a href="{{ url_for('exercises') }}" class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 hover:border-indigo-300 transition">
+        <div class="text-2xl mb-3">📝</div>
+        <h3 class="font-semibold mb-1">练习题</h3>
+        <p class="text-sm text-gray-500">精选编程练习题</p>
+    </a>
+    <a href="{{ url_for('quiz') }}" class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 hover:border-indigo-300 transition">
+        <div class="text-2xl mb-3">📋</div>
+        <h3 class="font-semibold mb-1">章节测验</h3>
+        <p class="text-sm text-gray-500">检验学习成果</p>
+    </a>
+    <a href="{{ url_for('stats') }}" class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 hover:border-indigo-300 transition">
+        <div class="text-2xl mb-3">📊</div>
+        <h3 class="font-semibold mb-1">学习统计</h3>
+        <p class="text-sm text-gray-500">查看学习进度</p>
+    </a>
+</div>
+
+<!-- 按分类展示模块 -->
+{% for cat, cat_modules in modules_by_category.items() %}
+<div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-6">
+    <h2 class="text-lg font-bold mb-4">{{ cat }}</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+        {% for module in cat_modules %}
+        {% set status = progress.modules.get(module.id, {}).get('status', 'not_started') %}
+        <a href="{{ url_for('learn', module_id=module.id) }}" 
+           class="flex items-center gap-3 p-3 rounded-lg border border-gray-200 hover:border-indigo-300 hover:bg-indigo-50 transition">
+            <span class="text-xl">{{ module.icon }}</span>
+            <div class="flex-1">
+                <div class="font-medium text-sm">{{ module.name }}</div>
+                <div class="text-xs text-gray-500">{{ module.order }} / 24</div>
+            </div>
+            {% if status == 'completed' %}
+            <span class="text-green-500">✅</span>
+            {% elif status == 'in_progress' %}
+            <span class="text-amber-500">🔄</span>
+            {% endif %}
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

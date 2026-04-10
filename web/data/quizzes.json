@@ -1,0 +1,3152 @@
+[
+  {
+    "id": "quiz_basics_001",
+    "module_id": "base_syntax",
+    "type": "选择",
+    "question": "以下哪个是 Python 中正确的变量命名？",
+    "options": [
+      "1name",
+      "my_name",
+      "class",
+      "print"
+    ],
+    "answer": "B",
+    "explanation": "Python 变量名必须以字母或下划线开头，不能使用数字或关键字。"
+  },
+  {
+    "id": "quiz_basics_002",
+    "module_id": "base_syntax",
+    "type": "选择",
+    "question": "Python 中单行注释用什么符号？",
+    "options": [
+      "//",
+      "#",
+      "/*",
+      "--"
+    ],
+    "answer": "B",
+    "explanation": "Python 使用 # 进行单行注释。"
+  },
+  {
+    "id": "quiz_basics_003",
+    "module_id": "base_syntax",
+    "type": "选择",
+    "question": "下列哪个是 Python 的输出语句？",
+    "options": [
+      "console.log()",
+      "print()",
+      "echo()",
+      "System.out.println()"
+    ],
+    "answer": "B",
+    "explanation": "Python 使用 print() 函数输出内容。"
+  },
+  {
+    "id": "quiz_basics_004",
+    "module_id": "base_syntax",
+    "type": "选择",
+    "question": "Python 使用什么来表示代码块？",
+    "options": [
+      "大括号 {}",
+      "缩进",
+      "圆括号 ()",
+      "方括号 []"
+    ],
+    "answer": "B",
+    "explanation": "Python 使用缩进（通常4个空格）来表示代码块。"
+  },
+  {
+    "id": "quiz_basics_005",
+    "module_id": "base_syntax",
+    "type": "选择",
+    "question": "如何获取用户输入？",
+    "options": [
+      "input()",
+      "read()",
+      "get()",
+      "scan()"
+    ],
+    "answer": "A",
+    "explanation": "Python 使用 input() 函数获取用户输入。"
+  },
+  {
+    "id": "quiz_types_001",
+    "module_id": "data_types",
+    "type": "选择",
+    "question": "type(3.14) 的返回值是什么？",
+    "options": [
+      "int",
+      "float",
+      "str",
+      "double"
+    ],
+    "answer": "B",
+    "explanation": "3.14 是浮点数类型，返回 float。"
+  },
+  {
+    "id": "quiz_types_002",
+    "module_id": "data_types",
+    "type": "选择",
+    "question": "列表 [1, 2, 3] 的第三个元素是？",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "C",
+    "explanation": "列表索引从0开始，第三个元素索引为2，即3。"
+  },
+  {
+    "id": "quiz_types_003",
+    "module_id": "data_types",
+    "type": "选择",
+    "question": "字典中获取不存在的键会发生什么？",
+    "options": [
+      "返回 None",
+      "返回 0",
+      "抛出 KeyError",
+      "返回空"
+    ],
+    "answer": "C",
+    "explanation": "字典访问不存在的键会抛出 KeyError 异常。"
+  },
+  {
+    "id": "quiz_types_004",
+    "module_id": "data_types",
+    "type": "选择",
+    "question": "tuple 和 list 的主要区别是？",
+    "options": [
+      "元素类型",
+      "长度",
+      "可变性与不可变性",
+      "索引方式"
+    ],
+    "answer": "C",
+    "explanation": "tuple 是不可变的，list 是可变的。"
+  },
+  {
+    "id": "quiz_types_005",
+    "module_id": "data_types",
+    "type": "选择",
+    "question": "len([1, [2, 3], 4]) 的结果是？",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "2"
+    ],
+    "answer": "B",
+    "explanation": "外层列表有3个元素：1, [2,3], 4。"
+  },
+  {
+    "id": "quiz_flow_001",
+    "module_id": "control_flow",
+    "type": "选择",
+    "question": "哪个关键字用于跳过当前循环迭代？",
+    "options": [
+      "skip",
+      "break",
+      "continue",
+      "next"
+    ],
+    "answer": "C",
+    "explanation": "continue 跳过当前迭代，break 跳出循环。"
+  },
+  {
+    "id": "quiz_flow_002",
+    "module_id": "control_flow",
+    "type": "选择",
+    "question": "for i in range(3) 会循环几次？",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "1"
+    ],
+    "answer": "B",
+    "explanation": "range(3) 生成 0, 1, 2，共3次。"
+  },
+  {
+    "id": "quiz_flow_003",
+    "module_id": "control_flow",
+    "type": "选择",
+    "question": "elif 的含义是？",
+    "options": [
+      "结束如果",
+      "否则如果",
+      "额外如果",
+      "结束如果"
+    ],
+    "answer": "B",
+    "explanation": "elif 是 else if 的缩写，表示否则如果。"
+  },
+  {
+    "id": "quiz_flow_004",
+    "module_id": "control_flow",
+    "type": "选择",
+    "question": "[i for i in range(5) if i % 2 == 0] 的结果是？",
+    "options": [
+      "[0, 1, 2, 3, 4]",
+      "[0, 2, 4]",
+      "[1, 3]",
+      "[2, 4]"
+    ],
+    "answer": "B",
+    "explanation": "筛选偶数，结果是 [0, 2, 4]。"
+  },
+  {
+    "id": "quiz_flow_005",
+    "module_id": "control_flow",
+    "type": "选择",
+    "question": "while True: 是什么类型的循环？",
+    "options": [
+      "确定次数",
+      "条件循环",
+      "无限循环",
+      "列表循环"
+    ],
+    "answer": "C",
+    "explanation": "while True 是无限循环，需要手动 break。"
+  },
+  {
+    "id": "quiz_func_001",
+    "module_id": "functions",
+    "type": "选择",
+    "question": "def 关键字用于？",
+    "options": [
+      "定义变量",
+      "定义函数",
+      "定义类",
+      "定义模块"
+    ],
+    "answer": "B",
+    "explanation": "def 用于定义函数。"
+  },
+  {
+    "id": "quiz_func_002",
+    "module_id": "functions",
+    "type": "选择",
+    "question": "函数参数 *args 的作用是？",
+    "options": [
+      "指定默认参数",
+      "接收任意数量位置参数",
+      "接收关键字参数",
+      "指定参数类型"
+    ],
+    "answer": "B",
+    "explanation": "*args 接收任意数量的位置参数。"
+  },
+  {
+    "id": "quiz_func_003",
+    "module_id": "functions",
+    "type": "选择",
+    "question": "lambda 的作用是？",
+    "options": [
+      "定义类",
+      "创建匿名函数",
+      "导入模块",
+      "抛出异常"
+    ],
+    "answer": "B",
+    "explanation": "lambda 用于创建简单的匿名函数。"
+  },
+  {
+    "id": "quiz_func_004",
+    "module_id": "functions",
+    "type": "选择",
+    "question": "函数返回值使用哪个关键字？",
+    "options": [
+      "return",
+      "yield",
+      "output",
+      "give"
+    ],
+    "answer": "A",
+    "explanation": "使用 return 返回函数值。"
+  },
+  {
+    "id": "quiz_func_005",
+    "module_id": "functions",
+    "type": "选择",
+    "question": "以下哪个是合法的默认参数？",
+    "options": [
+      "def f(a=1, b)",
+      "def f(a, b=1)",
+      "def f(a=1, b=)",
+      "def f(=1, b)"
+    ],
+    "answer": "B",
+    "explanation": "默认参数必须在位置参数之后。"
+  },
+  {
+    "id": "quiz_class_001",
+    "module_id": "classes_objects",
+    "type": "选择",
+    "question": "class 关键字用于？",
+    "options": [
+      "定义函数",
+      "定义类",
+      "定义模块",
+      "定义变量"
+    ],
+    "answer": "B",
+    "explanation": "class 用于定义类。"
+  },
+  {
+    "id": "quiz_class_002",
+    "module_id": "classes_objects",
+    "type": "选择",
+    "question": "__init__ 方法的作用是？",
+    "options": [
+      "析构函数",
+      "构造函数/初始化",
+      "普通方法",
+      "静态方法"
+    ],
+    "answer": "B",
+    "explanation": "__init__ 是构造函数，用于初始化对象。"
+  },
+  {
+    "id": "quiz_class_003",
+    "module_id": "classes_objects",
+    "type": "选择",
+    "question": "self 参数代表？",
+    "options": [
+      "类本身",
+      "当前对象",
+      "父类",
+      "子类"
+    ],
+    "answer": "B",
+    "explanation": "self 代表当前对象实例。"
+  },
+  {
+    "id": "quiz_class_004",
+    "module_id": "classes_objects",
+    "type": "选择",
+    "question": "继承使用什么语法？",
+    "options": [
+      "class A extends B",
+      "class A(B)",
+      "class A implements B",
+      "class A : B"
+    ],
+    "answer": "B",
+    "explanation": "Python 使用 class A(B) 表示 A 继承 B。"
+  },
+  {
+    "id": "quiz_class_005",
+    "module_id": "classes_objects",
+    "type": "选择",
+    "question": "下面哪个是私有属性？",
+    "options": [
+      "_name",
+      "__name",
+      "name",
+      "#name"
+    ],
+    "answer": "B",
+    "explanation": "双下划线 __name 表示私有属性（名称改写）。"
+  },
+  {
+    "id": "quiz_except_001",
+    "module_id": "exception_handling",
+    "type": "选择",
+    "question": "用于捕获异常的语句是？",
+    "options": [
+      "catch",
+      "except",
+      "try",
+      "handle"
+    ],
+    "answer": "B",
+    "explanation": "Python 使用 except 捕获异常。"
+  },
+  {
+    "id": "quiz_except_002",
+    "module_id": "exception_handling",
+    "type": "选择",
+    "question": "try-except-finally 中 finally 的作用是？",
+    "options": [
+      "指定异常处理",
+      "总是执行清理代码",
+      "重试操作",
+      "记录日志"
+    ],
+    "answer": "B",
+    "explanation": "finally 块无论是否有异常都会执行。"
+  },
+  {
+    "id": "quiz_except_003",
+    "module_id": "exception_handling",
+    "type": "选择",
+    "question": "手动抛出异常使用？",
+    "options": [
+      "throw",
+      "raise",
+      "catch",
+      "emit"
+    ],
+    "answer": "B",
+    "explanation": "使用 raise 手动抛出异常。"
+  },
+  {
+    "id": "quiz_except_004",
+    "module_id": "exception_handling",
+    "type": "选择",
+    "question": "10 / 0 会抛出什么异常？",
+    "options": [
+      "ValueError",
+      "TypeError",
+      "ZeroDivisionError",
+      "OverflowError"
+    ],
+    "answer": "C",
+    "explanation": "除以零会抛出 ZeroDivisionError。"
+  },
+  {
+    "id": "quiz_except_005",
+    "module_id": "exception_handling",
+    "type": "选择",
+    "question": "except Exception as e: 的作用是？",
+    "options": [
+      "重新抛出异常",
+      "捕获并保存异常对象",
+      "忽略异常",
+      "抛出新异常"
+    ],
+    "answer": "B",
+    "explanation": "as e 将异常对象保存到变量 e 中。"
+  },
+  {
+    "id": "quiz_file_001",
+    "module_id": "file_operations",
+    "type": "选择",
+    "question": "打开文件用于写入的正确方式是？",
+    "options": [
+      "open('file.txt', 'r')",
+      "open('file.txt', 'w')",
+      "open('file.txt', 'x')",
+      "open('file.txt', 'read')"
+    ],
+    "answer": "B",
+    "explanation": "'w' 表示写入模式，会覆盖文件。"
+  },
+  {
+    "id": "quiz_file_002",
+    "module_id": "file_operations",
+    "type": "选择",
+    "question": "读取文件全部内容的方法是？",
+    "options": [
+      "read()",
+      "readline()",
+      "readlines()",
+      "readall()"
+    ],
+    "answer": "A",
+    "explanation": "read() 读取全部内容，readline() 读取一行。"
+  },
+  {
+    "id": "quiz_file_003",
+    "module_id": "file_operations",
+    "type": "选择",
+    "question": "使用 with 语句的目的是？",
+    "options": [
+      "提高性能",
+      "自动关闭文件",
+      "加快读取",
+      "加密文件"
+    ],
+    "answer": "B",
+    "explanation": "with 语句确保文件正确关闭。"
+  },
+  {
+    "id": "quiz_file_004",
+    "module_id": "file_operations",
+    "type": "选择",
+    "question": "json 模块用于？",
+    "options": [
+      "图像处理",
+      "JSON 序列化",
+      "网络请求",
+      "数据库"
+    ],
+    "answer": "B",
+    "explanation": "json 模块用于 JSON 数据的序列化和反序列化。"
+  },
+  {
+    "id": "quiz_file_005",
+    "module_id": "file_operations",
+    "type": "选择",
+    "question": "os.path.exists() 的作用是？",
+    "options": [
+      "创建路径",
+      "检查路径是否存在",
+      "删除路径",
+      "复制路径"
+    ],
+    "answer": "B",
+    "explanation": "检查指定路径是否存在。"
+  },
+  {
+    "id": "quiz_module_001",
+    "module_id": "modules_packages",
+    "type": "选择",
+    "question": "导入模块的正确方式是？",
+    "options": [
+      "include math",
+      "import math",
+      "require math",
+      "use math"
+    ],
+    "answer": "B",
+    "explanation": "Python 使用 import 导入模块。"
+  },
+  {
+    "id": "quiz_module_002",
+    "module_id": "modules_packages",
+    "type": "选择",
+    "question": "from math import sqrt 的作用是？",
+    "options": [
+      "导入整个 math 模块",
+      "只导入 sqrt 函数",
+      "导入 math 和 sqrt",
+      "重命名 math"
+    ],
+    "answer": "B",
+    "explanation": "只导入指定的对象。"
+  },
+  {
+    "id": "quiz_module_003",
+    "module_id": "modules_packages",
+    "type": "选择",
+    "question": "__name__ == '__main__' 的作用是？",
+    "options": [
+      "判断是否为入口文件",
+      "定义主类",
+      "声明命名空间",
+      "导出模块"
+    ],
+    "answer": "A",
+    "explanation": "判断程序是否直接运行。"
+  },
+  {
+    "id": "quiz_module_004",
+    "module_id": "modules_packages",
+    "type": "选择",
+    "question": "Python 包目录下必须有的文件是？",
+    "options": [
+      "main.py",
+      "__init__.py",
+      "setup.py",
+      "config.py"
+    ],
+    "answer": "B",
+    "explanation": "__init__.py 使目录成为 Python 包。"
+  },
+  {
+    "id": "quiz_module_005",
+    "module_id": "modules_packages",
+    "type": "选择",
+    "question": "pip install 命令用于？",
+    "options": [
+      "卸载包",
+      "安装包",
+      "更新包",
+      "查看包"
+    ],
+    "answer": "B",
+    "explanation": "pip install 用于安装 Python 包。"
+  },
+  {
+    "id": "quiz_adv_001",
+    "module_id": "advanced_features",
+    "type": "选择",
+    "question": "yield 关键字用于？",
+    "options": [
+      "返回函数值",
+      "创建生成器",
+      "抛出异常",
+      "定义类"
+    ],
+    "answer": "B",
+    "explanation": "yield 创建生成器函数。"
+  },
+  {
+    "id": "quiz_adv_002",
+    "module_id": "advanced_features",
+    "type": "选择",
+    "question": "装饰器使用什么符号？",
+    "options": [
+      "@",
+      "#",
+      "*",
+      "$"
+    ],
+    "answer": "A",
+    "explanation": "装饰器使用 @ 符号。"
+  },
+  {
+    "id": "quiz_adv_003",
+    "module_id": "advanced_features",
+    "type": "选择",
+    "question": "with 语句用于？",
+    "options": [
+      "条件判断",
+      "循环",
+      "上下文管理",
+      "异常处理"
+    ],
+    "answer": "C",
+    "explanation": "with 用于上下文管理，自动清理资源。"
+  },
+  {
+    "id": "quiz_adv_004",
+    "module_id": "advanced_features",
+    "type": "选择",
+    "question": "__iter__ 和 __next__ 用于实现？",
+    "options": [
+      "装饰器",
+      "生成器",
+      "迭代器",
+      "上下文管理器"
+    ],
+    "answer": "C",
+    "explanation": "实现迭代器协议。"
+  },
+  {
+    "id": "quiz_adv_005",
+    "module_id": "advanced_features",
+    "type": "选择",
+    "question": "copy.deepcopy() 用于？",
+    "options": [
+      "浅拷贝",
+      "深拷贝",
+      "引用赋值",
+      "类型转换"
+    ],
+    "answer": "B",
+    "explanation": "深拷贝创建独立副本。"
+  },
+  {
+    "id": "quiz_type_001",
+    "module_id": "type_hints",
+    "type": "选择",
+    "question": "函数类型提示使用什么语法？",
+    "options": [
+      "def f(x: int) -> str",
+      "def f(int x) -> str",
+      "def f(x:int):str",
+      "def f(x: integer) -> string"
+    ],
+    "answer": "A",
+    "explanation": "类型注解使用冒号和箭头。"
+  },
+  {
+    "id": "quiz_type_002",
+    "module_id": "type_hints",
+    "type": "选择",
+    "question": "Union[str, int] 表示？",
+    "options": [
+      "字符串或整数",
+      "字符串和整数",
+      "仅字符串",
+      "仅整数"
+    ],
+    "answer": "A",
+    "explanation": "Union 表示类型可以是其中之一。"
+  },
+  {
+    "id": "quiz_type_003",
+    "module_id": "type_hints",
+    "type": "选择",
+    "question": "Optional[str] 等价于？",
+    "options": [
+      "str",
+      "str | None",
+      "str or None",
+      "str and None"
+    ],
+    "answer": "B",
+    "explanation": "Optional[str] = Union[str, None]。"
+  },
+  {
+    "id": "quiz_type_004",
+    "module_id": "type_hints",
+    "type": "选择",
+    "question": "类型提示在 Python 中是？",
+    "options": [
+      "强制约束",
+      "运行时检查",
+      "静态提示",
+      "编译时检查"
+    ],
+    "answer": "C",
+    "explanation": "类型提示是静态提示，不强制约束。"
+  },
+  {
+    "id": "quiz_type_005",
+    "module_id": "type_hints",
+    "type": "选择",
+    "question": "List[int] 从哪个模块导入？",
+    "options": [
+      "typing",
+      "types",
+      "type",
+      "hint"
+    ],
+    "answer": "A",
+    "explanation": "从 typing 模块导入泛型类型。"
+  },
+  {
+    "id": "quiz_conc_001",
+    "module_id": "concurrency",
+    "type": "选择",
+    "question": "threading 模块用于？",
+    "options": [
+      "进程管理",
+      "线程管理",
+      "异步IO",
+      "定时任务"
+    ],
+    "answer": "B",
+    "explanation": "threading 用于多线程编程。"
+  },
+  {
+    "id": "quiz_conc_002",
+    "module_id": "concurrency",
+    "type": "选择",
+    "question": "async/await 关键字用于？",
+    "options": [
+      "多线程",
+      "多进程",
+      "异步编程",
+      "并行计算"
+    ],
+    "answer": "C",
+    "explanation": "async/await 用于异步编程。"
+  },
+  {
+    "id": "quiz_conc_003",
+    "module_id": "concurrency",
+    "type": "选择",
+    "question": "asyncio.run() 的作用是？",
+    "options": [
+      "创建事件循环",
+      "运行异步函数",
+      "等待任务",
+      "创建任务"
+    ],
+    "answer": "B",
+    "explanation": "asyncio.run() 运行异步主函数。"
+  },
+  {
+    "id": "quiz_conc_004",
+    "module_id": "concurrency",
+    "type": "选择",
+    "question": "multiprocessing 用于？",
+    "options": [
+      "多线程",
+      "多进程",
+      "异步IO",
+      "协程"
+    ],
+    "answer": "B",
+    "explanation": "multiprocessing 用于多进程编程。"
+  },
+  {
+    "id": "quiz_conc_005",
+    "module_id": "concurrency",
+    "type": "选择",
+    "question": "GIL 是？",
+    "options": [
+      "全局导入锁",
+      "全局解释器锁",
+      "全局导入语言",
+      "全局指令集"
+    ],
+    "answer": "B",
+    "explanation": "GIL = Global Interpreter Lock。"
+  },
+  {
+    "id": "quiz_stdlib_001",
+    "module_id": "standard_library",
+    "type": "选择",
+    "question": "datetime.datetime.now() 返回？",
+    "options": [
+      "UTC时间",
+      "本地时间",
+      "时间戳",
+      "日期"
+    ],
+    "answer": "B",
+    "explanation": "返回当前本地日期时间。"
+  },
+  {
+    "id": "quiz_stdlib_002",
+    "module_id": "standard_library",
+    "type": "选择",
+    "question": "collections.Counter 用于？",
+    "options": [
+      "计数",
+      "排序",
+      "去重",
+      "查找"
+    ],
+    "answer": "A",
+    "explanation": "Counter 用于统计元素出现次数。"
+  },
+  {
+    "id": "quiz_stdlib_003",
+    "module_id": "standard_library",
+    "type": "选择",
+    "question": "random.choice() 的作用是？",
+    "options": [
+      "随机整数",
+      "随机选择",
+      "随机打乱",
+      "随机浮点"
+    ],
+    "answer": "B",
+    "explanation": "从序列中随机选择一个元素。"
+  },
+  {
+    "id": "quiz_stdlib_004",
+    "module_id": "standard_library",
+    "type": "选择",
+    "question": "functools.lru_cache 用于？",
+    "options": [
+      "排序",
+      "缓存",
+      "过滤",
+      "映射"
+    ],
+    "answer": "B",
+    "explanation": "lru_cache 实现函数结果缓存。"
+  },
+  {
+    "id": "quiz_stdlib_005",
+    "module_id": "standard_library",
+    "type": "选择",
+    "question": "itertools.permutations 用于？",
+    "options": [
+      "组合",
+      "排列",
+      "笛卡尔积",
+      "筛选"
+    ],
+    "answer": "B",
+    "explanation": "permutations 生成排列。"
+  },
+  {
+    "id": "quiz_third_001",
+    "module_id": "third_party_libraries",
+    "type": "选择",
+    "question": "requests 库主要用于？",
+    "options": [
+      "数据处理",
+      "HTTP 请求",
+      "图像处理",
+      "机器学习"
+    ],
+    "answer": "B",
+    "explanation": "requests 是常用的 HTTP 库。"
+  },
+  {
+    "id": "quiz_third_002",
+    "module_id": "third_party_libraries",
+    "type": "选择",
+    "question": "numpy 数组的维度称为什么？",
+    "options": [
+      "rank",
+      "shape",
+      "size",
+      "dim"
+    ],
+    "answer": "A",
+    "explanation": "numpy 中维度称为 rank。"
+  },
+  {
+    "id": "quiz_third_003",
+    "module_id": "third_party_libraries",
+    "type": "选择",
+    "question": "pandas 的核心数据结构是？",
+    "options": [
+      "Array",
+      "List",
+      "DataFrame",
+      "Table"
+    ],
+    "answer": "C",
+    "explanation": "DataFrame 是 pandas 的核心。"
+  },
+  {
+    "id": "quiz_third_004",
+    "module_id": "third_party_libraries",
+    "type": "选择",
+    "question": "requirements.txt 的作用是？",
+    "options": [
+      "项目说明",
+      "依赖列表",
+      "配置文件",
+      "日志文件"
+    ],
+    "answer": "B",
+    "explanation": "记录项目依赖包列表。"
+  },
+  {
+    "id": "quiz_third_005",
+    "module_id": "third_party_libraries",
+    "type": "选择",
+    "question": "虚拟环境的作用是？",
+    "options": [
+      "加密代码",
+      "隔离依赖",
+      "加速运行",
+      "远程连接"
+    ],
+    "answer": "B",
+    "explanation": "虚拟环境隔离项目依赖。"
+  },
+  {
+    "id": "quiz_ai_agent_001",
+    "module_id": "ai_agent",
+    "type": "选择",
+    "question": "AI Agent 的核心能力是什么？",
+    "options": [
+      "只能回答问题",
+      "自主规划和执行任务",
+      "仅提供信息",
+      "只能执行命令"
+    ],
+    "answer": "B",
+    "explanation": "AI Agent 能够自主分析目标、规划行动步骤并执行任务。"
+  },
+  {
+    "id": "quiz_ai_agent_002",
+    "module_id": "ai_agent",
+    "type": "选择",
+    "question": "ReAct 提示技术结合了什么？",
+    "options": [
+      "只读和行动",
+      "推理和行动",
+      "记忆和推理",
+      "视觉和语言"
+    ],
+    "answer": "B",
+    "explanation": "ReAct (Reasoning + Acting) 结合了推理和行动能力。"
+  },
+  {
+    "id": "quiz_ai_agent_003",
+    "module_id": "ai_agent",
+    "type": "选择",
+    "question": "AI Agent 常用的记忆组件是？",
+    "options": [
+      "仅短期记忆",
+      "仅长期记忆",
+      "短期+长期记忆",
+      "无记忆"
+    ],
+    "answer": "C",
+    "explanation": "AI Agent 通常使用短期记忆（工作上下文）和长期记忆（知识库）。"
+  },
+  {
+    "id": "quiz_ai_agent_004",
+    "module_id": "ai_agent",
+    "type": "选择",
+    "question": "CoT (Chain of Thought) 用于？",
+    "options": [
+      "快速回答",
+      "逐步推理思考",
+      "并行处理",
+      "随机生成"
+    ],
+    "answer": "B",
+    "explanation": "Chain of Thought 让模型展示推理过程，提高复杂任务效果。"
+  },
+  {
+    "id": "quiz_ai_agent_005",
+    "module_id": "ai_agent",
+    "type": "选择",
+    "question": "AI Agent 与传统程序的主要区别是？",
+    "options": [
+      "执行速度",
+      "自主决策能力",
+      "代码量",
+      "运行环境"
+    ],
+    "answer": "B",
+    "explanation": "AI Agent 具备自主规划和决策能力，而非按预设流程执行。"
+  },
+  {
+    "id": "quiz_langchain_001",
+    "module_id": "langchain_framework",
+    "type": "选择",
+    "question": "LangChain 主要用于？",
+    "options": [
+      "Web开发",
+      "构建AI应用",
+      "数据库操作",
+      "图像处理"
+    ],
+    "answer": "B",
+    "explanation": "LangChain 是构建AI应用的开发框架。"
+  },
+  {
+    "id": "quiz_langchain_002",
+    "module_id": "langchain_framework",
+    "type": "选择",
+    "question": "LangChain 的核心组件包括？",
+    "options": [
+      "只有模型",
+      "模型+提示+索引+内存+Agents",
+      "只有数据库",
+      "只有API"
+    ],
+    "answer": "B",
+    "explanation": "LangChain 核心包括 Model I/O、Prompt、Index、Memory、Agents。"
+  },
+  {
+    "id": "quiz_langchain_003",
+    "module_id": "langchain_framework",
+    "type": "选择",
+    "question": "LangChain Expression Language (LCEL) 的作用是？",
+    "options": [
+      "数据库查询",
+      "链式组合语言模型",
+      "前端开发",
+      "网络请求"
+    ],
+    "answer": "B",
+    "explanation": "LCEL 用于以声明方式组合语言模型组件。"
+  },
+  {
+    "id": "quiz_langchain_004",
+    "module_id": "langchain_framework",
+    "type": "选择",
+    "question": "以下哪个不是 LangChain 的核心概念？",
+    "options": [
+      "Chains",
+      "Agents",
+      "Indexes",
+      "GUI"
+    ],
+    "answer": "D",
+    "explanation": "LangChain 核心概念包括 Chains、Agents、Indexes、Memory 等，不是 GUI。"
+  },
+  {
+    "id": "quiz_langchain_005",
+    "module_id": "langchain_framework",
+    "type": "选择",
+    "question": "LangChain 支持哪些模型？",
+    "options": [
+      "仅 GPT",
+      "仅 Claude",
+      "仅开源模型",
+      "多种模型包括 OpenAI/Claude/开源"
+    ],
+    "answer": "D",
+    "explanation": "LangChain 支持多种模型，包括商业和开源模型。"
+  },
+  {
+    "id": "quiz_vector_001",
+    "module_id": "vector_databases",
+    "type": "选择",
+    "question": "向量数据库主要用于？",
+    "options": [
+      "存储图片",
+      "存储和检索向量嵌入",
+      "存储音频",
+      "仅存储文本"
+    ],
+    "answer": "B",
+    "explanation": "向量数据库专门用于存储和高效检索向量嵌入。"
+  },
+  {
+    "id": "quiz_vector_002",
+    "module_id": "vector_databases",
+    "type": "选择",
+    "question": "向量相似度搜索的常用距离是？",
+    "options": [
+      "欧氏距离和余弦相似度",
+      "仅曼哈顿距离",
+      "仅哈希距离",
+      "随机距离"
+    ],
+    "answer": "A",
+    "explanation": "欧氏距离和余弦相似度是最常用的向量相似度度量。"
+  },
+  {
+    "id": "quiz_vector_003",
+    "module_id": "vector_databases",
+    "type": "选择",
+    "question": "以下哪个不是向量数据库？",
+    "options": [
+      "Pinecone",
+      "Milvus",
+      "MongoDB",
+      "Weaviate"
+    ],
+    "answer": "C",
+    "explanation": "MongoDB 是文档数据库，不是专门的向量数据库。"
+  },
+  {
+    "id": "quiz_vector_004",
+    "module_id": "vector_databases",
+    "type": "选择",
+    "question": "向量嵌入的主要作用是？",
+    "options": [
+      "压缩数据",
+      "将数据转换为数值向量表示",
+      "加密数据",
+      "删除数据"
+    ],
+    "answer": "B",
+    "explanation": "向量嵌入将文本、图像等数据转换为数值向量，便于语义搜索。"
+  },
+  {
+    "id": "quiz_vector_005",
+    "module_id": "vector_databases",
+    "type": "选择",
+    "question": "近似最近邻 (ANN) 搜索用于？",
+    "options": [
+      "精确搜索",
+      "快速大规模相似性搜索",
+      "排序结果",
+      "过滤数据"
+    ],
+    "answer": "B",
+    "explanation": "ANN 通过牺牲少量精度换取大规模数据的快速检索。"
+  },
+  {
+    "id": "quiz_prompt_001",
+    "module_id": "prompt_engineering",
+    "type": "选择",
+    "question": "Few-shot prompting 的作用是？",
+    "options": [
+      "不提供任何示例",
+      "提供少量示例帮助模型理解",
+      "提供大量训练",
+      "仅提供问题"
+    ],
+    "answer": "B",
+    "explanation": "Few-shot prompting 通过提供少量示例帮助模型理解任务。"
+  },
+  {
+    "id": "quiz_prompt_002",
+    "module_id": "prompt_engineering",
+    "type": "选择",
+    "question": "CoT (Chain of Thought) 提示的核心是？",
+    "options": [
+      "直接给出答案",
+      "让模型展示推理过程",
+      "简化问题",
+      "随机生成"
+    ],
+    "answer": "B",
+    "explanation": "CoT 提示让模型展示逐步推理过程。"
+  },
+  {
+    "id": "quiz_prompt_003",
+    "module_id": "prompt_engineering",
+    "type": "选择",
+    "question": "角色提示是什么？",
+    "options": [
+      "设置模型权限",
+      "为模型设定特定角色来改善输出",
+      "限制模型功能",
+      "删除模型能力"
+    ],
+    "answer": "B",
+    "explanation": "角色提示通过设定角色（如专家、教师）来改善输出质量。"
+  },
+  {
+    "id": "quiz_prompt_004",
+    "module_id": "prompt_engineering",
+    "type": "选择",
+    "question": "以下哪个不是有效的提示技巧？",
+    "options": [
+      "清晰明确的要求",
+      "提供上下文",
+      "指定输出格式",
+      "使用不完整的句子"
+    ],
+    "answer": "D",
+    "explanation": "提示应该清晰完整，使用不完整句子会导致误解。"
+  },
+  {
+    "id": "quiz_prompt_005",
+    "module_id": "prompt_engineering",
+    "type": "选择",
+    "question": "提示工程的主要目标是？",
+    "options": [
+      "让模型变慢",
+      "优化提示以获得更好的模型输出",
+      "增加成本",
+      "减少功能"
+    ],
+    "answer": "B",
+    "explanation": "提示工程通过优化提示来提高模型输出的质量。"
+  },
+  {
+    "id": "quiz_rag_001",
+    "module_id": "rag_architecture",
+    "type": "选择",
+    "question": "RAG 的全称是？",
+    "options": [
+      "Rapid Application Generation",
+      "Retrieval-Augmented Generation",
+      "Random Attribute Generation",
+      "Real-time Algorithm Group"
+    ],
+    "answer": "B",
+    "explanation": "RAG = Retrieval-Augmented Generation（检索增强生成）。"
+  },
+  {
+    "id": "quiz_rag_002",
+    "module_id": "rag_architecture",
+    "type": "选择",
+    "question": "RAG 架构的核心组件包括？",
+    "options": [
+      "只有数据库",
+      "检索器+生成器",
+      "只有搜索引擎",
+      "只有LLM"
+    ],
+    "answer": "B",
+    "explanation": "RAG 核心是检索器（Retrieval）和生成器（Generation）。"
+  },
+  {
+    "id": "quiz_rag_003",
+    "module_id": "rag_architecture",
+    "type": "选择",
+    "question": "RAG 主要解决什么问题？",
+    "options": [
+      "模型知识过时和幻觉",
+      "模型运行速度",
+      "模型体积",
+      "模型接口"
+    ],
+    "answer": "A",
+    "explanation": "RAG 通过外部知识库补充模型知识，减少幻觉。"
+  },
+  {
+    "id": "quiz_rag_004",
+    "module_id": "rag_architecture",
+    "type": "选择",
+    "question": "向量检索在 RAG 中的作用是？",
+    "options": [
+      "加密数据",
+      "从知识库中检索相关信息",
+      "生成回答",
+      "存储数据"
+    ],
+    "answer": "B",
+    "explanation": "RAG 使用向量检索从知识库中检索相关文档。"
+  },
+  {
+    "id": "quiz_rag_005",
+    "module_id": "rag_architecture",
+    "type": "选择",
+    "question": "RAG 相比微调的优势是？",
+    "options": [
+      "需要更多训练数据",
+      "可更新知识而无需重新训练",
+      "成本更高",
+      "速度更慢"
+    ],
+    "answer": "B",
+    "explanation": "RAG 可通过更新知识库来更新知识，无需重新训练模型。"
+  },
+  {
+    "id": "quiz_finetune_001",
+    "module_id": "model_finetuning",
+    "type": "选择",
+    "question": "模型微调的主要目的是？",
+    "options": [
+      "增大模型体积",
+      "让模型适配特定任务",
+      "减慢模型速度",
+      "删除模型功能"
+    ],
+    "answer": "B",
+    "explanation": "模型微调通过在特定数据上训练来适配特定任务。"
+  },
+  {
+    "id": "quiz_finetune_002",
+    "module_id": "model_finetuning",
+    "type": "选择",
+    "question": "LoRA 技术的主要优势是？",
+    "options": [
+      "完全重新训练",
+      "参数高效微调，内存需求低",
+      "增加推理时间",
+      "减少模型精度"
+    ],
+    "answer": "B",
+    "explanation": "LoRA 通过低秩分解实现参数高效微调，大幅降低内存需求。"
+  },
+  {
+    "id": "quiz_finetune_003",
+    "module_id": "model_finetuning",
+    "type": "选择",
+    "question": "全参数微调和 LoRA 微调的主要区别是？",
+    "options": [
+      "训练数据量",
+      "更新的参数量和资源需求",
+      "训练时间",
+      "模型结构"
+    ],
+    "answer": "B",
+    "explanation": "LoRA 只更新少量参数，全参数微调更新所有参数。"
+  },
+  {
+    "id": "quiz_finetune_004",
+    "module_id": "model_finetuning",
+    "type": "选择",
+    "question": "预训练+微调的工作流程是？",
+    "options": [
+      "直接微调",
+      "预训练->领域微调->任务微调",
+      "仅预训练",
+      "仅微调"
+    ],
+    "answer": "B",
+    "explanation": "典型流程是在大规模数据上预训练，然后领域微调，最后任务微调。"
+  },
+  {
+    "id": "quiz_finetune_005",
+    "module_id": "model_finetuning",
+    "type": "选择",
+    "question": "微调过拟合的特征是？",
+    "options": [
+      "训练损失很高",
+      "训练损失很低但验证损失很高",
+      "训练时间长",
+      "训练速度快"
+    ],
+    "answer": "B",
+    "explanation": "过拟合表现为训练损失低但验证损失高，模型泛化能力差。"
+  },
+  {
+    "id": "quiz_multimodal_001",
+    "module_id": "multimodal_ai",
+    "type": "选择",
+    "question": "多模态AI 的特点是？",
+    "options": [
+      "仅处理文本",
+      "仅处理图像",
+      "能处理多种模态（文本、图像、音频等）",
+      "仅处理音频"
+    ],
+    "answer": "C",
+    "explanation": "多模态AI 能处理和理解多种类型的数据。"
+  },
+  {
+    "id": "quiz_multimodal_002",
+    "module_id": "multimodal_ai",
+    "type": "选择",
+    "question": "CLIP 模型主要用于？",
+    "options": [
+      "仅文本理解",
+      "图像和文本的联合理解",
+      "仅语音识别",
+      "仅视频处理"
+    ],
+    "answer": "B",
+    "explanation": "CLIP 通过对比学习理解图像和文本的关系。"
+  },
+  {
+    "id": "quiz_multimodal_003",
+    "module_id": "multimodal_ai",
+    "type": "选择",
+    "question": "视觉语言模型 (VLM) 可以用于？",
+    "options": [
+      "仅图像分类",
+      "图像问答、图像描述生成等",
+      "仅文本处理",
+      "仅音频处理"
+    ],
+    "answer": "B",
+    "explanation": "VLM 能理解和生成与图像相关的自然语言。"
+  },
+  {
+    "id": "quiz_multimodal_004",
+    "module_id": "multimodal_ai",
+    "type": "选择",
+    "question": "以下哪个是多模态输入？",
+    "options": [
+      "纯文本",
+      "文本+图像",
+      "纯数字",
+      "纯JSON"
+    ],
+    "answer": "B",
+    "explanation": "多模态输入包含多种数据类型，如文本+图像。"
+  },
+  {
+    "id": "quiz_multimodal_005",
+    "module_id": "multimodal_ai",
+    "type": "选择",
+    "question": "多模态大模型面临的挑战是？",
+    "options": [
+      "仅需一种数据",
+      "不同模态的对齐和融合",
+      "模型体积太小",
+      "训练速度太快"
+    ],
+    "answer": "B",
+    "explanation": "核心挑战是如何有效对齐和融合不同模态的信息。"
+  },
+  {
+    "id": "quiz_mcp_protocol_001",
+    "module_id": "mcp_protocol",
+    "type": "选择",
+    "question": "MCP 的全称是？",
+    "options": [
+      "Model Code Protocol",
+      "Model Context Protocol",
+      "Main Control Panel",
+      "Multiple Computer Process"
+    ],
+    "answer": "B",
+    "explanation": "MCP = Model Context Protocol（模型上下文协议）。"
+  },
+  {
+    "id": "quiz_mcp_protocol_002",
+    "module_id": "mcp_protocol",
+    "type": "选择",
+    "question": "MCP 协议的核心目的是？",
+    "options": [
+      "加密通信",
+      "让AI与外部系统交互",
+      "压缩数据",
+      "仅文本传输"
+    ],
+    "answer": "B",
+    "explanation": "MCP 协议为AI模型提供与外部世界交互的标准化方式。"
+  },
+  {
+    "id": "quiz_mcp_protocol_003",
+    "module_id": "mcp_protocol",
+    "type": "选择",
+    "question": "MCP 服务器的三大核心能力是？",
+    "options": [
+      "只有工具",
+      "Tools、Resources、Prompts",
+      "只有数据库",
+      "只有API"
+    ],
+    "answer": "B",
+    "explanation": "MCP 服务器提供工具（Tools）、资源（Resources）、提示模板（Prompts）。"
+  },
+  {
+    "id": "quiz_mcp_protocol_004",
+    "module_id": "mcp_protocol",
+    "type": "选择",
+    "question": "MCP 协议使用什么通信协议？",
+    "options": [
+      "HTTP",
+      "WebSocket",
+      "JSON-RPC",
+      "FTP"
+    ],
+    "answer": "C",
+    "explanation": "MCP 基于 JSON-RPC 2.0 进行通信。"
+  },
+  {
+    "id": "quiz_mcp_protocol_005",
+    "module_id": "mcp_protocol",
+    "type": "选择",
+    "question": "MCP 被比喻为什么？",
+    "options": [
+      "USB接口",
+      "蓝牙",
+      "WiFi",
+      "HDMI"
+    ],
+    "answer": "A",
+    "explanation": "MCP 被比喻为AI的'USB接口'，即插即用地连接外部能力。"
+  },
+  {
+    "id": "quiz_mcp_server_001",
+    "module_id": "mcp_server",
+    "type": "选择",
+    "question": "MCP 服务器的 transport 方式包括？",
+    "options": [
+      "只有HTTP",
+      "stdio 和 SSE",
+      "只有FTP",
+      "只有TCP"
+    ],
+    "answer": "B",
+    "explanation": "MCP 支持 stdio（本地进程）和 SSE（远程服务）两种传输方式。"
+  },
+  {
+    "id": "quiz_mcp_server_002",
+    "module_id": "mcp_server",
+    "type": "选择",
+    "question": "创建 MCP 服务器需要继承哪个类？",
+    "options": [
+      "HTTP Server",
+      "Server",
+      "BaseHTTPServer",
+      "Flask"
+    ],
+    "answer": "B",
+    "explanation": "使用 MCP SDK 的 Server 类创建服务器。"
+  },
+  {
+    "id": "quiz_mcp_server_003",
+    "module_id": "mcp_server",
+    "type": "选择",
+    "question": "MCP 工具必须定义的核心属性是？",
+    "options": [
+      "只有名称",
+      "name、description、inputSchema",
+      "只有代码",
+      "只有文档"
+    ],
+    "answer": "B",
+    "explanation": "MCP 工具需要定义名称、描述和输入模式。"
+  },
+  {
+    "id": "quiz_mcp_server_004",
+    "module_id": "mcp_server",
+    "type": "选择",
+    "question": "MCP 服务器可以提供哪些能力？",
+    "options": [
+      "只有工具",
+      "工具、资源、提示模板",
+      "只有数据库",
+      "只有网络"
+    ],
+    "answer": "B",
+    "explanation": "MCP 服务器提供 Tools（工具）、Resources（资源）、Prompts（提示模板）。"
+  },
+  {
+    "id": "quiz_mcp_server_005",
+    "module_id": "mcp_server",
+    "type": "选择",
+    "question": "MCP 工具的 inputSchema 作用是？",
+    "options": [
+      "加密参数",
+      "定义参数类型和约束",
+      "压缩数据",
+      "删除参数"
+    ],
+    "answer": "B",
+    "explanation": "inputSchema 定义工具的参数结构和约束。"
+  },
+  {
+    "id": "quiz_custom_skill_001",
+    "module_id": "custom_skill",
+    "type": "选择",
+    "question": "Skill 的核心价值是什么？",
+    "options": [
+      "仅扩展功能",
+      "模块化、可复用、可组合、可扩展的能力单元",
+      "仅提高速度",
+      "仅减少代码"
+    ],
+    "answer": "B",
+    "explanation": "Skill 将功能封装为可重用的单元，便于组合使用。"
+  },
+  {
+    "id": "quiz_custom_skill_002",
+    "module_id": "custom_skill",
+    "type": "选择",
+    "question": "Skill 的必需配置文件是？",
+    "options": [
+      "config.json",
+      "SKILL.md",
+      "settings.yaml",
+      "init.py"
+    ],
+    "answer": "B",
+    "explanation": "SKILL.md 是 Skill 的核心配置文件。"
+  },
+  {
+    "id": "quiz_custom_skill_003",
+    "module_id": "custom_skill",
+    "type": "选择",
+    "question": "Skill 能力定义中的 tools 用于？",
+    "options": [
+      "存储数据",
+      "定义可执行的函数",
+      "仅文档",
+      "仅日志"
+    ],
+    "answer": "B",
+    "explanation": "tools 定义 Skill 中可被调用的函数。"
+  },
+  {
+    "id": "quiz_custom_skill_004",
+    "module_id": "custom_skill",
+    "type": "选择",
+    "question": "Skill 的 trigger 字段作用是？",
+    "options": [
+      "设置权限",
+      "定义触发关键词",
+      "加密数据",
+      "日志记录"
+    ],
+    "answer": "B",
+    "explanation": "trigger 定义触发 Skill 的关键词。"
+  },
+  {
+    "id": "quiz_custom_skill_005",
+    "module_id": "custom_skill",
+    "type": "选择",
+    "question": "Skill 目录结构中的 workflows 目录用于？",
+    "options": [
+      "存储配置",
+      "定义自动化工作流",
+      "仅文档",
+      "测试代码"
+    ],
+    "answer": "B",
+    "explanation": "workflows 目录存放自动化工作流定义。"
+  },
+  {
+    "id": "quiz_enterprise_mcp_001",
+    "module_id": "enterprise_mcp",
+    "type": "选择",
+    "question": "企业级 MCP 的核心需求不包括？",
+    "options": [
+      "高可用性",
+      "可扩展性",
+      "简单性优先",
+      "安全性"
+    ],
+    "answer": "C",
+    "explanation": "企业级 MCP 强调高可用、可扩展、安全，而非简单性。"
+  },
+  {
+    "id": "quiz_enterprise_mcp_002",
+    "module_id": "enterprise_mcp",
+    "type": "选择",
+    "question": "MCP 高可用架构设计原则是？",
+    "options": [
+      "单点故障",
+      "无单点故障+故障自动恢复+水平扩展",
+      "仅使用单机",
+      "不使用容器"
+    ],
+    "answer": "B",
+    "explanation": "高可用架构需无单点故障、支持自动恢复和水平扩展。"
+  },
+  {
+    "id": "quiz_enterprise_mcp_003",
+    "module_id": "enterprise_mcp",
+    "type": "选择",
+    "question": "负载均衡的常用策略是？",
+    "options": [
+      "仅轮询",
+      "轮询、最少连接、IP哈希、加权",
+      "仅随机",
+      "仅哈希"
+    ],
+    "answer": "B",
+    "explanation": "常用策略包括轮询、最少连接、IP哈希、加权等。"
+  },
+  {
+    "id": "quiz_enterprise_mcp_004",
+    "module_id": "enterprise_mcp",
+    "type": "选择",
+    "question": "MCP 生产环境部署通常使用？",
+    "options": [
+      "仅手动部署",
+      "容器化+编排",
+      "仅虚拟机",
+      "仅脚本"
+    ],
+    "answer": "B",
+    "explanation": "生产环境通常使用 Docker + Kubernetes 等容器编排。"
+  },
+  {
+    "id": "quiz_enterprise_mcp_005",
+    "module_id": "enterprise_mcp",
+    "type": "选择",
+    "question": "多环境部署通常包括？",
+    "options": [
+      "仅开发环境",
+      "开发、测试、预发布、生产环境",
+      "仅生产环境",
+      "仅测试环境"
+    ],
+    "answer": "B",
+    "explanation": "多环境包括开发、测试、预发布、生产环境。"
+  },
+  {
+    "id": "quiz_mcp_security_001",
+    "module_id": "mcp_security",
+    "type": "选择",
+    "question": "MCP 安全的主要威胁是？",
+    "options": [
+      "网络延迟",
+      "未授权访问、数据泄露、工具滥用",
+      "界面美观",
+      "代码量"
+    ],
+    "answer": "B",
+    "explanation": "MCP 安全威胁包括未授权访问、数据泄露、工具滥用等。"
+  },
+  {
+    "id": "quiz_mcp_security_002",
+    "module_id": "mcp_security",
+    "type": "选择",
+    "question": "API密钥认证的缺点是？",
+    "options": [
+      "无法验证身份",
+      "无过期机制、难以撤销",
+      "速度太快",
+      "过于安全"
+    ],
+    "answer": "B",
+    "explanation": "API密钥无过期机制，泄露后难以撤销。"
+  },
+  {
+    "id": "quiz_mcp_security_003",
+    "module_id": "mcp_security",
+    "type": "选择",
+    "question": "OAuth 2.0 的主要优势是？",
+    "options": [
+      "简单密码",
+      "标准授权协议、支持令牌过期和撤销",
+      "无需网络",
+      "无状态"
+    ],
+    "answer": "B",
+    "explanation": "OAuth 2.0 是标准协议，支持令牌过期和细粒度权限控制。"
+  },
+  {
+    "id": "quiz_mcp_security_004",
+    "module_id": "mcp_security",
+    "type": "选择",
+    "question": "MCP 审计日志应记录？",
+    "options": [
+      "仅时间戳",
+      "用户身份、操作时间、工具、参数、结果",
+      "仅操作类型",
+      "仅参数"
+    ],
+    "answer": "B",
+    "explanation": "审计日志需记录完整的操作上下文。"
+  },
+  {
+    "id": "quiz_mcp_security_005",
+    "module_id": "mcp_security",
+    "type": "选择",
+    "question": "数据加密策略包括？",
+    "options": [
+      "仅传输加密",
+      "传输加密+存储加密+密钥管理",
+      "仅存储加密",
+      "仅密钥管理"
+    ],
+    "answer": "B",
+    "explanation": "企业级数据安全需要多层次的加密策略。"
+  },
+  {
+    "id": "quiz_multi_agent_001",
+    "module_id": "multi_agent",
+    "type": "选择",
+    "question": "多Agent系统的核心特征不包括？",
+    "options": [
+      "自主性",
+      "社会能力",
+      "高功耗",
+      "反应能力和预动能力"
+    ],
+    "answer": "C",
+    "explanation": "多Agent系统核心特征是自主性、社会能力、反应和预动能力，非功耗。"
+  },
+  {
+    "id": "quiz_multi_agent_002",
+    "module_id": "multi_agent",
+    "type": "选择",
+    "question": "Agent之间的通信模式包括？",
+    "options": [
+      "仅点对点",
+      "点对点、广播、中介通信",
+      "仅广播",
+      "仅文件通信"
+    ],
+    "answer": "B",
+    "explanation": "Agent通信包括点对点、广播和通过中央协调器转发。"
+  },
+  {
+    "id": "quiz_multi_agent_003",
+    "module_id": "multi_agent",
+    "type": "选择",
+    "question": "任务分担模式的优点是？",
+    "options": [
+      "单点故障",
+      "并行处理、提高效率",
+      "增加延迟",
+      "减少功能"
+    ],
+    "answer": "B",
+    "explanation": "任务分担可并行处理，提高系统效率。"
+  },
+  {
+    "id": "quiz_multi_agent_004",
+    "module_id": "multi_agent",
+    "type": "选择",
+    "question": "智能任务分配应考虑？",
+    "options": [
+      "仅随机分配",
+      "Agent能力、当前负载、任务需求",
+      "仅任务名称",
+      "仅Agent名称"
+    ],
+    "answer": "B",
+    "explanation": "智能分配需综合考虑Agent能力和负载。"
+  },
+  {
+    "id": "quiz_multi_agent_005",
+    "module_id": "multi_agent",
+    "type": "选择",
+    "question": "Agent的基本结构包括？",
+    "options": [
+      "只有输入",
+      "感知层、认知层、行动层",
+      "只有输出",
+      "只有网络"
+    ],
+    "answer": "B",
+    "explanation": "Agent架构包括感知（输入）、认知（分析决策）、行动（输出）。"
+  },
+  {
+    "id": "quiz_langchain_006",
+    "module_id": "langchain_framework",
+    "type": "选择",
+    "question": "LangChain 中 Chain 的作用是？",
+    "options": [
+      "仅存储数据",
+      "连接多个组件形成处理流水线",
+      "仅处理HTTP请求",
+      "仅数据库操作"
+    ],
+    "answer": "B",
+    "explanation": "Chain 用于将多个组件串联成工作流。"
+  },
+  {
+    "id": "quiz_langchain_007",
+    "module_id": "langchain_framework",
+    "type": "选择",
+    "question": "以下哪个是 LangChain 常用的输出解析器？",
+    "options": [
+      "JSONOutputParser",
+      "CSVParser",
+      "XMLParser",
+      "HTMLParser"
+    ],
+    "answer": "A",
+    "explanation": "JSONOutputParser 将模型输出解析为 JSON。"
+  },
+  {
+    "id": "quiz_langchain_008",
+    "module_id": "langchain_framework",
+    "type": "选择",
+    "question": "LangChain Agent 的核心特点是？",
+    "options": [
+      "完全确定性的",
+      "能自主决策使用哪些工具",
+      "只能顺序执行",
+      "不支持工具调用"
+    ],
+    "answer": "B",
+    "explanation": "Agent 能自主决定使用哪些工具。"
+  },
+  {
+    "id": "quiz_langchain_009",
+    "module_id": "langchain_framework",
+    "type": "选择",
+    "question": "VectorStore 在 LangChain 中的作用是？",
+    "options": [
+      "存储图片",
+      "存储和检索向量嵌入",
+      "仅缓存数据",
+      "处理音频"
+    ],
+    "answer": "B",
+    "explanation": "VectorStore 用于存储向量嵌入并支持相似性搜索。"
+  },
+  {
+    "id": "quiz_langchain_010",
+    "module_id": "langchain_framework",
+    "type": "选择",
+    "question": "以下哪个不是 LangChain 的 Memory 类型？",
+    "options": [
+      "ConversationBufferMemory",
+      "ConversationSummaryMemory",
+      "EntityMemory",
+      "ImageMemory"
+    ],
+    "answer": "D",
+    "explanation": "LangChain 有多种 Memory，但没有 ImageMemory。"
+  },
+  {
+    "id": "quiz_vector_006",
+    "module_id": "vector_databases",
+    "type": "选择",
+    "question": "向量归一化的作用是？",
+    "options": [
+      "增加向量长度",
+      "将向量长度统一为1，便于余弦相似度计算",
+      "减少维度",
+      "增加噪声"
+    ],
+    "answer": "B",
+    "explanation": "归一化后余弦相似度等于点积。"
+  },
+  {
+    "id": "quiz_vector_007",
+    "module_id": "vector_databases",
+    "type": "选择",
+    "question": "HNSW 算法的特点是？",
+    "options": [
+      "单层索引",
+      "多层图结构，高效近似搜索",
+      "仅支持精确查询",
+      "内存占用极大"
+    ],
+    "answer": "B",
+    "explanation": "HNSW 使用分层图结构，在搜索效率和精度间取得平衡。"
+  },
+  {
+    "id": "quiz_vector_008",
+    "module_id": "vector_databases",
+    "type": "选择",
+    "question": "Faiss 的全称是？",
+    "options": [
+      "Fast Artificial Index",
+      "Facebook AI Search",
+      "Facebook AI Similarity Search",
+      "Fast AI Similarity System"
+    ],
+    "answer": "C",
+    "explanation": "Faiss = Facebook AI Similarity Search。"
+  },
+  {
+    "id": "quiz_vector_009",
+    "module_id": "vector_databases",
+    "type": "选择",
+    "question": "向量聚类的常用方法是？",
+    "options": [
+      "仅 K-Means",
+      "K-Means, DBSCAN, 层次聚类",
+      "仅排序",
+      "仅过滤"
+    ],
+    "answer": "B",
+    "explanation": "可以使用多种聚类算法处理向量数据。"
+  },
+  {
+    "id": "quiz_vector_010",
+    "module_id": "vector_databases",
+    "type": "选择",
+    "question": "向量数据库与传统数据库的关系是？",
+    "options": [
+      "完全替代",
+      "互补关系，向量作为新型数据类型",
+      "毫无关系",
+      "就是传统数据库"
+    ],
+    "answer": "B",
+    "explanation": "向量数据库是传统数据库的补充。"
+  },
+  {
+    "id": "quiz_prompt_006",
+    "module_id": "prompt_engineering",
+    "type": "选择",
+    "question": "Zero-shot 提示的特点是？",
+    "options": [
+      "需要大量示例",
+      "不需要任何示例即可完成任务",
+      "必须训练模型",
+      "只能处理简单任务"
+    ],
+    "answer": "B",
+    "explanation": "Zero-shot 不需要示例，利用预学知识完成任务。"
+  },
+  {
+    "id": "quiz_prompt_007",
+    "module_id": "prompt_engineering",
+    "type": "选择",
+    "question": "Self-Consistency 自洽性的核心思想是？",
+    "options": [
+      "只生成一次",
+      "生成多个推理路径，选择最一致的答案",
+      "随机生成",
+      "仅使用第一个答案"
+    ],
+    "answer": "B",
+    "explanation": "通过多数投票选择最一致的推理结果。"
+  },
+  {
+    "id": "quiz_prompt_008",
+    "module_id": "prompt_engineering",
+    "type": "选择",
+    "question": "Tree of Thoughts (ToT) 拓展了什么？",
+    "options": [
+      "单链推理",
+      "树状多分支推理探索",
+      "仅顺序执行",
+      "单一路径"
+    ],
+    "answer": "B",
+    "explanation": "ToT 让模型在多个推理分支中探索。"
+  },
+  {
+    "id": "quiz_prompt_009",
+    "module_id": "prompt_engineering",
+    "type": "选择",
+    "question": "Prompt Tuning 与 Prompt Engineering 的区别是？",
+    "options": [
+      "完全相同",
+      "Prompt Tuning 通过梯度调整提示嵌入",
+      "前者需要训练",
+      "后者需要GPU"
+    ],
+    "answer": "B",
+    "explanation": "Prompt Tuning 是参数高效的微调方法。"
+  },
+  {
+    "id": "quiz_prompt_010",
+    "module_id": "prompt_engineering",
+    "type": "选择",
+    "question": "System Prompt 的作用是？",
+    "options": [
+      "限制用户输入",
+      "设定模型角色和行为规则",
+      "仅日志记录",
+      "加密通信"
+    ],
+    "answer": "B",
+    "explanation": "System Prompt 定义模型的整体行为。"
+  },
+  {
+    "id": "quiz_rag_006",
+    "module_id": "rag_architecture",
+    "type": "选择",
+    "question": "向量检索在 RAG 中的典型流程是？",
+    "options": [
+      "仅存储",
+      "文档->分块->向量化->存储->查询->检索",
+      "直接查询",
+      "仅排序"
+    ],
+    "answer": "B",
+    "explanation": "完整的向量检索流程包括文档处理、向量化、存储和检索。"
+  },
+  {
+    "id": "quiz_rag_007",
+    "module_id": "rag_architecture",
+    "type": "选择",
+    "question": "RAG 中文档分块的目的是？",
+    "options": [
+      "增加数据量",
+      "将长文档拆分为适合的片段，便于向量化",
+      "减少存储",
+      "仅用于显示"
+    ],
+    "answer": "B",
+    "explanation": "合理的分块确保检索内容既相关又完整。"
+  },
+  {
+    "id": "quiz_rag_008",
+    "module_id": "rag_architecture",
+    "type": "选择",
+    "question": "HyDE 的原理是？",
+    "options": [
+      "直接检索",
+      "让模型生成假设文档再检索",
+      "仅排序",
+      "过滤结果"
+    ],
+    "answer": "B",
+    "explanation": "HyDE 先让模型生成假设答案，再用假设答案去检索。"
+  },
+  {
+    "id": "quiz_rag_009",
+    "module_id": "rag_architecture",
+    "type": "选择",
+    "question": "RAG 评估的常用指标是？",
+    "options": [
+      "仅准确率",
+      "上下文相关性、答案准确性、忠实度",
+      "仅速度",
+      "仅成本"
+    ],
+    "answer": "B",
+    "explanation": "RAG 评估需综合考虑检索质量和生成质量。"
+  },
+  {
+    "id": "quiz_rag_010",
+    "module_id": "rag_architecture",
+    "type": "选择",
+    "question": "RAG 与微调的选择依据是？",
+    "options": [
+      "总是用RAG",
+      "需要频繁更新知识用RAG，需要模型适配特定风格用微调",
+      "仅看成本",
+      "仅看速度"
+    ],
+    "answer": "B",
+    "explanation": "RAG 适合动态知识，微调适合固定任务风格。"
+  },
+  {
+    "id": "quiz_finetune_006",
+    "module_id": "model_finetuning",
+    "type": "选择",
+    "question": "QLoRA 的特点是？",
+    "options": [
+      "需要全参数训练",
+      "4-bit量化+LoRA，大幅降低显存",
+      "无法量化",
+      "仅支持CPU"
+    ],
+    "answer": "B",
+    "explanation": "QLoRA 通过量化大幅降低显存。"
+  },
+  {
+    "id": "quiz_finetune_007",
+    "module_id": "model_finetuning",
+    "type": "选择",
+    "question": "PEFT 的全称是？",
+    "options": [
+      "Python Extra Fine Tuning",
+      "Parameter-Efficient Fine-Tuning",
+      "Pre-Training Extra Fine Tune",
+      "Prompt Efficient Fine Tuning"
+    ],
+    "answer": "B",
+    "explanation": "PEFT = Parameter-Efficient Fine-Tuning。"
+  },
+  {
+    "id": "quiz_finetune_008",
+    "module_id": "model_finetuning",
+    "type": "选择",
+    "question": "Adapter 的作用是？",
+    "options": [
+      "增加模型参数",
+      "在模型层间插入小型模块进行微调",
+      "减少参数",
+      "仅推理"
+    ],
+    "answer": "B",
+    "explanation": "Adapter 在层间插入小型模块。"
+  },
+  {
+    "id": "quiz_finetune_009",
+    "module_id": "model_finetuning",
+    "type": "选择",
+    "question": "Instruction Tuning 的目的是？",
+    "options": [
+      "仅语言建模",
+      "让模型理解并遵循自然语言指令",
+      "仅生成文本",
+      "仅分类"
+    ],
+    "answer": "B",
+    "explanation": "Instruction Tuning 提升模型指令遵循能力。"
+  },
+  {
+    "id": "quiz_finetune_010",
+    "module_id": "model_finetuning",
+    "type": "选择",
+    "question": "RLHF 的全称是？",
+    "options": [
+      "Reinforcement Learning High Frequency",
+      "Reinforcement Learning from Human Feedback",
+      "Rapid Learning High Feature",
+      "Recursive Learning from History"
+    ],
+    "answer": "B",
+    "explanation": "RLHF = Reinforcement Learning from Human Feedback。"
+  },
+  {
+    "id": "quiz_multimodal_006",
+    "module_id": "multimodal_ai",
+    "type": "选择",
+    "question": "BLIP 模型主要用于？",
+    "options": [
+      "仅文本处理",
+      "图像-文本理解和生成",
+      "仅语音识别",
+      "仅视频处理"
+    ],
+    "answer": "B",
+    "explanation": "BLIP 用于引导式图像-文本理解与生成。"
+  },
+  {
+    "id": "quiz_multimodal_007",
+    "module_id": "multimodal_ai",
+    "type": "选择",
+    "question": "Flamingo 模型的特点是？",
+    "options": [
+      "仅处理图像",
+      "少样本多模态学习",
+      "仅单模态",
+      "不支持few-shot"
+    ],
+    "answer": "B",
+    "explanation": "Flamingo 能在少样本下学习多模态任务。"
+  },
+  {
+    "id": "quiz_multimodal_008",
+    "module_id": "multimodal_ai",
+    "type": "选择",
+    "question": "AudioLM 用于？",
+    "options": [
+      "图像生成",
+      "音频生成和续写",
+      "文本处理",
+      "视频处理"
+    ],
+    "answer": "B",
+    "explanation": "AudioLM 是音频生成模型。"
+  },
+  {
+    "id": "quiz_multimodal_009",
+    "module_id": "multimodal_ai",
+    "type": "选择",
+    "question": "多模态融合的常用方法是？",
+    "options": [
+      "仅早融合",
+      "早融合、晚融合、中间融合",
+      "仅晚融合",
+      "仅拼接"
+    ],
+    "answer": "B",
+    "explanation": "多模态融合可在不同阶段进行。"
+  },
+  {
+    "id": "quiz_multimodal_010",
+    "module_id": "multimodal_ai",
+    "type": "选择",
+    "question": "视频理解模型通常处理哪些信息？",
+    "options": [
+      "仅画面",
+      "画面、音频、时序信息",
+      "仅音频",
+      "仅文本"
+    ],
+    "answer": "B",
+    "explanation": "视频理解需综合处理视觉、听觉和时序信息。"
+  },
+  {
+    "id": "quiz_enterprise_mcp_006",
+    "module_id": "enterprise_mcp",
+    "type": "选择",
+    "question": "MCP 网关的主要作用是？",
+    "options": [
+      "仅日志记录",
+      "统一入口、负载均衡、认证授权",
+      "仅存储",
+      "仅显示"
+    ],
+    "answer": "B",
+    "explanation": "MCP 网关是系统的统一入口。"
+  },
+  {
+    "id": "quiz_enterprise_mcp_007",
+    "module_id": "enterprise_mcp",
+    "type": "选择",
+    "question": "容器化部署 MCP 的优势是？",
+    "options": [
+      "无优势",
+      "环境一致、快速伸缩、易于运维",
+      "成本更高",
+      "无法伸缩"
+    ],
+    "answer": "B",
+    "explanation": "Docker/K8s 提供标准化部署。"
+  },
+  {
+    "id": "quiz_enterprise_mcp_008",
+    "module_id": "enterprise_mcp",
+    "type": "选择",
+    "question": "服务发现在 MCP 集群中的作用是？",
+    "options": [
+      "仅日志",
+      "自动发现和管理服务实例",
+      "仅存储",
+      "仅监控"
+    ],
+    "answer": "B",
+    "explanation": "服务发现让系统自动感知可用的 MCP 实例。"
+  },
+  {
+    "id": "quiz_enterprise_mcp_009",
+    "module_id": "enterprise_mcp",
+    "type": "选择",
+    "question": "MCP 多租户架构需要考虑？",
+    "options": [
+      "仅性能",
+      "资源隔离、权限管理、数据隔离、计费",
+      "仅存储",
+      "仅显示"
+    ],
+    "answer": "B",
+    "explanation": "多租户需保证租户间的隔离。"
+  },
+  {
+    "id": "quiz_enterprise_mcp_010",
+    "module_id": "enterprise_mcp",
+    "type": "选择",
+    "question": "灰度发布 MCP 服务的目的是？",
+    "options": [
+      "立即全量",
+      "逐步放量、降低风险、快速回滚",
+      "增加成本",
+      "减少功能"
+    ],
+    "answer": "B",
+    "explanation": "灰度发布通过逐步放量控制新版本风险。"
+  },
+  {
+    "id": "quiz_mcp_security_006",
+    "module_id": "mcp_security",
+    "type": "选择",
+    "question": "MCP 工具调用审计应记录？",
+    "options": [
+      "仅时间",
+      "调用者、工具名、参数、结果、时间",
+      "仅参数",
+      "仅结果"
+    ],
+    "answer": "B",
+    "explanation": "完整审计需记录完整调用上下文。"
+  },
+  {
+    "id": "quiz_mcp_security_007",
+    "module_id": "mcp_security",
+    "type": "选择",
+    "question": "Rate Limiting 在 MCP 中的作用是？",
+    "options": [
+      "无作用",
+      "防止滥用、保护后端资源",
+      "增加延迟",
+      "减少功能"
+    ],
+    "answer": "B",
+    "explanation": "限流防止单个用户过度消耗资源。"
+  },
+  {
+    "id": "quiz_mcp_security_008",
+    "module_id": "mcp_security",
+    "type": "选择",
+    "question": "MCP 敏感数据脱敏策略包括？",
+    "options": [
+      "仅日志",
+      "输入脱敏、输出脱敏、日志脱敏",
+      "仅存储",
+      "仅显示"
+    ],
+    "answer": "B",
+    "explanation": "数据全流程都需要脱敏。"
+  },
+  {
+    "id": "quiz_mcp_security_009",
+    "module_id": "mcp_security",
+    "type": "选择",
+    "question": "MCP 密钥轮换的最佳实践是？",
+    "options": [
+      "永不更换",
+      "定期自动轮换、立即撤销泄露密钥",
+      "手动更换",
+      "仅首次设置"
+    ],
+    "answer": "B",
+    "explanation": "自动化轮换降低密钥泄露风险。"
+  },
+  {
+    "id": "quiz_mcp_security_010",
+    "module_id": "mcp_security",
+    "type": "选择",
+    "question": "零信任架构在 MCP 中的体现是？",
+    "options": [
+      "仅防火墙内",
+      "永不信任、始终验证、最小权限",
+      "仅内网",
+      "仅VPN"
+    ],
+    "answer": "B",
+    "explanation": "零信任要求每次访问都经过验证。"
+  },
+  {
+    "id": "quiz_database_001",
+    "module_id": "database",
+    "type": "选择",
+    "question": "Python 中操作 SQLite 数据库的模块是？",
+    "options": [
+      "pymongo",
+      "sqlite3",
+      "redis",
+      "psycopg2"
+    ],
+    "answer": "B",
+    "explanation": "Python 标准库 sqlite3 用于操作 SQLite 数据库。"
+  },
+  {
+    "id": "quiz_database_002",
+    "module_id": "database",
+    "type": "选择",
+    "question": "SQLAlchemy 的主要功能是？",
+    "options": [
+      "数据库加密",
+      "ORM 和 SQL 抽象层",
+      "数据可视化",
+      "缓存管理"
+    ],
+    "answer": "B",
+    "explanation": "SQLAlchemy 提供对象关系映射和 SQL 抽象层。"
+  },
+  {
+    "id": "quiz_database_003",
+    "module_id": "database",
+    "type": "选择",
+    "question": "数据库事务的 ACID 特性不包括？",
+    "options": [
+      "原子性",
+      "一致性",
+      "隔离性",
+      "异步性"
+    ],
+    "answer": "D",
+    "explanation": "ACID 是原子性、一致性、隔离性、持久性。"
+  },
+  {
+    "id": "quiz_database_004",
+    "module_id": "database",
+    "type": "选择",
+    "question": "SQL 中用于更新数据的语句是？",
+    "options": [
+      "INSERT",
+      "UPDATE",
+      "DELETE",
+      "MODIFY"
+    ],
+    "answer": "B",
+    "explanation": "UPDATE 用于更新已有记录。"
+  },
+  {
+    "id": "quiz_database_005",
+    "module_id": "database",
+    "type": "选择",
+    "question": "数据库索引的主要作用是？",
+    "options": [
+      "减少存储空间",
+      "加快查询速度",
+      "保证数据安全",
+      "自动备份"
+    ],
+    "answer": "B",
+    "explanation": "索引通过减少扫描行数来加速查询。"
+  },
+  {
+    "id": "quiz_design_001",
+    "module_id": "design_patterns",
+    "type": "选择",
+    "question": "单例模式的作用是？",
+    "options": [
+      "限制类的继承",
+      "确保一个类只有一个实例",
+      "实现对象克隆",
+      "管理对象生命周期"
+    ],
+    "answer": "B",
+    "explanation": "单例模式确保类只有唯一实例并提供全局访问点。"
+  },
+  {
+    "id": "quiz_design_002",
+    "module_id": "design_patterns",
+    "type": "选择",
+    "question": "工厂模式属于哪种类型的设计模式？",
+    "options": [
+      "行为型",
+      "结构型",
+      "创建型",
+      "解耦型"
+    ],
+    "answer": "C",
+    "explanation": "工厂模式属于创建型设计模式。"
+  },
+  {
+    "id": "quiz_design_003",
+    "module_id": "design_patterns",
+    "type": "选择",
+    "question": "观察者模式中，被观察者状态改变时？",
+    "options": [
+      "自动删除观察者",
+      "通知所有注册的观察者",
+      "创建新观察者",
+      "停止运行"
+    ],
+    "answer": "B",
+    "explanation": "观察者模式中，被观察者通知所有注册的观察者。"
+  },
+  {
+    "id": "quiz_design_004",
+    "module_id": "design_patterns",
+    "type": "选择",
+    "question": "装饰器模式的作用是？",
+    "options": [
+      "限制对象访问",
+      "动态添加额外职责",
+      "实现对象序列化",
+      "管理对象缓存"
+    ],
+    "answer": "B",
+    "explanation": "装饰器模式动态为对象添加功能。"
+  },
+  {
+    "id": "quiz_design_005",
+    "module_id": "design_patterns",
+    "type": "选择",
+    "question": "策略模式的主要目的是？",
+    "options": [
+      "减少代码量",
+      "定义一系列算法并互换使用",
+      "实现递归",
+      "管理内存"
+    ],
+    "answer": "B",
+    "explanation": "策略模式定义一系列可互换的算法。"
+  },
+  {
+    "id": "quiz_net_001",
+    "module_id": "networking",
+    "type": "选择",
+    "question": "Python 中用于创建 HTTP 请求的库是？",
+    "options": [
+      "os",
+      "sys",
+      "requests",
+      "json"
+    ],
+    "answer": "C",
+    "explanation": "requests 库是 Python 中常用的 HTTP 客户端库。"
+  },
+  {
+    "id": "quiz_net_002",
+    "module_id": "networking",
+    "type": "选择",
+    "question": "WebSocket 的主要特点是？",
+    "options": [
+      "单向通信",
+      "全双工通信",
+      "仅支持文本",
+      "无连接"
+    ],
+    "answer": "B",
+    "explanation": "WebSocket 支持客户端和服务器双向实时通信。"
+  },
+  {
+    "id": "quiz_net_003",
+    "module_id": "networking",
+    "type": "选择",
+    "question": "HTTP 状态码 404 表示？",
+    "options": [
+      "服务器错误",
+      "页面未找到",
+      "请求成功",
+      "需要认证"
+    ],
+    "answer": "B",
+    "explanation": "404 Not Found 表示请求的资源不存在。"
+  },
+  {
+    "id": "quiz_net_004",
+    "module_id": "networking",
+    "type": "选择",
+    "question": "TCP 和 UDP 的主要区别是？",
+    "options": [
+      "传输速度",
+      "连接性和可靠性",
+      "数据格式",
+      "端口范围"
+    ],
+    "answer": "B",
+    "explanation": "TCP 提供可靠连接，UDP 是无连接协议。"
+  },
+  {
+    "id": "quiz_net_005",
+    "module_id": "networking",
+    "type": "选择",
+    "question": "JSON-RPC 通常使用什么协议传输？",
+    "options": [
+      "FTP",
+      "HTTP",
+      "SMTP",
+      "DNS"
+    ],
+    "answer": "B",
+    "explanation": "JSON-RPC 通常基于 HTTP 协议传输。"
+  },
+  {
+    "id": "quiz_data_001",
+    "module_id": "data_processing",
+    "type": "选择",
+    "question": "pandas 中用于读取 CSV 文件的函数是？",
+    "options": [
+      "read_file()",
+      "read_csv()",
+      "load_csv()",
+      "import_csv()"
+    ],
+    "answer": "B",
+    "explanation": "pandas.read_csv() 用于读取 CSV 文件。"
+  },
+  {
+    "id": "quiz_data_002",
+    "module_id": "data_processing",
+    "type": "选择",
+    "question": "DataFrame 的行索引使用什么名称？",
+    "options": [
+      "columns",
+      "index",
+      "rows",
+      "labels"
+    ],
+    "answer": "B",
+    "explanation": "DataFrame 的行索引称为 index，列称为 columns。"
+  },
+  {
+    "id": "quiz_data_003",
+    "module_id": "data_processing",
+    "type": "选择",
+    "question": "缺失值处理的方法不包括？",
+    "options": [
+      "删除",
+      "填充",
+      "忽略",
+      "隐藏"
+    ],
+    "answer": "D",
+    "explanation": "常用方法是删除、填充或插值，不是隐藏。"
+  },
+  {
+    "id": "quiz_data_004",
+    "module_id": "data_processing",
+    "type": "选择",
+    "question": "数据标准化常用的方法是？",
+    "options": [
+      "Min-Max 缩放",
+      "随机打乱",
+      "数据加密",
+      "数据可视化"
+    ],
+    "answer": "A",
+    "explanation": "Min-Max 缩放和 Z-score 标准化是常用方法。"
+  },
+  {
+    "id": "quiz_data_005",
+    "module_id": "data_processing",
+    "type": "选择",
+    "question": "map() 函数的返回值类型是？",
+    "options": [
+      "list",
+      "tuple",
+      "map object",
+      "dict"
+    ],
+    "answer": "C",
+    "explanation": "map() 返回迭代器对象，需要转换为 list。"
+  },
+  {
+    "id": "quiz_web_001",
+    "module_id": "web_development",
+    "type": "选择",
+    "question": "Flask 框架的定位是？",
+    "options": [
+      "重量级框架",
+      "轻量级微框架",
+      "全栈框架",
+      "异步框架"
+    ],
+    "answer": "B",
+    "explanation": "Flask 是轻量级的 Python Web 微框架。"
+  },
+  {
+    "id": "quiz_web_002",
+    "module_id": "web_development",
+    "type": "选择",
+    "question": "Django 中的 MTV 架构中 T 代表？",
+    "options": [
+      "Template",
+      "Table",
+      "Transform",
+      "Transfer"
+    ],
+    "answer": "A",
+    "explanation": "MTV = Model-Template-View。"
+  },
+  {
+    "id": "quiz_web_003",
+    "module_id": "web_development",
+    "type": "选择",
+    "question": "RESTful API 常用的 HTTP 方法不包括？",
+    "options": [
+      "GET",
+      "POST",
+      "SEND",
+      "DELETE"
+    ],
+    "answer": "C",
+    "explanation": "RESTful 使用 GET、POST、PUT、PATCH、DELETE。"
+  },
+  {
+    "id": "quiz_web_004",
+    "module_id": "web_development",
+    "type": "选择",
+    "question": "FastAPI 自动生成 API 文档使用？",
+    "options": [
+      "需要额外安装",
+      "Swagger UI",
+      "Postman",
+      "curl"
+    ],
+    "answer": "B",
+    "explanation": "FastAPI 自动集成 Swagger UI 文档。"
+  },
+  {
+    "id": "quiz_web_005",
+    "module_id": "web_development",
+    "type": "选择",
+    "question": "HTTP Cookie 的主要用途是？",
+    "options": [
+      "数据传输",
+      "会话状态管理",
+      "数据加密",
+      "页面渲染"
+    ],
+    "answer": "B",
+    "explanation": "Cookie 用于在客户端存储会话状态。"
+  },
+  {
+    "id": "quiz_ai_ml_001",
+    "module_id": "ai_ml_basics",
+    "type": "选择",
+    "question": "监督学习的特点是？",
+    "options": [
+      "不需要标签数据",
+      "使用有标签的训练数据",
+      "仅用于分类",
+      "不需要模型"
+    ],
+    "answer": "B",
+    "explanation": "监督学习使用有标签数据训练模型。"
+  },
+  {
+    "id": "quiz_ai_ml_002",
+    "module_id": "ai_ml_basics",
+    "type": "选择",
+    "question": "K-Means 属于哪种类型的学习？",
+    "options": [
+      "监督学习",
+      "无监督学习",
+      "强化学习",
+      "迁移学习"
+    ],
+    "answer": "B",
+    "explanation": "K-Means 是无监督学习的聚类算法。"
+  },
+  {
+    "id": "quiz_ai_ml_003",
+    "module_id": "ai_ml_basics",
+    "type": "选择",
+    "question": "准确率的计算公式是？",
+    "options": [
+      "TP/(TP+FP)",
+      "TP/(TP+FN)",
+      "(TP+TN)/(TP+TN+FP+FN)",
+      "FP/(FP+TN)"
+    ],
+    "answer": "C",
+    "explanation": "准确率 = 正确预测数 / 总预测数。"
+  },
+  {
+    "id": "quiz_ai_ml_004",
+    "module_id": "ai_ml_basics",
+    "type": "选择",
+    "question": "过拟合是指？",
+    "options": [
+      "模型太简单",
+      "模型在训练集表现好但测试集差",
+      "训练数据不足",
+      "特征太少"
+    ],
+    "answer": "B",
+    "explanation": "过拟合是模型过于复杂，泛化能力差。"
+  },
+  {
+    "id": "quiz_ai_ml_005",
+    "module_id": "ai_ml_basics",
+    "type": "选择",
+    "question": "交叉验证的主要目的是？",
+    "options": [
+      "加快训练",
+      "评估模型泛化能力",
+      "减少特征",
+      "增加数据"
+    ],
+    "answer": "B",
+    "explanation": "交叉验证评估模型在未见数据上的表现。"
+  },
+  {
+    "id": "quiz_dl_001",
+    "module_id": "deep_learning",
+    "type": "选择",
+    "question": "深度学习中的激活函数作用是？",
+    "options": [
+      "减少参数",
+      "引入非线性",
+      "加快收敛",
+      "减少层数"
+    ],
+    "answer": "B",
+    "explanation": "激活函数为网络引入非线性能力。"
+  },
+  {
+    "id": "quiz_dl_002",
+    "module_id": "deep_learning",
+    "type": "选择",
+    "question": "ReLU 激活函数的公式是？",
+    "options": [
+      "f(x) = 1/(1+e^-x)",
+      "f(x) = max(0, x)",
+      "f(x) = tanh(x)",
+      "f(x) = x"
+    ],
+    "answer": "B",
+    "explanation": "ReLU = max(0, x)，是最常用的激活函数。"
+  },
+  {
+    "id": "quiz_dl_003",
+    "module_id": "deep_learning",
+    "type": "选择",
+    "question": "卷积神经网络 (CNN) 主要用于？",
+    "options": [
+      "处理序列数据",
+      "图像处理",
+      "文本分类",
+      "语音识别"
+    ],
+    "answer": "B",
+    "explanation": "CNN 专门用于处理图像等网格数据。"
+  },
+  {
+    "id": "quiz_dl_004",
+    "module_id": "deep_learning",
+    "type": "选择",
+    "question": "反向传播算法用于？",
+    "options": [
+      "特征提取",
+      "计算梯度并更新权重",
+      "数据增强",
+      "模型评估"
+    ],
+    "answer": "B",
+    "explanation": "反向传播计算梯度并更新网络参数。"
+  },
+  {
+    "id": "quiz_dl_005",
+    "module_id": "deep_learning",
+    "type": "选择",
+    "question": "Dropout 的作用是？",
+    "options": [
+      "加快推理",
+      "减少过拟合",
+      "增加特征",
+      "批量归一化"
+    ],
+    "answer": "B",
+    "explanation": "Dropout 通过随机丢弃神经元减少过拟合。"
+  },
+  {
+    "id": "quiz_nlp_001",
+    "module_id": "nlp_and_llm",
+    "type": "选择",
+    "question": "Transformer 架构的核心组件是？",
+    "options": [
+      "卷积层",
+      "循环层",
+      "注意力机制",
+      "池化层"
+    ],
+    "answer": "C",
+    "explanation": "Transformer 基于自注意力机制。"
+  },
+  {
+    "id": "quiz_nlp_002",
+    "module_id": "nlp_and_llm",
+    "type": "选择",
+    "question": "BERT 主要用于？",
+    "options": [
+      "文本生成",
+      "文本分类和理解",
+      "语音识别",
+      "图像描述"
+    ],
+    "answer": "B",
+    "explanation": "BERT 是预训练语言模型，用于多种 NLP 任务。"
+  },
+  {
+    "id": "quiz_nlp_003",
+    "module_id": "nlp_and_llm",
+    "type": "选择",
+    "question": "分词 (Tokenization) 的作用是？",
+    "options": [
+      "加密文本",
+      "将文本拆分成词元",
+      "翻译文本",
+      "压缩文本"
+    ],
+    "answer": "B",
+    "explanation": "分词将文本拆分成模型可处理的词元。"
+  },
+  {
+    "id": "quiz_nlp_004",
+    "module_id": "nlp_and_llm",
+    "type": "选择",
+    "question": "GPT 模型采用什么架构？",
+    "options": [
+      "编码器-only",
+      "解码器-only",
+      "编码器-解码器",
+      "混合"
+    ],
+    "answer": "B",
+    "explanation": "GPT 采用解码器-only 的自回归架构。"
+  },
+  {
+    "id": "quiz_nlp_005",
+    "module_id": "nlp_and_llm",
+    "type": "选择",
+    "question": "LLM 的上下文窗口指的是？",
+    "options": [
+      "模型层数",
+      "一次能处理的词元数量",
+      "词表大小",
+      "隐藏层维度"
+    ],
+    "answer": "B",
+    "explanation": "上下文窗口限制模型一次能处理的最大词元数。"
+  },
+  {
+    "id": "quiz_cv_001",
+    "module_id": "cv_computer_vision",
+    "type": "选择",
+    "question": "OpenCV 中读取图像的函数是？",
+    "options": [
+      "plt.read()",
+      "cv2.imread()",
+      "PIL.load()",
+      "skimage.import()"
+    ],
+    "answer": "B",
+    "explanation": "cv2.imread() 是 OpenCV 读取图像的函数。"
+  },
+  {
+    "id": "quiz_cv_002",
+    "module_id": "cv_computer_vision",
+    "type": "选择",
+    "question": "卷积操作在图像处理中的作用是？",
+    "options": [
+      "增加图像大小",
+      "特征提取",
+      "图像加密",
+      "格式转换"
+    ],
+    "answer": "B",
+    "explanation": "卷积核用于提取图像特征如边缘、纹理等。"
+  },
+  {
+    "id": "quiz_cv_003",
+    "module_id": "cv_computer_vision",
+    "type": "选择",
+    "question": "图像数据增强的方法包括？",
+    "options": [
+      "仅翻转",
+      "翻转、旋转、裁剪、颜色变换",
+      "仅裁剪",
+      "仅改变大小"
+    ],
+    "answer": "B",
+    "explanation": "数据增强包括多种几何和颜色变换。"
+  },
+  {
+    "id": "quiz_cv_004",
+    "module_id": "cv_computer_vision",
+    "type": "选择",
+    "question": "YOLO 算法主要用于？",
+    "options": [
+      "图像分类",
+      "目标检测",
+      "语义分割",
+      "图像生成"
+    ],
+    "answer": "B",
+    "explanation": "YOLO 是实时目标检测算法。"
+  },
+  {
+    "id": "quiz_cv_005",
+    "module_id": "cv_computer_vision",
+    "type": "选择",
+    "question": "迁移学习在计算机视觉中常用于？",
+    "options": [
+      "从头训练模型",
+      "预训练模型微调",
+      "数据标注",
+      "模型压缩"
+    ],
+    "answer": "B",
+    "explanation": "使用 ImageNet 预训练模型进行微调是常见做法。"
+  },
+  {
+    "id": "quiz_unit_001",
+    "module_id": "unit_testing",
+    "type": "选择",
+    "question": "unittest 模块中用于测试断言的方法是？",
+    "options": [
+      "assert",
+      "assertEqual",
+      "check",
+      "verify"
+    ],
+    "answer": "B",
+    "explanation": "assertEqual 是 unittest 中常用的断言方法。"
+  },
+  {
+    "id": "quiz_unit_002",
+    "module_id": "unit_testing",
+    "type": "选择",
+    "question": "pytest 中使用什么装饰器标记测试？",
+    "options": [
+      "@test",
+      "def test_",
+      "TestCase",
+      "@fixture"
+    ],
+    "answer": "B",
+    "explanation": "pytest 中以 test_ 开头的函数就是测试。"
+  },
+  {
+    "id": "quiz_unit_003",
+    "module_id": "unit_testing",
+    "type": "选择",
+    "question": "setUp() 方法在测试中的作用是？",
+    "options": [
+      "清理测试数据",
+      "初始化测试环境",
+      "运行所有测试",
+      "生成测试报告"
+    ],
+    "answer": "B",
+    "explanation": "setUp() 在每个测试方法前运行，用于初始化。"
+  },
+  {
+    "id": "quiz_unit_004",
+    "module_id": "unit_testing",
+    "type": "选择",
+    "question": "Mock 对象的主要用途是？",
+    "options": [
+      "加速测试",
+      "模拟外部依赖",
+      "减少测试代码",
+      "生成假数据"
+    ],
+    "answer": "B",
+    "explanation": "Mock 用于隔离被测代码的外部依赖。"
+  },
+  {
+    "id": "quiz_unit_005",
+    "module_id": "unit_testing",
+    "type": "选择",
+    "question": "代码覆盖率衡量的是？",
+    "options": [
+      "测试数量",
+      "代码被测试覆盖的比例",
+      "Bug 数量",
+      "执行速度"
+    ],
+    "answer": "B",
+    "explanation": "覆盖率衡量测试对代码的覆盖程度。"
+  },
+  {
+    "id": "quiz_debug_001",
+    "module_id": "debugging",
+    "type": "选择",
+    "question": "pdb 是 Python 的什么工具？",
+    "options": [
+      "性能分析器",
+      "调试器",
+      "测试框架",
+      "代码格式化工具"
+    ],
+    "answer": "B",
+    "explanation": "pdb 是 Python 内置的交互式调试器。"
+  },
+  {
+    "id": "quiz_debug_002",
+    "module_id": "debugging",
+    "type": "选择",
+    "question": "pdb 中用于设置断点的命令是？",
+    "options": [
+      "run",
+      "break 或 b",
+      "step",
+      "continue"
+    ],
+    "answer": "B",
+    "explanation": "break/b 命令用于设置断点。"
+  },
+  {
+    "id": "quiz_debug_003",
+    "module_id": "debugging",
+    "type": "选择",
+    "question": "日志级别 DEBUG 和 INFO 的区别是？",
+    "options": [
+      "无区别",
+      "详细程度不同",
+      "仅输出位置不同",
+      "格式不同"
+    ],
+    "answer": "B",
+    "explanation": "DEBUG 更详细，INFO 记录一般信息。"
+  },
+  {
+    "id": "quiz_debug_004",
+    "module_id": "debugging",
+    "type": "选择",
+    "question": "memory_profiler 用于？",
+    "options": [
+      "调试逻辑错误",
+      "分析内存使用",
+      "性能测试",
+      "代码覆盖"
+    ],
+    "answer": "B",
+    "explanation": "memory_profiler 用于检测内存使用情况。"
+  },
+  {
+    "id": "quiz_debug_005",
+    "module_id": "debugging",
+    "type": "选择",
+    "question": "timeit 模块用于？",
+    "options": [
+      "测量代码运行时间",
+      "内存分析",
+      "代码调试",
+      "日志记录"
+    ],
+    "answer": "A",
+    "explanation": "timeit 用于精确测量小段代码的执行时间。"
+  }
+]

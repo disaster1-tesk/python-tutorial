@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}收藏 - {{ APP_NAME }}{% endblock %}
+
+{% block content %}
+<div class="mb-6">
+    <h1 class="text-2xl font-bold">⭐ 我的收藏</h1>
+    <p class="text-gray-500">收藏你喜欢的知识点和练习题</p>
+</div>
+
+<!-- 收藏的模块 -->
+{% if favorited_modules %}
+<div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-6">
+    <h2 class="font-bold mb-4">📖 收藏的知识点</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+        {% for module in favorited_modules %}
+        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+            <a href="{{ url_for('learn', module_id=module.id) }}" class="flex items-center gap-2 hover:text-indigo-600">
+                <span>{{ module.icon }}</span>
+                <span>{{ module.name }}</span>
+            </a>
+            <button onclick="removeFavorite('modules', '{{ module.id }}')" class="text-gray-400 hover:text-red-500">✕</button>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<!-- 收藏的练习题 -->
+{% if favorited_exercises %}
+<div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-6">
+    <h2 class="font-bold mb-4">📝 收藏的练习题</h2>
+    <div class="space-y-3">
+        {% for ex in favorited_exercises %}
+        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+            <div>
+                <span class="font-medium">{{ ex.title }}</span>
+                <span class="text-sm text-gray-500 ml-2">{{ ex.module }}</span>
+            </div>
+            <button onclick="removeFavorite('exercises', '{{ ex.id }}')" class="text-gray-400 hover:text-red-500">✕</button>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<!-- 收藏的测验 -->
+{% if favorited_quizzes %}
+<div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-6">
+    <h2 class="font-bold mb-4">📋 收藏的测验</h2>
+    <div class="space-y-3">
+        {% for q in favorited_quizzes %}
+        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+            <div>
+                <span class="font-medium">{{ q.question[:50] }}...</span>
+                <span class="text-sm text-gray-500 ml-2">{{ q.module_id }}</span>
+            </div>
+            <button onclick="removeFavorite('quizzes', '{{ q.id }}')" class="text-gray-400 hover:text-red-500">✕</button>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+{% if not favorited_modules and not favorited_exercises and not favorited_quizzes %}
+<div class="bg-white rounded-xl p-12 text-center">
+    <div class="text-4xl mb-4">⭐</div>
+    <p class="text-gray-500">暂无收藏内容</p>
+    <a href="{{ url_for('index') }}" class="inline-block mt-4 text-indigo-600 hover:underline">去学习 →</a>
+</div>
+{% endif %}
+
+<script>
+function removeFavorite(type, id) {
+    fetch('/api/favorites/' + type + '/' + id, {
+        method: 'DELETE'
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) location.reload();
+    });
+}
+</script>
+{% endblock %}

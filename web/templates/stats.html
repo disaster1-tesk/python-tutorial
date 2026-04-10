@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}学习统计 - {{ APP_NAME }}{% endblock %}
+
+{% block content %}
+<div class="mb-6">
+    <h1 class="text-2xl font-bold">📊 学习统计</h1>
+    <p class="text-gray-500">查看你的学习进度</p>
+</div>
+
+<!-- 统计卡片 -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+    <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 text-center">
+        <div class="text-3xl font-bold text-indigo-600">{{ modules|length }}</div>
+        <div class="text-sm text-gray-500 mt-1">总模块数</div>
+    </div>
+    <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 text-center">
+        <div class="text-3xl font-bold text-green-600">{{ completed_count }}</div>
+        <div class="text-sm text-gray-500 mt-1">已完成</div>
+    </div>
+    <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 text-center">
+        <div class="text-3xl font-bold text-amber-600">{{ exercises_count }}</div>
+        <div class="text-sm text-gray-500 mt-1">练习题</div>
+    </div>
+    <div class="bg-white rounded-xl p-5 shadow-sm border border-gray-100 text-center">
+        <div class="text-3xl font-bold text-purple-600">{{ quizzes_count }}</div>
+        <div class="text-sm text-gray-500 mt-1">测验次数</div>
+    </div>
+</div>
+
+<!-- 图表 -->
+<div class="grid md:grid-cols-2 gap-6 mb-8">
+    <!-- 进度环 -->
+    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+        <h2 class="font-bold mb-4">总体进度</h2>
+        <div class="flex items-center justify-center">
+            <div class="relative w-40 h-40">
+                <svg class="progress-ring w-40 h-40" viewBox="0 0 100 100">
+                    <circle class="text-gray-200" stroke="currentColor" stroke-width="8" fill="transparent" r="40" cx="50" cy="50"/>
+                    <circle class="text-indigo-600 progress-ring-circle" stroke="currentColor" stroke-width="8" fill="transparent" r="40" cx="50" cy="50"
+                            stroke-dasharray="{{ 251.2 }}" stroke-dashoffset="{{ 251.2 - (251.2 * completed_count / (modules|length or 1)) }}"/>
+                </svg>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-2xl font-bold">{{ ((completed_count / (modules|length or 1)) * 100)|int }}%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 正确率 -->
+    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+        <h2 class="font-bold mb-4">练习正确率</h2>
+        <div class="text-center">
+            <div class="text-4xl font-bold text-green-600">{{ correct_rate|int }}%</div>
+            <div class="text-sm text-gray-500 mt-1">正确率</div>
+        </div>
+    </div>
+</div>
+
+<!-- 模块进度 -->
+<div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-6">
+    <h2 class="font-bold mb-4">📚 模块进度</h2>
+    <div class="space-y-3">
+        {% for module in modules %}
+        {% set status = progress.modules.get(module.id, {}).get('status', 'not_started') %}
+        <div class="flex items-center gap-3">
+            <span class="text-lg">{{ module.icon }}</span>
+            <div class="flex-1">
+                <div class="flex justify-between text-sm mb-1">
+                    <span>{{ module.name }}</span>
+                    <span class="{% if status == 'completed' %}text-green-600{% elif status == 'in_progress' %}text-amber-600{% else %}text-gray-400{% endif %}">
+                        {% if status == 'completed' %}✅ 已完成{% elif status == 'in_progress' %}🔄 进行中{% else %}⏳ 未开始{% endif %}
+                    </span>
+                </div>
+                <div class="h-2 bg-gray-100 rounded-full overflow-hidden">
+                    <div class="h-full {% if status == 'completed' %}bg-green-500{% elif status == 'in_progress' %}bg-amber-500{% else %}bg-gray-300{% endif %}" 
+                         style="width: {% if status == 'completed' %}100{% elif status == 'in_progress' %}50{% else %}0{% endif %}%"></div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- 未学习模块 -->
+<div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+    <h2 class="font-bold mb-4">📖 待学习模块</h2>
+    <div class="flex flex-wrap gap-2">
+        {% for module in modules %}
+        {% if progress.modules.get(module.id, {}).get('status') != 'completed' %}
+        <a href="{{ url_for('learn', module_id=module.id) }}" 
+           class="px-3 py-2 bg-gray-100 rounded-lg text-sm hover:bg-gray-200">
+            {{ module.icon }} {{ module.name }}
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

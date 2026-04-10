@@ -1,0 +1,16 @@
+{
+  "achievements": [
+    {
+      "id": "first_step",
+      "unlocked_at": "2026-04-10T04:00:02.603673"
+    },
+    {
+      "id": "perfect_score",
+      "unlocked_at": "2026-04-10T04:02:21.459115"
+    }
+  ],
+  "unlocked": [
+    "first_step",
+    "perfect_score"
+  ]
+}
