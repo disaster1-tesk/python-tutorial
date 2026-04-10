@@ -15,6 +15,17 @@ dist/
 build/
 *.egg
 
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Docker
+*.log
+*.pid
+*.seed
+*.pid.lock
+
 # OS
 Thumbs.db
 Desktop.ini

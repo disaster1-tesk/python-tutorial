@@ -1,0 +1,72 @@
+# ============================================================
+# Python Tutorial - Docker Compose 配置
+# ============================================================
+
+services:
+  # Python Web 应用
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: python-tutorial-web
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - FLASK_DEBUG=0
+    volumes:
+      - ./web:/app/web
+      - ./base_syntax:/app/base_syntax
+      - ./data_types:/app/data_types
+      - ./control_flow:/app/control_flow
+      - ./functions:/app/functions
+      - ./classes_objects:/app/classes_objects
+      - ./exception_handling:/app/exception_handling
+      - ./file_operations:/app/file_operations
+      - ./modules_packages:/app/modules_packages
+      - ./advanced_features:/app/advanced_features
+      - ./type_hints:/app/type_hints
+      - ./concurrency:/app/concurrency
+      - ./standard_library:/app/standard_library
+      - ./third_party_libraries:/app/third_party_libraries
+      - ./database:/app/database
+      - ./design_patterns:/app/design_patterns
+      - ./networking:/app/networking
+      - ./data_processing:/app/data_processing
+      - ./web_development:/app/web_development
+      - ./ai_ml_basics:/app/ai_ml_basics
+      - ./deep_learning:/app/deep_learning
+      - ./nlp_and_llm:/app/nlp_and_llm
+      - ./cv_computer_vision:/app/cv_computer_vision
+      - ./unit_testing:/app/unit_testing
+      - ./debugging:/app/debugging
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - tutorial-network
+
+  # 可选：Streamlit Web 应用（如需）
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: python-tutorial-streamlit
+    ports:
+      - "8502:8502"
+    environment:
+      - STREAMLIT_SERVER_PORT=8502
+    volumes:
+      - ./web:/app/web
+    command: streamlit run web/app.py --server.port=8502 --server.address=0.0.0.0
+    restart: unless-stopped
+    networks:
+      - tutorial-network
+
+networks:
+  tutorial-network:
+    driver: bridge
