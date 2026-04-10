@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 代码高亮 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <!-- 代码高亮 - GitHub Dark 主题，字符串颜色更清晰 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -187,6 +187,21 @@
             background: transparent;
             padding: 0;
             color: inherit;
+        }
+
+        /* 增强字符串高亮 */
+        .hljs-string {
+            color: #ce9178 !important;
+            font-weight: 500;
+        }
+
+        .markdown-content code:not(pre code) {
+            color: #c7254e;
+            background: #f9f2f4;
+            padding: 0.15em 0.4em;
+            border-radius: 4px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9em;
         }
         
         .markdown-content blockquote {

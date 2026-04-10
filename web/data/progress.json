@@ -27,6 +27,10 @@
     "functions": {
       "status": "in_progress",
       "updated_at": "2026-04-10T17:52:20.327070"
+    },
+    "modules_packages": {
+      "status": "in_progress",
+      "updated_at": "2026-04-10T21:20:26.141047"
     }
   },
   "exercises": [],
@@ -55,6 +59,6 @@
   "learning_days": [
     "2026-04-10"
   ],
-  "last_visit": "2026-04-10T17:52:20.327087",
+  "last_visit": "2026-04-10T21:20:26.141074",
   "total_time": 0
 }
